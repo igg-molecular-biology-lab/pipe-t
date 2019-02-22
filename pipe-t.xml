@@ -1,0 +1,183 @@
+<?xml version="1.0"?>
+<tool id="pipe-t" name="PIPE-T" version="1.0" hidden="false">
+<description>A workflow for processing and analyzing miR expression profiles by RTqPCR </description>
+<requirements>
+  <requirement type="package" version="3.1.2">R</requirement>
+</requirements>
+<stdio>
+   <exit_code range="1:" />
+</stdio>
+<command>
+    <![CDATA[
+    #for $input in $dp.list_files
+    ln -sf '$input' '$__tool_directory__/Symlink/${input.element_identifier}';
+    #end for
+    #if str( $dn.condNorm.normMethod ) == "globalmean":
+      #if str( $di.condImpute.format ) == "mestdagh":
+          #if str( $de.condDEA.method ) == "ttest":
+              Rscript $__tool_directory__/pipe-t.R $dp.files $galaxy_output1 "$__tool_directory__/Symlink" $dc.Ctmin $dc.Ctmax $dc.flag $galaxy_output2 $dn.condNorm.normMethod $galaxy_output3 $galaxy_output4 $df.percent $galaxy_output5 $di.condImpute.format $galaxy_output6 $de.condDEA.method $de.condDEA.alternative $de.condDEA.paired $de.condDEA.replicates $de.condDEA.sort $de.condDEA.stringent $de.condDEA.padjust $galaxy_output7 "$df.filtname";
+          #end if
+          #if str( $de.condDEA.method ) == "rp":
+              Rscript $__tool_directory__/pipe-t.R $dp.files $galaxy_output1 "$__tool_directory__/Symlink" $dc.Ctmin $dc.Ctmax $dc.flag $galaxy_output2 $dn.condNorm.normMethod $galaxy_output3 $galaxy_output4 $df.percent $galaxy_output5 $di.condImpute.format $galaxy_output6 $de.condDEA.method $galaxy_output7 "$df.filtname";
+          #end if
+      #end if
+
+      #if str( $di.condImpute.format ) == "knn":
+          #if str( $de.condDEA.method ) == "ttest":
+                Rscript $__tool_directory__/pipe-t.R $dp.files $galaxy_output1 "$__tool_directory__/Symlink" $dc.Ctmin $dc.Ctmax $dc.flag $galaxy_output2 $dn.condNorm.normMethod $galaxy_output3 $galaxy_output4 $df.percent $galaxy_output5 $di.condImpute.format $di.condImpute.k $di.condImpute.maxp $galaxy_output6 $de.condDEA.method $de.condDEA.alternative $de.condDEA.paired $de.condDEA.replicates $de.condDEA.sort $de.condDEA.stringent $de.condDEA.padjust $galaxy_output7 "$df.filtname";
+          #end if
+          #if str( $de.condDEA.method ) == "rp":
+                Rscript $__tool_directory__/pipe-t.R $dp.files $galaxy_output1 "$__tool_directory__/Symlink" $dc.Ctmin $dc.Ctmax $dc.flag $galaxy_output2 $dn.condNorm.normMethod $galaxy_output3 $galaxy_output4 $df.percent $galaxy_output5 $di.condImpute.format $di.condImpute.k $di.condImpute.maxp $galaxy_output6 $de.condDEA.method $galaxy_output7 "$df.filtname";
+          #end if
+      #end if
+    #end if
+    #if str( $dn.condNorm.normMethod ) == "deltaCt":
+      #if str( $di.condImpute.format ) == "mestdagh":
+          #if str( $de.condDEA.method ) == "ttest":
+              Rscript $__tool_directory__/pipe-t.R $dp.files $galaxy_output1 "$__tool_directory__/Symlink" $dc.Ctmin $dc.Ctmax $dc.flag $galaxy_output2 $dn.condNorm.normMethod "$dn.condNorm.normalizers" $galaxy_output3 $galaxy_output4 $df.percent $galaxy_output5 $di.condImpute.format $galaxy_output6 $de.condDEA.method $de.condDEA.alternative $de.condDEA.paired $de.condDEA.replicates $de.condDEA.sort $de.condDEA.stringent $de.condDEA.padjust $galaxy_output7 "$df.filtname";
+          #end if
+          #if str( $de.condDEA.method ) == "rp":
+              Rscript $__tool_directory__/pipe-t.R $dp.files $galaxy_output1 "$__tool_directory__/Symlink" $dc.Ctmin $dc.Ctmax $dc.flag $galaxy_output2 $dn.condNorm.normMethod "$dn.condNorm.normalizers" $galaxy_output3 $galaxy_output4 $df.percent $galaxy_output5 $di.condImpute.format $galaxy_output6 $de.condDEA.method $galaxy_output7 "$df.filtname";
+          #end if
+      #end if
+
+      #if str( $di.condImpute.format ) == "knn":
+          #if str( $de.condDEA.method ) == "ttest":
+                Rscript $__tool_directory__/pipe-t.R $dp.files $galaxy_output1 "$__tool_directory__/Symlink" $dc.Ctmin $dc.Ctmax $dc.flag $galaxy_output2 $dn.condNorm.normMethod "$dn.condNorm.normalizers" $galaxy_output3 $galaxy_output4 $df.percent $galaxy_output5 $di.condImpute.format $di.condImpute.k $di.condImpute.maxp $galaxy_output6 $de.condDEA.method $de.condDEA.alternative $de.condDEA.paired $de.condDEA.replicates $de.condDEA.sort $de.condDEA.stringent $de.condDEA.padjust $galaxy_output7 "$df.filtname";
+          #end if
+          #if str( $de.condDEA.method ) == "rp":
+                Rscript $__tool_directory__/pipe-t.R $dp.files $galaxy_output1 "$__tool_directory__/Symlink" $dc.Ctmin $dc.Ctmax $dc.flag $galaxy_output2 $dn.condNorm.normMethod "$dn.condNorm.normalizers" $galaxy_output3 $galaxy_output4 $df.percent $galaxy_output5 $di.condImpute.format $di.condImpute.k $di.condImpute.maxp $galaxy_output6 $de.condDEA.method $galaxy_output7 "$df.filtname";
+          #end if
+      #end if
+    #end if
+]]>
+</command>
+<inputs>
+<section name="dp" title="Data parsing" expanded="true">
+	<param name="list_files" type="data_collection" collection_type="list" value="" label="Select a collection list of TaqMan
+  Low Density Array files in the history tab" help="Collection should be of category List and datasets should contain at least the fields: EXPFAIL, Target Name,  Well Position, and CT. "/>
+ 	<param name="files" type="data" format="txt" label="Select one of the files in the history tab" help="File should contains at least the fields: sampleName and Treatment." >
+</param>
+</section>
+<section name="dc" title="Ct categorization based on a category or a flag value" expanded="true">
+  <param name="Ctmin" type="integer" min="0" max="40" value="14" label="Set up a minimum Ct value" help="Any Ct below your selected value will be labelled as Unreliable." />
+  <param name="Ctmax" type="integer" min="0" max="40" value="32" label="Set up a maximum Ct value" help="Any Ct above your selected value will be labelled as Unreliable."/>
+  <param name="flag" type="select" label="Select TRUE if you want that PIPE-T labels a Ct value as Unreliable on the basis of EXPFAIL flag" help="Data in qPCRset objects will have feature categories (Unreliable, Undetermined) assigned to them based on different Ct criteria.">
+      <option value="TRUE">TRUE</option>
+      <option value="FALSE">FALSE</option>
+  </param>
+</section>
+<section name="dn" title="Data normalization" expanded="true">
+  <conditional name="condNorm">
+    <param name="normMethod" type="select" label="Select one of the normalization methods from the list below." help="Normalization is important to reduce technical variability from the data.">
+      <option value="globalmean" selected="true">Global mean</option>
+      <option value="deltaCt">DeltaCt method with house keeping</option>
+    </param>
+    <when value="deltaCt">
+      <param name="normalizers" type="text" label="Type a comma separated list of housekeeping miR identifiers that will be used as normalizers." value="U6 snRNA-001973">
+      	  </param>
+    </when>
+  </conditional>
+</section>
+<section name="df" title="Data filtering based on percentage of NAs and on names" expanded="true">
+  <param name="percent" type="integer" min="0" max="100" value="0" label="Set up a percentage of NAs."
+ help="miR with more than the specified percentage of NAs across samples will be removed." />
+<param name="filtname" type="text" label="Type a comma separeted list of miR identifiers to filter out" help="miR identifiers specified in the List will be removed." value="U6 snRNA-001973,hsa-miR-520a">
+    </param>
+</section>
+<section name="di" title="NA Imputation" expanded="true">
+  <conditional name="condImpute">
+    <param name="format" type="select"  label="Select one of the imputation methods from the list below." help="">
+      <option value="mestdagh" selected="true">Mestdagh</option>
+      <option value="knn">K-Nearest Neighbour</option>
+    </param>
+    <when value="knn">
+      <param name="k" type="integer" min="1" max="100" value="10" label="Select a number of neighbors to be used in the KNN imputation method" />
+      <param name="maxp" type="integer" min="1" max="2000" value="1500" label="Select the largest number of miR imputed using the KNN method." help="Larger numbers are divided by two-means clustering (recursively)
+      prior to imputation. "/>
+    </when>
+  </conditional>
+  </section>
+  <section name="de" title="Differential expression analysis" expanded="true">
+    <conditional name="condDEA">
+      <param name="method" type="select"  label="Select one of the methods from the list below.">
+        <option value="ttest" selected="true">T-test and fold change</option>
+        <option value="rp">Rank Product (Only for unpaired data)</option>
+      </param>
+      <when value="ttest">
+        <param name="alternative" type="select"  label="Select one of the types of alternative hypothesis to assess significance.">
+          <option value="two.sided" selected="true">Two sided</option>
+          <option value="greater">Greater</option>
+          <option value="less">Lower</option>
+        </param>
+        <param name="paired" type="select" label="Select TRUE if you want a paired analysis?" help="Pairing of samples will follow the order of the sampleNames in the input file">
+            <option value="TRUE" >TRUE</option>
+            <option value="FALSE" selected="true">FALSE</option>
+        </param>
+        <param name="replicates" type="select" label="Select TRUE if you have replicated miR in your data" help="If replicated genes are present in the data, the statistics will be calculated once for each replicated miR, rather than the separately.">
+            <option value="TRUE" >TRUE</option>
+            <option value="FALSE" selected="true">FALSE</option>
+        </param>
+        <param name="sort" type="select" label="Select TRUE if you the output to be sorted by increasing order of p-value?" help="">
+            <option value="TRUE" selected="true">TRUE</option>
+            <option value="FALSE" >FALSE</option>
+        </param>
+        <param name="stringent" type="select" label="Select TRUE to admit more stringent analysis." help=" If stringent is TRUE any unreliable or undetermined measurements among technical and
+biological replicates will result in the final result being Undetermined. If stringent is FALSE result will be OK unless at least half of the Ct values for a given gene are unreliable/undetermined.">
+            <option value="TRUE" selected="true">TRUE</option>
+            <option value="FALSE" >FALSE</option>
+        </param>
+        <param name="padjust" type="select"  label="Select one of the methods to adjust pvalues for multiple hypothesis testing">
+          <option value="BH" selected="true">Benjamini-Hochberg</option>
+          <option value="bonferroni">Bonferroni</option>
+        </param>
+      </when>
+      <when value="rp">
+      </when>
+    </conditional>
+    </section>
+</inputs>
+<outputs>
+  <data format="txt" name="galaxy_output1" label="1_Ct_Raw"/>
+  <data format="txt" name="galaxy_output2" label="2_Ct_Categorized"/>
+  <data format="txt" name="galaxy_output3" label="3_deltaCt_Normalized"/>
+  <data format="png" name="galaxy_output4" label="4_ECDF"/>
+  <data format="txt" name="galaxy_output6" label="5_Imputed"/>
+  <data format="txt" name="galaxy_output5" label="6_2^-deltaCt"/>
+  <data format="txt" name="galaxy_output7" label="7_DifferentiallyExpressedMiR"/>
+</outputs>
+
+<help>
+<![CDATA[
+**What it does**
+INPUTS: This tool parses a list of RTqPCR file and a file with the groups
+OUTPUTS: and returs
+1) A txt file with the raw Ct data
+2) A txt file with Ct data after data categorization
+3) A txt file with deltaCt data after data normalization
+4) A PNG file with the Empirical cumulative distribution before and after data normalization
+5) A txt file after data filtering based on a percentage of missing values (NA)
+6) A txt file after imputation of missing values
+7) A txt file with a number statistics about the significance of each miR
+]]>
+</help>
+<citations>
+        <citation type="bibtex">
+    @Manual{HTqPCR,
+        title = {HTqPCR: Automated analysis of high-throughput qPCR data.},
+        author = {Heidi Dvinge, Paul Bertone},
+        year = {2009},
+        note = {R package version 1.20.0},
+        url = {http://bioconductor.org/packages/HTqPCR/},
+    }
+    @Manual{HTqPCR,
+        title = {HTqPCR: Automated analysis of high-throughput qPCR data.},
+        author = {Heidi Dvinge, Paul Bertone},
+        year = {2009},
+        note = {R package version 1.20.0},
+        url = {http://bioconductor.org/packages/HTqPCR/},
+    }
+        </citation>
+    </citations>
+
+</tool>
