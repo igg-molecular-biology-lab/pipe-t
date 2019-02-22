@@ -1,6 +1,6 @@
-<!-- <?xml version="1.0"?>
+<?xml version="1.0"?>
 <tool_dependency>
-  <package name="R" version="3.1.2">
+  <!-- <package name="R" version="3.1.2">
       <repository name="package_r_3_1_2" owner="iuc" prior_installation_required="True" />
   </package>
     <package name="crisprseek" version="1.11.0">
@@ -15,7 +15,7 @@
               </actions>
         </install>
         <readme>
-          
+          PIPE-T: TODO
         </readme>
-    </package>
-</tool_dependency> -->
+    </package> -->
+</tool_dependency>
