@@ -1,0 +1,6 @@
+categories: []
+description: A workflow for processing and analyzing miR expression profiles by RTqPCR
+homepage_url: https://github.com/igg-molecular-biology-lab/pipe-t
+name: pipe_t
+owner: davidecangelosi
+remote_repository_url: https://github.com/igg-molecular-biology-lab/pipe-t.git
