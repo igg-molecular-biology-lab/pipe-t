@@ -3,7 +3,6 @@
 <description>A workflow for processing and analyzing miR expression profiles by RTqPCR</description>
 <requirements>
   <requirement type="package" version="3.1.2">R</requirement>
-  <requirement type="package" version="1.20.0">HTqPCR</requirement>
 </requirements>
 <stdio>
    <exit_code range="1:" />
