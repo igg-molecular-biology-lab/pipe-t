@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
 <tool_dependency>
   <!-- <package name="R" version="3.1.2">
-      <repository name="package_r_3_1_2" owner="iuc" prior_installation_required="True" />
-  </package>
-    <package name="crisprseek" version="1.11.0">
+      <repository name="package_r_3_1_2" owner="davidecangelosi" prior_installation_required="True" />
+  </package> -->
+    <package name="pipe_t" version="1.11.0">
         <install version="1.0">
             <actions>
               <action type="setup_r_environment">
-                  <repository name="package_r_3_1_2" owner="iuc">
+                  <repository name="package_r_3_1_2" owner="davidecangelosi">
                       <package name="R" version="3.1.2" />
                   </repository>
                     <package>https://bioarchive.galaxyproject.org/HTqPCR_1.20.0.tar.gz</package>
@@ -17,5 +17,5 @@
         <readme>
           PIPE-T: TODO
         </readme>
-    </package> -->
+    </package>
 </tool_dependency>
