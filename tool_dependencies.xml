@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <tool_dependency>
-  <package name="R" version="3.1.2">
+  <!-- <package name="R" version="3.1.2">
       <repository name="package_r_3_1_2" owner="iuc" prior_installation_required="True" />
   </package>
     <package name="pipe_t" version="1.0">
@@ -15,7 +15,7 @@
               </actions>
         </install>
         <readme>
-          PIPE-T: TODO
+          PIPE-T:
         </readme>
-    </package>
+    </package> -->
 </tool_dependency>
