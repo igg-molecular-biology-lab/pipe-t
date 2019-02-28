@@ -2,7 +2,7 @@
 <tool id="pipe-t" name="PIPE-T" version="1.0" hidden="false">
 <description>A workflow for processing and analyzing miR expression profiles by RTqPCR</description>
 <requirements>
-  <requirement type="package" version="3.1.2">r-base</requirement>
+  <requirement type="package" version="3.1.2-0">r-base</requirement>
   <!-- <requirement type="package">libgcc</requirement> -->
   <requirement type="package" version="1.32.0">bioconductor-htqpcr</requirement>
   <!-- <requirement type="package">bioconductor-rankprod</requirement>
