@@ -273,7 +273,7 @@ dev.off()
 ####################################################################################################################
 #NORMALIZATION
 #method version 3.5.1 + Global mean
-normalizeCtData <-
+normalizeCtDataDav <-
 function(q,
 	norm	= "deltaCt",
 	deltaCt.genes	= NULL,
