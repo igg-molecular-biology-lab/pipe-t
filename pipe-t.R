@@ -287,7 +287,7 @@ function(q,
 	data	<- exprs(q)
 	data.norm	<- data
 	# Get the normalisation method
-	method	<- match.arg(norm, c("quantile", "scale.rankinvariant", "norm.rankinvariant", "deltaCt", "geometric.mean"))
+	method	<- match.arg(norm, c("quantile", "scale.rankinvariant", "norm.rankinvariant", "deltaCt", "geometric.mean", "globalmean"))
 	# Some general stuff that will be used by both rank.invariant methods
 	if (method %in% c("scale.rankinvariant", "norm.rankinvariant")) {
 		# Index to use for too high Ct values
