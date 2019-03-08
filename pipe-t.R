@@ -227,7 +227,7 @@ switch(format,
       raw<- readCtData(files = as.vector(files$sampleName), header=TRUE,  format="plain", column.info=columns, path = path,sample.info=phenoData)
     },
     "SDS"={
-      columns<- list(feature=4, Ct=6)
+      columns<- list(feature=3, Ct=6, flag=11)
       metadata <- data.frame(labelDescription = c("sampleName", "Treatment"),  row.names = c("sampleName", "Treatment"))
       phenoData <- new("AnnotatedDataFrame", data = files, varMetadata = metadata)
       rownames(phenoData)=as.vector(files$sampleName)
@@ -252,7 +252,28 @@ cat("\n Files read correctly! ")
 write.table(exprs(raw), file=rawout, quote=FALSE,  row.names=TRUE, col.names=TRUE,sep = "\t")
 ####################################################################################################################
 #Set a new categories for the values meeting two criterions
-unreliable<-setCategory(raw, Ct.max=dcCtmax, Ct.min=dcCtmin,replicates=FALSE,  flag=dcflag, flag.out="Y", quantile=NULL)
+switch(format,
+    "plain"={
+      unreliable<-setCategory(raw, Ct.max=dcCtmax, Ct.min=dcCtmin,replicates=FALSE,  flag=dcflag, flag.out="Y", quantile=NULL)
+    },
+    "SDS"={
+      unreliable<-setCategory(raw, Ct.max=dcCtmax, Ct.min=dcCtmin,replicates=FALSE,  flag=dcflag, flag.out="FALSE", quantile=NULL)
+    },
+    "LightCycler"={
+      unreliable<-setCategory(raw, Ct.max=dcCtmax, Ct.min=dcCtmin,replicates=FALSE,  flag=dcflag, flag.out="Y", quantile=NULL)
+    },
+    "CFX"={
+      unreliable<-setCategory(raw, Ct.max=dcCtmax, Ct.min=dcCtmin,replicates=FALSE,  flag=dcflag, flag.out="Y", quantile=NULL)
+    },
+    "OpenArray"={
+      unreliable<-setCategory(raw, Ct.max=dcCtmax, Ct.min=dcCtmin,replicates=FALSE,  flag=dcflag, flag.out="FALSE", quantile=NULL)
+    },
+    "BioMark"={
+      unreliable<-setCategory(raw, Ct.max=dcCtmax, Ct.min=dcCtmin,replicates=FALSE,  flag=dcflag, flag.out="Fail", quantile=NULL)
+    },
+    stop("Enter something that switches me!")
+)
+#unreliable<-setCategory(raw, Ct.max=dcCtmax, Ct.min=dcCtmin,replicates=FALSE,  flag=dcflag, flag.out="Y", quantile=NULL)
 
 ####################################################################################################################
 #Filter out the values of the new category
