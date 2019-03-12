@@ -48,7 +48,7 @@
 
       #if str( $di.condImpute.format ) == "knn":
           #if str( $de.condDEA.method ) == "ttest":
-                Rscript $__tool_directory__/pipe-t.R $dp.files "$dff.condFile.formatFile" $dff.n "$dff.condFile.formatFile" $dff.condFile.n $galaxy_output1 "$__tool_directory__/Symlink" $dc.Ctmin $dc.Ctmax $dc.flag $galaxy_output2 $dn.condNorm.normMethod $galaxy_output3 $galaxy_output4 $df.percent $galaxy_output5 $di.condImpute.format $di.condImpute.k $di.condImpute.maxp $galaxy_output6 $de.condDEA.method $de.condDEA.alternative $de.condDEA.paired $de.condDEA.replicates $de.condDEA.sort $de.condDEA.stringent $de.condDEA.padjust $galaxy_output7 "$df.filtname";
+                Rscript $__tool_directory__/pipe-t.R $dp.files "$dff.condFile.formatFile" $dff.n $galaxy_output1 "$__tool_directory__/Symlink" $dc.Ctmin $dc.Ctmax $dc.flag $galaxy_output2 $dn.condNorm.normMethod $galaxy_output3 $galaxy_output4 $df.percent $galaxy_output5 $di.condImpute.format $di.condImpute.k $di.condImpute.maxp $galaxy_output6 $de.condDEA.method $de.condDEA.alternative $de.condDEA.paired $de.condDEA.replicates $de.condDEA.sort $de.condDEA.stringent $de.condDEA.padjust $galaxy_output7 "$df.filtname";
           #end if
           #if str( $de.condDEA.method ) == "rp":
                 Rscript $__tool_directory__/pipe-t.R $dp.files "$dff.condFile.formatFile" $dff.n $galaxy_output1 "$__tool_directory__/Symlink" $dc.Ctmin $dc.Ctmax $dc.flag $galaxy_output2 $dn.condNorm.normMethod $galaxy_output3 $galaxy_output4 $df.percent $galaxy_output5 $di.condImpute.format $di.condImpute.k $di.condImpute.maxp $galaxy_output6 $de.condDEA.method $galaxy_output7 "$df.filtname";
@@ -64,7 +64,6 @@
  	<param name="files" type="data" format="txt" label="Select one of the files in the history tab" help="File should contains at least the fields: sampleName and Treatment." />
 </section>
 <section name="dff" title="File format" expanded="true">
-  <conditional name="condFile">
       <param name="formatFile" type="select"  label="Select one of the file formats from the list below." help="">
         <option value="plain" selected="true">Plain</option>
         <option value="SDS" >SDS</option>
@@ -73,8 +72,7 @@
         <option value="OpenArray" >OpenArray</option>
         <option value="BioMark" >BioMark</option>
       </param>
-    </conditional>
-    <param name="n" type="integer" min="1" max="1000" value="384" label="Select the number of miR\genes in the raw data" />
+      <param name="n" type="integer" min="1" max="1000" value="384" label="Select the number of miR\genes in the raw data" />
 <!--<param name="collapsedfiles" type="data" format="tabular" label="" />
 <param name="taxons" type="select" optional="true" multiple="true" label="Browse Taxons from Taxonomy">
   <options from_dataset="collapsedfiles">
@@ -85,8 +83,10 @@
 </param>-->
 </section>
 <section name="dc" title="Ct categorization based on a category or a flag value" expanded="true">
-  <param name="Ctmin" type="integer" min="0" max="40" value="14" label="Set up a minimum Ct value" help="Any Ct below your selected value will be labelled as Unreliable." />
-  <param name="Ctmax" type="integer" min="0" max="40" value="32" label="Set up a maximum Ct value" help="Any Ct above your selected value will be labelled as Unreliable."/>
+  <param name="Ctmin" type="integer" min="0" max="40" value="14" label="Set up a minimum Ct value"
+ help="Any Ct below your selected value will be labelled as Unreliable." />
+  <param name="Ctmax" type="integer" min="0" max="40" value="32" label="Set up a maximum Ct value"
+ help="Any Ct above your selected value will be labelled as Unreliable."/>
   <param name="flag" type="select" label="Select TRUE if you want that PIPE-T labels a Ct value as Unreliable on the basis of EXPFAIL flag" help="Data in qPCRset objects will have feature categories (Unreliable, Undetermined) assigned to them based on different Ct criteria.">
       <option value="TRUE">TRUE</option>
       <option value="FALSE">FALSE</option>

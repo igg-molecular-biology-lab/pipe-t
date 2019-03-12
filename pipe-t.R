@@ -1,5 +1,5 @@
 
-cat("\n Started! ")
+cat("\n Started! \n")
 #sessionInfo()
 
 
@@ -25,7 +25,7 @@ library(BBmisc)
 #library(gmp)
 })
 
-cat("\n R libraries...loaded!")
+cat("\n R libraries...loaded!\n")
 
 args = commandArgs(trailingOnly=TRUE)
 dpfiles<-basename(args[1])
@@ -39,17 +39,6 @@ dcCtmax<-args[7]
 dcflag<-args[8]
 x<-args[9]
 normalizationMethod<-args[10]
-#cat("\n format ", format)
-#cat("\n nfeatures ", nfeatures)
-#cat("\n dpfiles ", dpfiles)
-#cat("\n path000 ", path000)
-#cat("\n rawout ", rawout)
-#cat("\n path ", path)
-#cat("\n dcCtmin ", dcCtmin)
-#cat("\n dcCtmax ", dcCtmax)
-#cat("\n dcflag ", dcflag)
-#cat("\n x ", x)
-#cat("\n normalizationMethod ", normalizationMethod)
 if (normalizationMethod=="deltaCt") {
     normalizers<-args[11]
     outputNorm<-args[12]
@@ -57,25 +46,13 @@ if (normalizationMethod=="deltaCt") {
     percentofnastoremove<-args[14]
     outputRemaining<-args[15]
     imputeMethod<-args[16]
-    #cat("\n normalizers ", normalizers)
-    #cat("\n outputNorm ", outputNorm)
-    #cat("\n outputECDF ", outputECDF)
-    #cat("\n percentofnastoremove ", percentofnastoremove)
-    #cat("\n outputRemaining ", outputRemaining)
-    #cat("\n imputeMethod ", imputeMethod)
     if (imputeMethod=="knn") {
       kappa<- args[17]
       macsp<-args[18]
       outputIMP<-args[19]
 
       DEAMethod<-args[20]
-      #cat("\n kappa ", kappa)
-      #cat("\n macsp ", macsp)
-      #cat("\n outputIMP ", outputIMP)
-      #cat("\n DEAMethod ", DEAMethod)
-      #cat("\n Dea ", DEAMethod)
-
-        if (DEAMethod=="ttest") {
+      if (DEAMethod=="ttest") {
           alternative<- args[21]
           paired<-args[22]
           replicates<- args[23]
@@ -84,27 +61,15 @@ if (normalizationMethod=="deltaCt") {
           padjust<-args[26]
           outputDEA<-args[27]
           filtnames<-args[28]
-          #cat("\n alternative ", alternative)
-          #cat("\n paired ", paired)
-          #cat("\n replicates ", replicates)
-          #cat("\n sort ", sort)
-          #cat("\n stringent ", stringent)
-          #cat("\n padjust ", padjust)
-          #cat("\n outputDEA ", outputDEA)
-          #cat("\n filtnames ", filtnames)
         } else {
           outputDEA<-args[21]
           filtnames<-args[22]
-          #cat("\n outputDEA ", outputDEA)
-          #cat("\n filtnames ", filtnames)
         }
     } else {
       #globalmean, modified globalmean, etc
         outputIMP<-args[17]
         DEAMethod<-args[18]
-        #cat("\n outputIMP ", outputIMP)
-        #cat("\n DEAMethod ", DEAMethod)
-          if (DEAMethod=="ttest") {
+        if (DEAMethod=="ttest") {
             alternative<- args[19]
             paired<-args[20]
             replicates<- args[21]
@@ -113,19 +78,9 @@ if (normalizationMethod=="deltaCt") {
             padjust<-args[24]
             outputDEA<-args[25]
             filtnames<-args[26]
-            #cat("\n alternative ", alternative)
-            #cat("\n paired ", paired)
-            #cat("\n replicates ", replicates)
-            #cat("\n sort ", sort)
-            #cat("\n stringent ", stringent)
-            #cat("\n padjust ", padjust)
-            #cat("\n outputDEA ", outputDEA)
-            #cat("\n filtnames ", filtnames)
           } else {
             outputDEA<-args[19]
             filtnames<-args[20]
-            #cat("\n outputDEA ", outputDEA)
-            #cat("\n filtnames ", filtnames)
           }
     }
   }else {
@@ -134,22 +89,14 @@ if (normalizationMethod=="deltaCt") {
     percentofnastoremove<-args[13]
     outputRemaining<-args[14]
     imputeMethod<-args[15]
-    #cat("\n outputNorm ", outputNorm)
-    #cat("\n outputECDF ", outputECDF)
-    #cat("\n percentofnastoremove ", percentofnastoremove)
-    #cat("\n outputRemaining ", outputRemaining)
-    #cat("\n imputeMethod ", imputeMethod)
-
+   
     if (imputeMethod=="knn") {
       kappa<- args[16]
       macsp<-args[17]
       outputIMP<-args[18]
 
       DEAMethod<-args[19]
-      #cat("\n kappa ", kappa)
-      #cat("\n macsp ", macsp)
-      #cat("\n outputIMP ", outputIMP)
-      #cat("\n DEAMethod ", DEAMethod)
+     
       if (DEAMethod=="ttest") {
           alternative<- args[20]
           paired<-args[21]
@@ -159,24 +106,13 @@ if (normalizationMethod=="deltaCt") {
           padjust<-args[25]
           outputDEA<-args[26]
           filtnames<-args[27]
-          #cat("\n alternative ", alternative)
-          #cat("\n paired ", paired)
-          #cat("\n replicates ", replicates)
-          #cat("\n sort ", sort)
-          #cat("\n stringent ", stringent)
-          #cat("\n padjust ", padjust)
-          #cat("\n outputDEA ", outputDEA)
-
         } else {
           outputDEA<-args[20]
           filtnames<-args[21]
-          #cat("\n outputDEA ", outputDEA)
         }
      } else {
         outputIMP<-args[16]
         DEAMethod<-args[17]
-        #cat("\n outputIMP ", outputIMP)
-        #cat("\n DEAMethod ", DEAMethod)
           if (DEAMethod=="ttest") {
             alternative<- args[18]
             paired<-args[19]
@@ -186,35 +122,15 @@ if (normalizationMethod=="deltaCt") {
             padjust<-args[23]
             outputDEA<-args[24]
             filtnames<-args[25]
-            #cat("\n alternative ", alternative)
-            #cat("\n paired ", paired)
-            #cat("\n replicates ", replicates)
-            #cat("\n sort ", sort)
-            #cat("\n stringent ", stringent)
-            #cat("\n padjust ", padjust)
-            #cat("\n outputDEA ", outputDEA)
-            #cat("\n filtnames ", filtnames)
+           
           } else {
             outputDEA<-args[18]
             filtnames<-args[19]
-            #cat("\n outputDEA ", outputDEA)
-            #cat("\n filtnames ", filtnames)
+            
           }
       }
   }
-  cat("\n Initialization completed! ")
-#cat("\n Norma ", as.character(normalizers))
-#cat("\n base name ", dpfiles)
-#cat("\n raw ", rawout)
-#cat("\n paired ", paired)
-#cat("\n rawout ", rawout)
-#cat("\n min ", dcCtmin)
-#cat("\n max ", dcCtmax)
-#cat("\n flag ", dcflag)
-#cat("\n x ", x)
-#cat("\n dirname ", dirname(args[1]))
-#<validator type="metadata" check="sampleName,Treatment" message="We accept only sampleName and Treatment column names at the moment">Wrong format</validator>
-#  <validator type="regex" message="Should be of form name1,name2,name3 e.g U6 snRNA-001973 or U6 snRNA-001973,hsa-miR-328-000543">^[a-z][A-Z][0-9](,[a-z][A-Z][0-9])*$</validator>
+cat("\n Initialization completed! \n")
 
 head(read.delim(file.path(path000, dpfiles), sep="\t"))
 files <- read.delim(file.path(path000, dpfiles), sep="\t")
@@ -445,9 +361,8 @@ normalizedDataset <- normalizeCtDataDav(xFilter, norm="deltaCt",  deltaCt.genes 
 normalizedDataset <- normalizeCtDataDav(xFilter, norm=normalizationMethod)
 
 }
-cat("\n Data normalized correctly! ")
+cat("\n Data normalized correctly! \n")
 write.table(exprs(normalizedDataset), file=outputNorm, quote=FALSE,  row.names=TRUE, col.names=TRUE,sep = "\t")
- #cat("\n arg 7 ", args[7])
 #normalizedDataset
 ####################################################################################################################
 #Check noise reduction by empirical cumulative distribution
@@ -489,9 +404,8 @@ dev.off()
 
 #Two-sample Kolmogorov-Smirnov
 ks.test(vec,gm)
-#cat("\n Significance of noise reduction ",  ks.test(vec,gm)$p.value)
 
-################################################## 6 NAs##################################################
+################################################## Filtering based on number of NAs##################################################
 
 #FILTERING on the basis of NAs
 #qPCRset.R
@@ -502,7 +416,7 @@ ncatn <- as.integer(n.samples(normalizedDataset))*as.integer(percentofnastoremov
 
 qFiltNAs <- filterCtData(normalizedDataset, remove.category=c("Undetermined","Unreliable"), n.category=as.integer(ncatn),remove.name=explode(filtnames, sep = ","))
 
-cat("\n Data filtered correctly! ")
+cat("\n Data filtered correctly! \n")
 
 if (imputeMethod=="knn") {
  imp<-impute.knn(exprs(qFiltNAs) ,k = as.integer(kappa), maxp = as.integer(macsp), rng.seed=362436069)
@@ -523,7 +437,7 @@ if (imputeMethod=="knn") {
  }
 
 }
-cat("\n Imputation completed! ")
+cat("\n Imputation completed! \n")
 
 #write.table(exprs(qFiltNAs), file=outputIMP, quote=FALSE,  row.names=TRUE, col.names=TRUE,sep = "\t")
 png(outputIMP,    # create PNG for the heat map
@@ -542,7 +456,7 @@ if (DEAMethod=="ttest") {
  write.table(DEG, file=outputDEA, quote=FALSE,  row.names=TRUE, col.names=TRUE,sep = "\t")
 } else {
  DEG<-RP(exprs(qFiltNAs), as.numeric(pData(qFiltNAs)$Treatment)-1, num.perm = 1000,logged = TRUE, gene.names = featureNames(qFiltNAs), plot = FALSE, rand = 123)
- write.table(DEG[1:6], file=outputDEA, quote=FALSE,  row.names=TRUE, col.names=TRUE,sep = "\t")
+ write.table(as.data.frame(DEG[1:6]), file=outputDEA, quote=FALSE,  row.names=TRUE, col.names=TRUE,sep = "\t")
 }
-cat("\n Differential expression analysis completed correctly! ")
-cat("\n Workflow ended correctly! ")
+cat("\n Differential expression analysis completed correctly! \n")
+cat("\n Workflow ended correctly! \n")
