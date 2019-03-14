@@ -171,7 +171,7 @@ biological replicates will result in the final result being Undetermined. If str
   <data format="png" name="galaxy_output2" label="2_Boxplot after data categorization"/>
   <data format="txt" name="galaxy_output3" label="3_deltaCt_Normalized"/>
   <data format="png" name="galaxy_output4" label="4_ECDF"/>
-  <data format="png" name="galaxy_output6" label="5_Boxplot after data imputation"/>
+  <data format="png" name="galaxy_output6" label="5_Boxplot after data normalization"/>
   <data format="txt" name="galaxy_output5" label="6_2^-deltaCt"/>
   <data format="txt" name="galaxy_output7" label="7_Differentially Expressed miRs\genes"/>
 </outputs>
@@ -185,7 +185,7 @@ OUTPUTS: and returs
 2) A PNG file with a boxplot of Ct data after data categorization for each sample
 3) A txt file with deltaCt data after data normalization
 4) A PNG file with the Empirical cumulative distribution before and after data normalization
-5) A PNG file after data filtering based on a percentage of missing values (NA)
+5) A PNG file with boxplot of deltaCt data after data normalization
 6) A txt file after imputation of missing values
 7) A txt file with a number statistics about the significance of each miR\gene
 ]]>

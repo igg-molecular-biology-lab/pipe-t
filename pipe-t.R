@@ -363,6 +363,8 @@ normalizedDataset <- normalizeCtDataDav(xFilter, norm=normalizationMethod)
 }
 cat("\n Data normalized correctly! \n")
 write.table(exprs(normalizedDataset), file=outputNorm, quote=FALSE,  row.names=TRUE, col.names=TRUE,sep = "\t")
+
+
 #normalizedDataset
 ####################################################################################################################
 #Check noise reduction by empirical cumulative distribution
@@ -405,6 +407,16 @@ dev.off()
 #Two-sample Kolmogorov-Smirnov
 ks.test(vec,gm)
 
+
+#write.table(exprs(qFiltNAs), file=outputIMP, quote=FALSE,  row.names=TRUE, col.names=TRUE,sep = "\t")
+png(outputIMP,    # create PNG for the heat map
+  width = 10*300,        # 5 x 300 pixels
+  height = 10*300,
+  res = 300,            # 300 pixels per inch
+  pointsize = 8)
+  plotCtBoxes(normalizedDataset, stratify=NULL, xlab = "Samples", ylab="DeltaCt", names=as.character(seq(1, ncol(normalizedDataset), 1)))       # smaller font size
+dev.off()
+
 ################################################## Filtering based on number of NAs##################################################
 
 #FILTERING on the basis of NAs
@@ -439,14 +451,7 @@ if (imputeMethod=="knn") {
 }
 cat("\n Imputation completed! \n")
 
-#write.table(exprs(qFiltNAs), file=outputIMP, quote=FALSE,  row.names=TRUE, col.names=TRUE,sep = "\t")
-png(outputIMP,    # create PNG for the heat map
-  width = 10*300,        # 5 x 300 pixels
-  height = 10*300,
-  res = 300,            # 300 pixels per inch
-  pointsize = 8)
-  plotCtBoxes(qFiltNAs, stratify=NULL, xlab = "Samples", ylab="DeltaCt", names=as.character(seq(1, ncol(qFiltNAs), 1)))       # smaller font size
-dev.off()
+
 
 write.table(2^-exprs(qFiltNAs), file=outputRemaining, quote=FALSE,  row.names=TRUE, col.names=TRUE, sep = "\t")
 
