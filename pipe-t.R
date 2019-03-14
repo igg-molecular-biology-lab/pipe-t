@@ -150,16 +150,16 @@ switch(format,
       raw<- readCtData(files = files$sampleName, format="SDS",column.info=columns, path = path, sample.info=phenoData, n.features=as.numeric(nfeatures))
     },
     "LightCycler"={
-      raw <- readCtData(files = files$sampleName,, path = path, format = "LightCycler", n.features = as.numeric(nfeatures))
+      raw <- readCtData(files = files$sampleName, path = path, format = "LightCycler", n.features = as.numeric(nfeatures))
     },
     "CFX"={
-      raw <- readCtData(files = files$sampleName,, path = path, format = "CFX", n.features = as.numeric(nfeatures))
+      raw <- readCtData(files = files$sampleName, path = path, format = "CFX", n.features = as.numeric(nfeatures))
     },
     "OpenArray"={
-      raw <- readCtData(files = files$sampleName,, path = path, format = "OpenArray", n.features = as.numeric(nfeatures))
+      raw <- readCtData(files = files$sampleName, path = path, format = "OpenArray", n.features = as.numeric(nfeatures))
     },
     "BioMark"={
-      raw <- readCtData(files = files$sampleName,, path = path, format = "BioMark", n.features = as.numeric(nfeatures))
+      raw <- readCtData(files = files$sampleName, path = path, format = "BioMark", n.features = as.numeric(nfeatures))
     },
     stop("Enter something that switches me!")
 )
