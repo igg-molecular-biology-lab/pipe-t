@@ -455,7 +455,7 @@ if (DEAMethod=="ttest") {
  DEG<-ttestCtData(qFiltNAs, groups = files$Treatment, alternative = alternative, paired = ifelse(paired=="TRUE", TRUE, FALSE), replicates =ifelse(replicates=="TRUE", TRUE, FALSE), sort=ifelse(sort=="TRUE", TRUE, FALSE), stringent=ifelse(stringent=="TRUE", TRUE, FALSE), p.adjust=padjust)
  write.table(DEG, file=outputDEA, quote=FALSE,  row.names=TRUE, col.names=TRUE,sep = "\t")
 } else {
- DEG<-RP(exprs(qFiltNAs), as.numeric(pData(qFiltNAs)$Treatment)-1, num.perm = 1000,logged = TRUE, gene.names = featureNames(qFiltNAs), plot = FALSE, rand = 123)
+ DEG<-RP(exprs(qFiltNAs), as.numeric(pData(qFiltNAs)$Treatment)-1, num.perm = 1000,logged = TRUE, gene.names = featureNames(qFiltNAs), huge=TRUE, plot = FALSE, rand = 123)
  write.table(as.data.frame(DEG[1:6]), file=outputDEA, quote=FALSE,  row.names=TRUE, col.names=TRUE,sep = "\t")
 }
 cat("\n Differential expression analysis completed correctly! \n")
