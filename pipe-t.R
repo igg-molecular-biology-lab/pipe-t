@@ -475,7 +475,8 @@ if (DEAMethod=="ttest") {
  #Differential expression analysis (paired t test+BH). Returns Fold change in linear scale.
  DEG<-ttestCtData(qFiltNAs, groups = files$Treatment, alternative = alternative, paired = ifelse(paired=="TRUE", TRUE, FALSE), replicates =ifelse(replicates=="TRUE", TRUE, FALSE), sort=ifelse(sort=="TRUE", TRUE, FALSE), stringent=ifelse(stringent=="TRUE", TRUE, FALSE), p.adjust=padjust)
  write.table(DEG, file=outputDEA, quote=FALSE,  row.names=TRUE, col.names=TRUE,sep = "\t")
-} else {
+} 
+if (DEAMethod=="rp") {
  DEG<-RP(exprs(qFiltNAs), as.numeric(pData(qFiltNAs)$Treatment)-1, num.perm = 1000,logged = TRUE, gene.names = featureNames(qFiltNAs), huge=TRUE, plot = FALSE, rand = 123)
  write.table(DEG[1:5], file=outputDEA, quote=FALSE,  row.names=TRUE, col.names=TRUE,sep = "\t")
 }
