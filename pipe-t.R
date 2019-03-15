@@ -135,12 +135,15 @@ cat("\n Initialization completed! \n")
 head(read.delim(file.path(path000, dpfiles), sep="\t"))
 files <- read.delim(file.path(path000, dpfiles), sep="\t")
 switch(format,
-    "plain"={
+  "viia7"={
       columns<- list(flag="EXPFAIL", feature="Target.Name",  position="Well.Position", Ct="CT")
       metadata <- data.frame(labelDescription = c("sampleName", "Treatment"),  row.names = c("sampleName", "Treatment"))
       phenoData <- new("AnnotatedDataFrame", data = files, varMetadata = metadata)
       rownames(phenoData)=as.vector(files$sampleName)
       raw<- readCtData(files = as.vector(files$sampleName), header=TRUE,  format="plain", column.info=columns, path = path,sample.info=phenoData,n.features = as.numeric(nfeatures))
+    },
+    "plain"={
+      raw<- readCtData(files = as.vector(files$sampleName), header=TRUE,  format="plain", path = path,n.features = as.numeric(nfeatures))
     },
     "SDS"={
       columns<- list(feature=3, Ct=6, flag=11)
