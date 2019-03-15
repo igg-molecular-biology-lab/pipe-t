@@ -172,8 +172,11 @@ write.table(exprs(raw), file=rawout, quote=FALSE,  row.names=TRUE, col.names=TRU
 ####################################################################################################################
 #Set a new categories for the values meeting two criterions
 switch(format,
-    "plain"={
+    "viia7"={
       unreliable<-setCategory(raw, Ct.max=dcCtmax, Ct.min=dcCtmin,replicates=FALSE,  flag=dcflag, flag.out="Y", quantile=NULL)
+    },
+    "plain"={
+      unreliable<-setCategory(raw, Ct.max=dcCtmax, Ct.min=dcCtmin,replicates=FALSE,  flag=dcflag, flag.out="Flagged", quantile=NULL)
     },
     "SDS"={
       unreliable<-setCategory(raw, Ct.max=dcCtmax, Ct.min=dcCtmin,replicates=FALSE,  flag=dcflag, flag.out="TRUE", quantile=NULL)
