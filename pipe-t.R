@@ -143,7 +143,9 @@ switch(format,
       raw<- readCtData(files = as.vector(files$sampleName), header=TRUE,  format="plain", column.info=columns, path = path,sample.info=phenoData,n.features = as.numeric(nfeatures))
     },
     "plain"={
-      raw<- readCtData(files = as.vector(files$sampleName), header=TRUE,  format="plain", path = path,n.features = as.numeric(nfeatures))
+      metadata <- data.frame(labelDescription = c("sampleName", "Treatment"),  row.names = c("sampleName", "Treatment"))
+      phenoData <- new("AnnotatedDataFrame", data = files, varMetadata = metadata)
+      raw<- readCtData(files = as.vector(files$sampleName), header=TRUE,  format="plain", path = path, sample.info=phenoData,n.features = as.numeric(nfeatures))
     },
     "SDS"={
       columns<- list(feature=3, Ct=6, flag=11)
@@ -153,16 +155,24 @@ switch(format,
       raw<- readCtData(files = files$sampleName, format="SDS",column.info=columns, path = path, sample.info=phenoData, n.features=as.numeric(nfeatures))
     },
     "LightCycler"={
-      raw <- readCtData(files = files$sampleName, path = path, format = "LightCycler", n.features = as.numeric(nfeatures))
+      metadata <- data.frame(labelDescription = c("sampleName", "Treatment"),  row.names = c("sampleName", "Treatment"))
+      phenoData <- new("AnnotatedDataFrame", data = files, varMetadata = metadata)
+      raw <- readCtData(files = files$sampleName, path = path, format = "LightCycler", sample.info=phenoData,n.features = as.numeric(nfeatures))
     },
     "CFX"={
-      raw <- readCtData(files = files$sampleName, path = path, format = "CFX", n.features = as.numeric(nfeatures))
+      metadata <- data.frame(labelDescription = c("sampleName", "Treatment"),  row.names = c("sampleName", "Treatment"))
+      phenoData <- new("AnnotatedDataFrame", data = files, varMetadata = metadata)
+      raw <- readCtData(files = files$sampleName, path = path, format = "CFX", sample.info=phenoData,n.features = as.numeric(nfeatures))
     },
     "OpenArray"={
-      raw <- readCtData(files = files$sampleName, path = path, format = "OpenArray", n.features = as.numeric(nfeatures))
+      metadata <- data.frame(labelDescription = c("sampleName", "Treatment"),  row.names = c("sampleName", "Treatment"))
+      phenoData <- new("AnnotatedDataFrame", data = files, varMetadata = metadata)
+      raw <- readCtData(files = files$sampleName, path = path, format = "OpenArray", sample.info=phenoData,n.features = as.numeric(nfeatures))
     },
     "BioMark"={
-      raw <- readCtData(files = files$sampleName, path = path, format = "BioMark", n.features = as.numeric(nfeatures))
+      metadata <- data.frame(labelDescription = c("sampleName", "Treatment"),  row.names = c("sampleName", "Treatment"))
+      phenoData <- new("AnnotatedDataFrame", data = files, varMetadata = metadata)
+      raw <- readCtData(files = files$sampleName, path = path, format = "BioMark", sample.info=phenoData, n.features = as.numeric(nfeatures))
     },
     stop("Enter something that switches me!")
 )
