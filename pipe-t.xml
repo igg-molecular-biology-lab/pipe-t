@@ -72,8 +72,8 @@
 <inputs>
 <section name="dp" title="Data parsing" expanded="true">
   <param name="list_files" type="data_collection" collection_type="list" value="" label="Select a collection list of TaqMan
-  Low Density Array files in the history tab" help="Collection should be of category List and datasets should contain at least the fields: EXPFAIL, Target Name,  Well Position, and CT. "/>
- 	<param name="files" type="data" format="txt" label="Select one of the files in the history tab" help="File should contains at least the fields: sampleName and Treatment." />
+  Low Density Array files in the history tab" help="Collection should be of category List. "/>
+ 	<param name="files" type="data" format="txt" label="Select one of the files in the history tab" help="File should contains only the fields: sampleName and Treatment." />
 </section>
 <section name="dff" title="File format" expanded="true">
       <param name="formatFile" type="select"  label="Select one of the file formats from the list below." help="">
@@ -85,7 +85,7 @@
         <option value="OpenArray" >OpenArray</option>
         <option value="BioMark" >BioMark</option>
       </param>
-      <param name="n" type="integer" min="1" max="1000" value="384" label="Select the number of miR\genes in the raw data" />
+      <param name="n" type="integer" min="1" max="1000" value="384" label="Type the number of miR\genes with a Ct value" />
 <!--<param name="collapsedfiles" type="data" format="tabular" label="" />
 <param name="taxons" type="select" optional="true" multiple="true" label="Browse Taxons from Taxonomy">
   <options from_dataset="collapsedfiles">
@@ -95,12 +95,12 @@
   </options>
 </param>-->
 </section>
-<section name="dc" title="Ct categorization based on a category or a flag value" expanded="true">
+<section name="dc" title="Categorization based on a category or a flag value" expanded="true">
   <param name="Ctmin" type="integer" min="0" max="40" value="14" label="Set up a minimum Ct value"
  help="Any Ct below your selected value will be labelled as Unreliable." />
   <param name="Ctmax" type="integer" min="0" max="40" value="32" label="Set up a maximum Ct value"
  help="Any Ct above your selected value will be labelled as Unreliable."/>
-  <param name="flag" type="select" label="Select TRUE if you want that PIPE-T labels a Ct value as Unreliable on the basis of EXPFAIL flag" help="Data in qPCRset objects will have feature categories (Unreliable, Undetermined) assigned to them based on different Ct criteria.">
+  <param name="flag" type="select" label="Select TRUE if you want that PIPE-T categorizes a Ct value as Unreliable on the basis of EXPFAIL flag" help="Data in qPCRset objects will have feature categories (Unreliable, Undetermined) assigned to them based on different Ct criteria.">
       <option value="TRUE">TRUE</option>
       <option value="FALSE">FALSE</option>
   </param>
@@ -134,15 +134,15 @@
       <option value="knn">K-Nearest Neighbour</option>
     </param>
     <when value="knn">
-      <param name="k" type="integer" min="1" max="100" value="10" label="Select a number of neighbors to be used in the KNN imputation method" />
-      <param name="maxp" type="integer" min="1" max="2000" value="1500" label="Select the largest number of miR\gene imputed using the KNN method." help="Larger numbers are divided by two-means clustering (recursively)
+      <param name="k" type="integer" min="1" max="100" value="10" label="Type a number of neighbors to use by the KNN imputation method" />
+      <param name="maxp" type="integer" min="1" max="2000" value="1500" label="Type the largest number of miR\gene imputed by the KNN method." help="Larger numbers are divided by two-means clustering (recursively)
       prior to imputation. "/>
     </when>
   </conditional>
   </section>
   <section name="de" title="Differential expression analysis" expanded="true">
     <conditional name="condDEA">
-      <param name="method" type="select"  label="Select one of the methods from the list below.">
+      <param name="method" type="select"  label="Select one of the methods from the list below or NONE.">
         <option value="ttest" selected="true">T-test and fold change</option>
         <option value="rp">Rank Product (Only for unpaired data)</option>
         <option value="none">NONE</option>
@@ -213,19 +213,23 @@ OUTPUTS: and returs
         note = {R package version 1.36.0},
         url = {http://bioconductor.org/packages/HTqPCR/},
     }
+        </citation>
+        <citation type="bibtex">
     @Manual{impute,
         title = {Impute: Imputation for microarray data.},
         author = {Trevor Hastie, Robert Tibshirani, Balasubramanian Narasimhan, Gilbert Chu},
         year = {2018},
-        note = {R package version 1.40.0},
+        note = {R package version 1.56.0},
         url = {http://bioconductor.org/packages/impute/},
     }
+        </citation>
+        <citation type="bibtex">
     @Manual{RankProd,
         title = {RankProd:  Rank Product method for identifying differentially expressed
 genes with application in meta-analysis.},
         author = {Francesco Del Carratore},
         year = {2018},
-        note = {R package version 2.38.0},
+        note = {R package version 3.8.0},
         url = {http://bioconductor.org/packages/RankProd/},
     }
         </citation>
