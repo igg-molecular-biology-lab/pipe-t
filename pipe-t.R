@@ -22,6 +22,7 @@ library(RankProd)
 library(methods)
 library(impute)
 library(BBmisc)
+library(affy)
 #library(gmp)
 })
 
