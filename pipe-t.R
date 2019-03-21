@@ -146,6 +146,7 @@ switch(format,
     "plain"={
       metadata <- data.frame(labelDescription = c("sampleName", "Treatment"),  row.names = c("sampleName", "Treatment"))
       phenoData <- new("AnnotatedDataFrame", data = files, varMetadata = metadata)
+      rownames(phenoData)=as.vector(files$sampleName)
       raw<- readCtData(files = as.vector(files$sampleName), header=FALSE,  format="plain", path = path, sample.info=phenoData,n.features = as.numeric(nfeatures))
     },
     "SDS"={
@@ -158,21 +159,25 @@ switch(format,
     "LightCycler"={
       metadata <- data.frame(labelDescription = c("sampleName", "Treatment"),  row.names = c("sampleName", "Treatment"))
       phenoData <- new("AnnotatedDataFrame", data = files, varMetadata = metadata)
+      rownames(phenoData)=as.vector(files$sampleName)
       raw <- readCtData(files = files$sampleName, path = path, format = "LightCycler", sample.info=phenoData,n.features = as.numeric(nfeatures))
     },
     "CFX"={
       metadata <- data.frame(labelDescription = c("sampleName", "Treatment"),  row.names = c("sampleName", "Treatment"))
       phenoData <- new("AnnotatedDataFrame", data = files, varMetadata = metadata)
+      rownames(phenoData)=as.vector(files$sampleName)
       raw <- readCtData(files = files$sampleName, path = path, format = "CFX", sample.info=phenoData,n.features = as.numeric(nfeatures))
     },
     "OpenArray"={
       metadata <- data.frame(labelDescription = c("sampleName", "Treatment"),  row.names = c("sampleName", "Treatment"))
       phenoData <- new("AnnotatedDataFrame", data = files, varMetadata = metadata)
+      rownames(phenoData)=as.vector(files$sampleName)
       raw <- readCtData(files = files$sampleName, path = path, format = "OpenArray", sample.info=phenoData,n.features = as.numeric(nfeatures))
     },
     "BioMark"={
       metadata <- data.frame(labelDescription = c("sampleName", "Treatment"),  row.names = c("sampleName", "Treatment"))
       phenoData <- new("AnnotatedDataFrame", data = files, varMetadata = metadata)
+      rownames(phenoData)=as.vector(files$sampleName)
       raw <- readCtData(files = files$sampleName, path = path, format = "BioMark", sample.info=phenoData, n.features = as.numeric(nfeatures))
     },
     stop("Enter something that switches me!")
