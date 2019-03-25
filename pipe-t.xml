@@ -8,7 +8,7 @@
   <requirement type="package" version="3.8.0">bioconductor-rankprod</requirement>
   <requirement type="package" version="1.56.0">bioconductor-impute</requirement>
 <requirement type="package" version="1.11.0">r-bbmisc</requirement>
-<requirement type="package">r-psych</requirement>
+<requirement type="package" version="1.8.3.3">r-psych</requirement>
 </requirements>
 <stdio>
    <exit_code range="1:" />
