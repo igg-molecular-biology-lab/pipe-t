@@ -379,12 +379,35 @@ function(q,
 	q
 }
 
-if (normalizationMethod=="deltaCt") {
+
+switch(normalizationMethod,
+    "deltaCt"={
+      normalizedDataset <- normalizeCtDataDav(xFilter, norm="deltaCt",  deltaCt.genes =explode(normalizers, sep = ","))
+    },
+    "quantile"={
+      normalizedDataset <- normalizeCtDataDav(xFilter, norm=normalizationMethod)
+    },
+    "scale.rankinvariant"={
+      normalizedDataset <- normalizeCtDataDav(na.omit(xFilter), norm=normalizationMethod)
+    },
+    "norm.rankinvariant"={
+       normalizedDataset <- normalizeCtDataDav(na.omit(xFilter), norm=normalizationMethod)
+    },
+    "geometric.mean"={
+      normalizedDataset <- normalizeCtDataDav(xFilter, norm=normalizationMethod)
+    },
+    "globalmean"={
+      normalizedDataset <- normalizeCtDataDav(xFilter, norm=normalizationMethod)
+    },
+    stop("Enter something that switches me!")
+)
+
+  #if (normalizationMethod=="deltaCt") {
 #normalize CT data
 
-normalizedDataset <- normalizeCtDataDav(xFilter, norm="deltaCt",  deltaCt.genes =explode(normalizers, sep = ","))
-} else {
-normalizedDataset <- normalizeCtDataDav(xFilter, norm=normalizationMethod)
+#normalizedDataset <- normalizeCtDataDav(xFilter, norm="deltaCt",  deltaCt.genes =explode(normalizers, sep = ","))
+#} else {
+#normalizedDataset <- normalizeCtDataDav(xFilter, norm=normalizationMethod)
 
 }
 cat("\n Data normalized correctly! \n")
