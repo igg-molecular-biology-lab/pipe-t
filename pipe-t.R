@@ -350,12 +350,12 @@ function(q,
 									xx <- subset(x, x<Ct.max)
 									geometric.mean(xx)})
 			# Which sample to scale to
-			if (missing(geo.mean.ref))
-				geo.mean.ref <- 1
+			#if (missing(geo.mean.ref))
+			#	geo.mean.ref <- 1
 			# Calculate the scaling factor
-			geo.scale	<- geo.mean/geo.mean[geo.mean.ref]
+			#geo.scale	<- geo.mean/geo.mean[geo.mean.ref]
 			# Adjust the data accordingly
-			data.norm <- t(t(data) - geo.scale)
+			data.norm <- t(t(data) - geo.mean)
 			if (verbose) {
 				cat(c("Scaling Ct values\n\tUsing geometric mean within each sample\n"))
 				cat(c("\tScaling factors:", format(geo.scale, digits=3), "\n"))
