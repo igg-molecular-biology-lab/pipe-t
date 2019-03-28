@@ -358,7 +358,7 @@ function(q,
 			data.norm <- t(t(data) - geo.mean)
 			if (verbose) {
 				cat(c("Scaling Ct values\n\tUsing geometric mean within each sample\n"))
-				cat(c("\tScaling factors:", format(geo.scale, digits=3), "\n"))
+				#cat(c("\tScaling factors:", format(geo.scale, digits=3), "\n"))
 			}
 		} # switch
     ,globalmean = {
