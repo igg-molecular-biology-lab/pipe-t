@@ -348,7 +348,7 @@ function(q,
 			#						2^mean(xx)})
       geo.mean	<- apply(data, 2, function(x) {
 									xx <- subset(x, x<Ct.max)
-									geometric.mean(xx)})
+									2^geometric.mean(xx)})
 			# Which sample to scale to
 			if (missing(geo.mean.ref))
 				geo.mean.ref <- 1
