@@ -388,10 +388,10 @@ switch(normalizationMethod,
       normalizedDataset <- normalizeCtDataDav(xFilter, norm=normalizationMethod)
     },
     "scale.rankinvariant"={
-      normalizedDataset <- normalizeCtDataDav(na.omit(xFilter), norm=normalizationMethod)
+      normalizedDataset <- normalizeCtDataDav(xFilter, norm=normalizationMethod)
     },
     "norm.rankinvariant"={
-       normalizedDataset <- normalizeCtDataDav(na.omit(xFilter), norm=normalizationMethod)
+       normalizedDataset <- normalizeCtDataDav(xFilter, norm=normalizationMethod)
     },
     "geometric.mean"={
       normalizedDataset <- normalizeCtDataDav(xFilter, norm=normalizationMethod)
