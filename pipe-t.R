@@ -409,7 +409,7 @@ switch(normalizationMethod,
 #} else {
 #normalizedDataset <- normalizeCtDataDav(xFilter, norm=normalizationMethod)
 
-}
+#}
 cat("\n Data normalized correctly! \n")
 write.table(exprs(normalizedDataset), file=outputNorm, quote=FALSE,  row.names=TRUE, col.names=TRUE,sep = "\t")
 
