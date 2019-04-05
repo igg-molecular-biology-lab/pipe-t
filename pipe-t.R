@@ -507,7 +507,7 @@ switch(imputeMethod,
         }
       }
     },
-     "cubic"={
+    "cubic"={
      exprs(qFiltNAs) <- na.spline(exprs(qFiltNAs))
     },
     "mean"={
@@ -521,27 +521,7 @@ switch(imputeMethod,
     },
     stop("Enter something that switches me!")
 )
-#unrel
 
-if (imputeMethod=="knn") {
- imp<-impute.knn(exprs(qFiltNAs) ,k = as.integer(kappa), maxp = as.integer(macsp), rng.seed=362436069)
- exprs(qFiltNAs)=imp$data
-} else {
- #Mesdagh
- #sostituisce a NA -1000
- for (i in 1:nrow(exprs(qFiltNAs))){
-   for(j in 1:ncol(exprs(qFiltNAs))){
-     if(is.na(exprs(qFiltNAs)[i,j])>0)exprs(qFiltNAs)[i,j]<- -1000
-   }
- }
- temp<-exprs(qFiltNAs)
- for (i in 1:nrow(exprs(qFiltNAs))){
-   for(j in 1:ncol(exprs(qFiltNAs))){
-     if(exprs(qFiltNAs)[i,j]<(-100))exprs(qFiltNAs)[i,j]<- max(temp[i,])+1
-   }
- }
-
-}
 cat("\n Imputation completed! \n")
 
 
