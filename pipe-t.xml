@@ -9,6 +9,7 @@
   <requirement type="package" version="1.56.0">bioconductor-impute</requirement>
 <requirement type="package" version="1.11.0">r-bbmisc</requirement>
 <requirement type="package" version="1.8.4">r-psych</requirement>
+<requirement type="package" version="1.8_1">r-zoo</requirement>
 </requirements>
 <stdio>
    <exit_code range="1:" />

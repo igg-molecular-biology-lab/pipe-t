@@ -25,6 +25,7 @@ library(BBmisc)
 library(affy)
 library(psych)
 #library(gmp)
+library(zoo)
 })
 
 cat("\n R libraries...loaded!\n")
@@ -251,9 +252,11 @@ function(q,
 	# Some general stuff that will be used by both rank.invariant methods
 	if (method %in% c("scale.rankinvariant", "norm.rankinvariant")) {
 		# Index to use for too high Ct values
-		Ct.index	<- data>Ct.max
+		#Ct.index	<- data>Ct.max
 		data.Ctmax	<- data
-		data.Ctmax[Ct.index]	<- NA
+    Ct.index	<- is.na(data)
+		#data.Ctmax[Ct.index]	<- NA
+    data<-na.spline(data)
 		# Define what to rank against
 		if (rank.type=="pseudo.median") {
 			ref.data	<- apply(data.Ctmax, 1, median, na.rm=TRUE)
