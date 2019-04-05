@@ -408,7 +408,7 @@ switch(normalizationMethod,
     },
     stop("Enter something that switches me!")
 )
-tr
+
   #if (normalizationMethod=="deltaCt") {
 #normalize CT data
 
@@ -485,6 +485,43 @@ ncatn <- as.integer(n.samples(normalizedDataset))*as.integer(percentofnastoremov
 qFiltNAs <- filterCtData(normalizedDataset, remove.category=c("Undetermined","Unreliable"), n.category=as.integer(ncatn),remove.name=explode(filtnames, sep = ","))
 
 cat("\n Data filtered correctly! \n")
+
+
+switch(imputeMethod,
+    "knn"={
+     imp<-impute.knn(exprs(qFiltNAs) ,k = as.integer(kappa), maxp = as.integer(macsp), rng.seed=362436069)
+      exprs(qFiltNAs)=imp$data
+    },
+    "mestdagh"={
+     #Mesdagh
+      #sostituisce a NA -1000
+      for (i in 1:nrow(exprs(qFiltNAs))){
+        for(j in 1:ncol(exprs(qFiltNAs))){
+          if(is.na(exprs(qFiltNAs)[i,j])>0)exprs(qFiltNAs)[i,j]<- -1000
+        }
+      }
+      temp<-exprs(qFiltNAs)
+      for (i in 1:nrow(exprs(qFiltNAs))){
+        for(j in 1:ncol(exprs(qFiltNAs))){
+          if(exprs(qFiltNAs)[i,j]<(-100))exprs(qFiltNAs)[i,j]<- max(temp[i,])+1
+        }
+      }
+    },
+     "cubic"={
+     exprs(qFiltNAs) <- na.spline(exprs(qFiltNAs))
+    },
+    "mean"={
+      exprs(qFiltNAs)<-impute(exprs(qFiltNAs),mean)
+    },
+    "median"={
+      exprs(qFiltNAs)<-impute(exprs(qFiltNAs),median)
+    },
+    "nondetects"={
+      qFiltNAs <- qpcrImpute(qFiltNAs, outform=c("Single"),linkglm = c("logit"))
+    },
+    stop("Enter something that switches me!")
+)
+#unrel
 
 if (imputeMethod=="knn") {
  imp<-impute.knn(exprs(qFiltNAs) ,k = as.integer(kappa), maxp = as.integer(macsp), rng.seed=362436069)

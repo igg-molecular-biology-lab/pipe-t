@@ -138,6 +138,10 @@
     <param name="format" type="select"  label="Select one of the imputation methods from the list below." help="">
       <option value="mestdagh" selected="true">Mestdagh</option>
       <option value="knn">K-Nearest Neighbour</option>
+      <option value="mean">Mean</option>
+      <option value="median">Median</option>
+      <option value="cubic">Cubic Spline</option>
+      <option value="nondetects">Non-detects</option>
     </param>
     <when value="knn">
       <param name="k" type="integer" min="1" max="100" value="10" label="Type a number of neighbors to use by the KNN imputation method" />
