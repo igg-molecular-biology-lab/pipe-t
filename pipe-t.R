@@ -401,7 +401,7 @@ switch(normalizationMethod,
     },
     stop("Enter something that switches me!")
 )
-
+tr
   #if (normalizationMethod=="deltaCt") {
 #normalize CT data
 

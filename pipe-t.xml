@@ -110,7 +110,7 @@
   <conditional name="condNorm">
     <param name="normMethod" type="select" label="Select one of the normalization methods from the list below." help="Normalization is important to reduce technical variability from the data.">
       <option value="globalmean" selected="true">Global mean</option>
-      <option value="deltaCt">DeltaCt method with house keeping</option>
+      <option value="deltaCt">DeltaCt method (housekeeping genes)</option>
       <option value="geometric.mean">Modified global mean</option>
       <option value="quantile">Quantile</option>
       <option value="norm.rankinvariant">Rank invariant</option>
