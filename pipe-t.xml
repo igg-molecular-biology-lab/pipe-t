@@ -10,6 +10,10 @@
 <requirement type="package" version="1.11.0">r-bbmisc</requirement>
 <requirement type="package" version="1.8.4">r-psych</requirement>
 <requirement type="package" version="1.8_1">r-zoo</requirement>
+<requirement type="package" version="2.10.0">bioconductor-nondetects</requirement>
+<requirement type="package" version="4.1_1">r-hmisc</requirement>
+<requirement type="package" version="1.4">r-missforest</requirement>
+<requirement type="package" version="3.4.0">r-mice</requirement>
 </requirements>
 <stdio>
    <exit_code range="1:" />
