@@ -487,7 +487,7 @@ qFiltNAs <- filterCtData(normalizedDataset, remove.category=c("Undetermined","Un
 
 cat("\n Data filtered correctly! \n")
 
-
+if (is.na(exprs(qFiltNAs))){
 switch(imputeMethod,
     "knn"={
      imp<-impute.knn(exprs(qFiltNAs) ,k = as.integer(kappa), maxp = as.integer(macsp), rng.seed=362436069)
@@ -524,7 +524,9 @@ switch(imputeMethod,
 )
 
 cat("\n Imputation completed! \n")
-
+}else{
+  cat("\n Nothing to impute! \n")
+}
 
 write.table(2^-exprs(qFiltNAs), file=outputRemaining, quote=FALSE,  row.names=TRUE, col.names=TRUE, sep = "\t")
 
