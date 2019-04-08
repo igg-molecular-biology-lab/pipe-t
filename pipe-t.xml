@@ -25,7 +25,7 @@
     #end for
 
     #if str( $dn.condNorm.normMethod ) == "deltaCt":
-      #if str( $di.condImpute.format ) == "mestdagh":
+      #if str( $di.condImpute.format ) == "mestdagh" or str( $di.condImpute.format ) == "mean" or str( $di.condImpute.format ) == "median" or str( $di.condImpute.format ) == "nondetects" or str( $di.condImpute.format ) == "cubic": 
           #if str( $de.condDEA.method ) == "ttest":
               Rscript $__tool_directory__/pipe-t.R $dp.files "$dff.formatFile" $dff.n $galaxy_output1 "$__tool_directory__/Symlink" $dc.Ctmin $dc.Ctmax $dc.flag $galaxy_output2 $dn.condNorm.normMethod "$dn.condNorm.normalizers" $galaxy_output3 $galaxy_output4 $df.percent $galaxy_output5 $di.condImpute.format $galaxy_output6 $de.condDEA.method $de.condDEA.alternative $de.condDEA.paired $de.condDEA.replicates $de.condDEA.sort $de.condDEA.stringent $de.condDEA.padjust $galaxy_output7 "$df.filtname";
           #end if
@@ -49,7 +49,7 @@
           #end if
       #end if
     #else
-      #if str( $di.condImpute.format ) == "mestdagh":
+      #if str( $di.condImpute.format ) == "mestdagh" or str( $di.condImpute.format ) == "mean" or str( $di.condImpute.format ) == "median" or str( $di.condImpute.format ) == "nondetects" or str( $di.condImpute.format ) == "cubic":
           #if str( $de.condDEA.method ) == "ttest":
               Rscript $__tool_directory__/pipe-t.R $dp.files "$dff.formatFile" $dff.n $galaxy_output1 "$__tool_directory__/Symlink" $dc.Ctmin $dc.Ctmax $dc.flag $galaxy_output2 $dn.condNorm.normMethod $galaxy_output3 $galaxy_output4 $df.percent $galaxy_output5 $di.condImpute.format $galaxy_output6 $de.condDEA.method $de.condDEA.alternative $de.condDEA.paired $de.condDEA.replicates $de.condDEA.sort $de.condDEA.stringent $de.condDEA.padjust $galaxy_output7 "$df.filtname";
           #end if
