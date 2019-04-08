@@ -73,7 +73,7 @@ if (normalizationMethod=="deltaCt") {
           filtnames<-args[22]
         }
     } else {
-      #globalmean, modified globalmean, etc
+      #mean, median, nondetects, cubic 
         outputIMP<-args[17]
         DEAMethod<-args[18]
         if (DEAMethod=="ttest") {
@@ -118,6 +118,7 @@ if (normalizationMethod=="deltaCt") {
           filtnames<-args[21]
         }
      } else {
+       #mean, median, nondetects, cubic 
         outputIMP<-args[16]
         DEAMethod<-args[17]
           if (DEAMethod=="ttest") {
@@ -523,7 +524,6 @@ switch(imputeMethod,
 )
 
 cat("\n Imputation completed! \n")
-
 
 
 write.table(2^-exprs(qFiltNAs), file=outputRemaining, quote=FALSE,  row.names=TRUE, col.names=TRUE, sep = "\t")
