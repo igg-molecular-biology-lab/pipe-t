@@ -81,7 +81,7 @@
 </section>
 <section name="dff" title="File format" expanded="true">
       <param name="formatFile" type="select"  label="Select one of the file formats from the list below." help="">
-        <option value="viia7" selected="true">ViiA 7 TXT</option>
+        <option value="EDS" selected="true">EDS</option>
         <option value="plain">Plain</option>
         <option value="SDS" >SDS</option>
         <option value="LightCycler" >LightCycler</option>

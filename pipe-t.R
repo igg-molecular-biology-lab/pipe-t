@@ -143,7 +143,7 @@ cat("\n Initialization completed! \n")
 head(read.delim(file.path(path000, dpfiles), sep="\t"))
 files <- read.delim(file.path(path000, dpfiles), sep="\t")
 switch(format,
-  "viia7"={
+  "EDS"={
       columns<- list(flag="EXPFAIL", feature="Target.Name",  position="Well.Position", Ct="CT")
       metadata <- data.frame(labelDescription = c("sampleName", "Treatment"),  row.names = c("sampleName", "Treatment"))
       phenoData <- new("AnnotatedDataFrame", data = files, varMetadata = metadata)
@@ -195,7 +195,7 @@ write.table(exprs(raw), file=rawout, quote=FALSE,  row.names=TRUE, col.names=TRU
 ####################################################################################################################
 #Set a new categories for the values meeting two criterions
 switch(format,
-    "viia7"={
+    "EDS"={
       unreliable<-setCategory(raw, Ct.max=dcCtmax, Ct.min=dcCtmin,replicates=FALSE,  flag=dcflag, flag.out="Y", quantile=NULL)
     },
     "plain"={
