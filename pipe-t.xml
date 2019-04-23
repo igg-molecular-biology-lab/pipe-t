@@ -169,7 +169,7 @@
             <option value="TRUE" selected="true">TRUE</option>
             <option value="FALSE" >FALSE</option>
         </param>
-        <param name="sort" type="select" label="Select TRUE if you the output to be sorted by increasing order of p-value?" help="">
+        <param name="sort" type="select" label="Select TRUE if you want the output to be sorted by increasing order of p-value?" help="">
             <option value="TRUE" selected="true">TRUE</option>
             <option value="FALSE" >FALSE</option>
         </param>
