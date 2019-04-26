@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <tool id="pipe-t" name="PIPE-T" version="1.0" hidden="false">
-<description>A workflow for processing and analyzing miR\gene expression profiles by RTqPCR </description>
+<description>A tool for analyzing RTqPCR expression data </description>
 <requirements>
   <requirement type="package" version="3.5.0">r-base</requirement>
   <requirement type="package" version="7.2.0">libgcc</requirement>
