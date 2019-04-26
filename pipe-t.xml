@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <tool id="pipe-t" name="PIPE-T" version="1.0" hidden="false">
-<description>A workflow for processing and analyzing miR\gene expression profiles by RTqPCR </description>
+<description>A tool for analyzing RTqPCR expression data </description>
 <requirements>
   <requirement type="package" version="3.5.0">r-base</requirement>
   <requirement type="package" version="7.2.0">libgcc</requirement>
@@ -110,7 +110,7 @@
       <option value="scale.rankinvariant">Scale rank invariant</option>
     </param>
     <when value="deltaCt">
-      <param name="normalizers" type="text" label="Type a comma separated list of housekeeping miR\gene identifiers that will be used as normalizers." value="U6 snRNA-001973">
+      <param name="normalizers" type="text" label="Type a comma separated list of housekeeping transcript identifiers that will be used as normalizers." value="U6 snRNA-001973">
       	  </param>
     </when>
   </conditional>
@@ -118,7 +118,7 @@
 <section name="df" title="Transcript filtering and imputation" expanded="true">
   <param name="percent" type="integer" min="0" max="100" value="0" label="Set up a percentage of NAs."
  help="miRs\genes with more than the specified percentage of NAs across samples will be removed." />
-<param name="filtname" type="text" label="Type a comma separeted list of miR\gene identifiers to filter out" help="miR\gene identifiers specified in the List will be removed." value="U6 snRNA-001973,hsa-miR-520a">
+<param name="filtname" type="text" label="Type a comma separeted list of transcript identifiers to filter out" help="transcript identifiers specified in the List will be removed." value="U6 snRNA-001973,hsa-miR-520a">
     </param>
   <conditional name="condImpute">
     <param name="format" type="select"  label="Select one of the imputation methods from the list below." help="">
@@ -131,7 +131,7 @@
     </param>
     <when value="knn">
       <param name="k" type="integer" min="1" max="100" value="10" label="Type a number of neighbors to use by the KNN imputation method" />
-      <param name="maxp" type="integer" min="1" max="2000" value="1500" label="Type the largest number of miR\gene imputed by the KNN method." help="Larger numbers are divided by two-means clustering (recursively)
+      <param name="maxp" type="integer" min="1" max="2000" value="1500" label="Type the maximum number of imputed transcript by  KNN method." help="Larger numbers are divided by two-means clustering (recursively)
       prior to imputation. "/>
     </when>
   </conditional>
