@@ -94,7 +94,7 @@
  help="Any Ct below your selected value will be labelled as Unreliable." />
   <param name="Ctmax" type="integer" min="0" max="40" value="32" label="Set up a maximum Ct value"
  help="Any Ct above your selected value will be labelled as Unreliable."/>
-  <param name="flag" type="select" label="Select TRUE if you want that PIPE-T categorizes a Ct value as Unreliable on the basis of FAIL flag" help="Data in qPCRset objects will have feature categories (Unreliable, Undetermined) assigned to them based on different Ct criteria.">
+  <param name="flag" type="select" label="Select TRUE if you want that PIPE-T assigns category 'Unreliable' on the basis of FAILURE flag" help="Data in qPCRset objects will have feature categories (Unreliable, Undetermined) assigned to them based on different Ct criteria.">
       <option value="TRUE">TRUE</option>
       <option value="FALSE">FALSE</option>
   </param>
