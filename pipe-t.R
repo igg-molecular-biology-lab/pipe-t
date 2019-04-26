@@ -528,7 +528,7 @@ cat("\n Imputation completed! \n")
   cat("\n Nothing to impute! \n")
 }
 
-write.table(2^-exprs(qFiltNAs), file=outputRemaining, quote=FALSE,  row.names=TRUE, col.names=TRUE, sep = "\t")
+write.table(exprs(qFiltNAs), file=outputRemaining, quote=FALSE,  row.names=TRUE, col.names=TRUE, sep = "\t")
 
 if (DEAMethod=="ttest") {
  #Differential expression analysis (paired t test+BH). Returns Fold change in linear scale.
