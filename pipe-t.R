@@ -140,6 +140,162 @@ if (normalizationMethod=="deltaCt") {
   }
 cat("\n Initialization completed! \n")
 
+readCtDataDav<-
+function (files, path = NULL, n.features = 384, format = "plain",
+    column.info, flag, feature, type, position, Ct, header = FALSE,
+    SDS = FALSE, n.data = 1, samples, na.value = 40, sample.info,
+    ...)
+{
+    if (missing(files))
+        stop("No input files specified")
+    if (length(files) != length(n.data) & length(n.data) != 1)
+        stop("n.data must either be a single integer, or same length as number of files")
+    if (length(n.data) == 1)
+        n.data <- rep(n.data, length(files))
+    nsamples <- sum(n.data)
+    ncum <- cumsum(n.data)
+    s.names <- NULL
+    nspots <- n.features
+    if (SDS) {
+        warning("Please use format='SDS'. The SDS' parameter is retained for backward compatibility only.")
+        format <- "SDS"
+    }
+    if (!missing(flag) | !missing(feature) | !missing(type) |
+        !missing(position) | !missing(Ct)) {
+        warning("Please use 'column.info' for providing a list of column numbers containing particular information. The use of 'flag', 'feature', 'type', 'position' and 'Ct' is deprecated and will be removed in future versions.")
+    }
+    if (missing(column.info)) {
+        column.info <- switch(format, EDS = list(flag="EXPFAIL", feature="Target.Name",  position="Well.Position", Ct="CT"),
+          plain = list(flag = 4,
+            feature = 6, type = 7, position = 3, Ct = 8), SDS = list(flag = 4,
+            feature = 6, type = 7, position = 3, Ct = 8), LightCycler = list(feature = "Name",
+            position = "Pos", Ct = "Cp"), CFX = list(feature = "Content",
+            position = "Well", Ct = "Cq.Mean"), OpenArray = list(flag = "ThroughHole.Outlier",
+            feature = "Assay.Assay.ID", type = "Assay.Assay.Type",
+            position = "ThroughHole.Address", Ct = "ThroughHole.Ct"),
+            BioMark = list(flag = "Call", feature = "Name.1",
+                position = "ID", Ct = "Value"))
+    }
+    X <- matrix(0, nspots, nsamples)
+    X.flags <- as.data.frame(X)
+    X.cat <- data.frame(matrix("OK", ncol = nsamples, nrow = nspots),
+        stringsAsFactors = FALSE)
+    for (i in seq_along(files)) {
+        if (i == 1) {
+            cols <- 1:ncum[i]
+        }
+        else {
+            cols <- (ncum[i - 1] + 1):ncum[i]
+        }
+        readfile <- ifelse(is.null(path), files[i], file.path(path,
+            files[i]))
+        sample <- switch(format, EDS =.readCtEDS(readfile = readfile,
+        n.data = n.data, i = i, nspots = nspots, ...), plain = .readCtPlain(readfile = readfile,
+            header = header, n.features = n.features, n.data = n.data,
+            i = i, ...), SDS = .readCtSDS(readfile = readfile,
+            n.data = n.data, i = i, nspots = nspots, ...), LightCycler = .readCtLightCycler(readfile = readfile,
+            n.data = n.data, i = i, nspots = nspots, ...), CFX = .readCtCFX(readfile = readfile,
+            n.data = n.data, i = i, nspots = nspots, ...), OpenArray = .readCtOpenArray(readfile = readfile,
+            n.data = n.data, i = i, nspots = nspots, ...), BioMark = .readCtBioMark(readfile = readfile,
+            n.data = n.data, i = i, nspots = nspots, ...))
+
+        data <- matrix(sample[, column.info[["Ct"]]], ncol = n.data[i])
+        undeter <- apply(data, 2, function(x) x %in% c("Undetermined",
+            "No Ct"))
+        X.cat[, cols][undeter] <- "Undetermined"
+        nas <- c("Undetermined", "No Ct", "999", "N/A")
+        if (is.null(na.value)) {
+            data[data %in% nas | data == 0] <- NA
+        }
+        else {
+            data[data %in% nas | is.na(data) | data == 0] <- na.value
+        }
+        X[, cols] <- apply(data, 2, function(x) as.numeric(as.character(x)))
+        if ("flag" %in% names(column.info)) {
+            flags <- matrix(sample[, column.info[["flag"]]],
+                ncol = n.data[i])
+            flags[flags == "-"] <- "Failed"
+            flags[flags == "+"] <- "Passed"
+            X.flags[, cols] <- flags
+        }
+        else {
+            X.flags[, cols] <- "Passed"
+        }
+        if (format == "OpenArray") {
+            s.names <- c(s.names, unique(sample$SampleInfo.SampleID))
+        }
+        else if (format %in% c("EDS","plain", "SDS")) {
+            s.names <- c(s.names, unique(sample[, 2]))
+        }
+        else {
+            s.names <- s.names
+        }
+        if (i == 1) {
+            featPos <- paste("feature", 1:nspots, sep = "")
+            if ("position" %in% names(column.info))
+                featPos <- as.character(sample[1:nspots, column.info[["position"]]])
+            featType <- factor(rep("Target", nspots))
+            if ("type" %in% names(column.info))
+                featType <- sample[1:nspots, column.info[["type"]]]
+            featName <- paste("feature", 1:nspots, sep = "")
+            if ("feature" %in% names(column.info))
+                featName <- as.character(sample[1:nspots, column.info[["feature"]]])
+            df <- data.frame(featureNames = featName, featureType = as.factor(featType),
+                featurePos = featPos)
+            metaData <- data.frame(labelDescription = c("Name of the qPCR feature (gene)",
+                "Type pf feature", "Position on assay"))
+            featData <- AnnotatedDataFrame(data = df, varMetadata = metaData)
+        }
+    }
+    if (!missing(samples)) {
+        if (length(samples) < nsamples) {
+            warning("Not enough sample names provided; using Sample1, Sample2, ... instead\n")
+            samples <- paste("Sample", 1:nsamples, sep = "")
+        }
+        else if (length(samples) == nsamples) {
+            samples <- samples
+        }
+    }
+    else if (missing(samples)) {
+        if (length(files) == nsamples) {
+            samples <- gsub("(.+)\\..+", "\\1", files)
+        }
+        else if (length(s.names) == nsamples) {
+            samples <- s.names
+        }
+        else {
+            samples <- paste("Sample", 1:nsamples, sep = "")
+        }
+    }
+    samples <- make.unique(samples)
+    if (any(is.na(X)))
+        warning("One or more samples contain NAs. Consider replacing these with e.g. Ct=40 now.")
+    if (missing(sample.info)) {
+        pdata <- data.frame(sample = 1:length(samples), row.names = samples)
+        sample.info <- new("AnnotatedDataFrame", data = pdata,
+            varMetadata = data.frame(labelDescription = "Sample numbering",
+                row.names = "Sample names"))
+    }
+    X.hist <- data.frame(history = capture.output(match.call(readCtData)),
+        stringsAsFactors = FALSE)
+    out <- new("qPCRset", exprs = X, phenoData = sample.info,
+        featureData = featData, featureCategory = X.cat, flag = X.flags,
+        CtHistory = X.hist)
+    out
+}
+.readCtEDS	<-
+function(readfile=readfile, n.data=n.data, i=i, nspots=nspots, ...)
+{
+	# Scan through beginning of file, max 100 lines
+	file.header <- readLines(con=readfile, n=100)
+	n.header	<- grep("^Well", file.header)
+	if (length(n.header)==0)
+		n.header	<- 0
+	# Read data, skip the required lines
+	out	<- read.delim(file=readfile, header=TRUE, colClasses="character", nrows=nspots*n.data[i], skip=n.header-1, strip.white=TRUE, ...)
+	out
+} # .readCtEDS
+
 head(read.delim(file.path(path000, dpfiles), sep="\t"))
 files <- read.delim(file.path(path000, dpfiles), sep="\t")
 switch(format,
@@ -148,44 +304,44 @@ switch(format,
       metadata <- data.frame(labelDescription = c("sampleName", "Treatment"),  row.names = c("sampleName", "Treatment"))
       phenoData <- new("AnnotatedDataFrame", data = files, varMetadata = metadata)
       rownames(phenoData)=as.vector(files$sampleName)
-      raw<- readCtData(files = as.vector(files$sampleName), header=TRUE,  format="plain", column.info=columns, path = path,sample.info=phenoData,n.features = as.numeric(nfeatures))
+      raw<- readCtDataDav(files = as.vector(files$sampleName), header=TRUE,  format="EDS", column.info=columns, path = path,sample.info=phenoData,n.features = as.numeric(nfeatures))
     },
     "plain"={
       metadata <- data.frame(labelDescription = c("sampleName", "Treatment"),  row.names = c("sampleName", "Treatment"))
       phenoData <- new("AnnotatedDataFrame", data = files, varMetadata = metadata)
       rownames(phenoData)=as.vector(files$sampleName)
-      raw<- readCtData(files = as.vector(files$sampleName), header=FALSE,  format="plain", path = path, sample.info=phenoData,n.features = as.numeric(nfeatures))
+      raw<- readCtDataDav(files = as.vector(files$sampleName), header=FALSE,  format="plain", path = path, sample.info=phenoData,n.features = as.numeric(nfeatures))
     },
     "SDS"={
       columns<- list(feature=3, Ct=6, flag=11)
       metadata <- data.frame(labelDescription = c("sampleName", "Treatment"),  row.names = c("sampleName", "Treatment"))
       phenoData <- new("AnnotatedDataFrame", data = files, varMetadata = metadata)
       rownames(phenoData)=as.vector(files$sampleName)
-      raw<- readCtData(files = files$sampleName, format="SDS",column.info=columns, path = path, sample.info=phenoData, n.features=as.numeric(nfeatures))
+      raw<- readCtDataDav(files = files$sampleName, format="SDS",column.info=columns, path = path, sample.info=phenoData, n.features=as.numeric(nfeatures))
     },
     "LightCycler"={
       metadata <- data.frame(labelDescription = c("sampleName", "Treatment"),  row.names = c("sampleName", "Treatment"))
       phenoData <- new("AnnotatedDataFrame", data = files, varMetadata = metadata)
       rownames(phenoData)=as.vector(files$sampleName)
-      raw <- readCtData(files = files$sampleName, path = path, format = "LightCycler", sample.info=phenoData,n.features = as.numeric(nfeatures))
+      raw <- readCtDataDav(files = files$sampleName, path = path, format = "LightCycler", sample.info=phenoData,n.features = as.numeric(nfeatures))
     },
     "CFX"={
       metadata <- data.frame(labelDescription = c("sampleName", "Treatment"),  row.names = c("sampleName", "Treatment"))
       phenoData <- new("AnnotatedDataFrame", data = files, varMetadata = metadata)
       rownames(phenoData)=as.vector(files$sampleName)
-      raw <- readCtData(files = files$sampleName, path = path, format = "CFX", sample.info=phenoData,n.features = as.numeric(nfeatures))
+      raw <- readCtDataDav(files = files$sampleName, path = path, format = "CFX", sample.info=phenoData,n.features = as.numeric(nfeatures))
     },
     "OpenArray"={
       metadata <- data.frame(labelDescription = c("sampleName", "Treatment"),  row.names = c("sampleName", "Treatment"))
       phenoData <- new("AnnotatedDataFrame", data = files, varMetadata = metadata)
       rownames(phenoData)=as.vector(files$sampleName)
-      raw <- readCtData(files = files$sampleName, path = path, format = "OpenArray", sample.info=phenoData,n.features = as.numeric(nfeatures))
+      raw <- readCtDataDav(files = files$sampleName, path = path, format = "OpenArray", sample.info=phenoData,n.features = as.numeric(nfeatures))
     },
     "BioMark"={
       metadata <- data.frame(labelDescription = c("sampleName", "Treatment"),  row.names = c("sampleName", "Treatment"))
       phenoData <- new("AnnotatedDataFrame", data = files, varMetadata = metadata)
       rownames(phenoData)=as.vector(files$sampleName)
-      raw <- readCtData(files = files$sampleName, path = path, format = "BioMark", sample.info=phenoData, n.features = as.numeric(nfeatures))
+      raw <- readCtDataDav(files = files$sampleName, path = path, format = "BioMark", sample.info=phenoData, n.features = as.numeric(nfeatures))
     },
     stop("Enter something that switches me!")
 )
