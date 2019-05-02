@@ -20,7 +20,7 @@ RUN apt-get install -y libxml2-dev libcurl4-openssl-dev curl libcairo2-dev
 #install smagexp from test toolshed
 ADD tools.yml $GALAXY_ROOT/tools.yaml
 RUN install-tools $GALAXY_ROOT/tools.yaml && \
-    /tool_deps/_conda/bin/conda clean --tarballs
+    /tool_deps/_conda/bin/conda clean --all --yes
 
 #RUN chown galaxy:galaxy /usr/local/lib/R/site-library
 
