@@ -1,4 +1,4 @@
-# Galaxy - SMAGEXP
+# Galaxy - PIPE_T
 #
 # VERSION       0.2
 
@@ -17,7 +17,7 @@ RUN apt-get install -y libxml2-dev libcurl4-openssl-dev curl libcairo2-dev
 #RUN chown root:ssl-cert /etc/ssl-cert-snakeoil.key
 #RUN sed -i -e "s/\/ssl\/private//g" /etc/postgresql/9.3/main/postgresql.conf
 
-#install smagexp from test toolshed
+#install pipe_t from toolshed
 ADD tools.yml $GALAXY_ROOT/tools.yaml
 RUN install-tools $GALAXY_ROOT/tools.yaml && \
     /tool_deps/_conda/bin/conda clean --all --yes
