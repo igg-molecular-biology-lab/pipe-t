@@ -4,7 +4,7 @@
 
 FROM bgruening/galaxy-stable:latest
 
-MAINTAINER D. CANGELOSO, davidecangelosi@gaslini.org
+MAINTAINER D. CANGELOSI, davidecangelosi@gaslini.org
 
 ENV GALAXY_CONFIG_BRAND="Galaxy PIPE-T"
 ENV ENABLE_TTS_INSTALL True
