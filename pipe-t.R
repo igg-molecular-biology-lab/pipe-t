@@ -140,6 +140,96 @@ if (normalizationMethod=="deltaCt") {
   }
 cat("\n Initialization completed! \n")
 
+.readCtEDS	<-
+function(readfile=readfile, n.data=n.data, i=i, nspots=nspots, ...)
+{
+	# Scan through beginning of file, max 100 lines
+	file.header <- readLines(con=readfile, n=100)
+	n.header	<- grep("^Well", file.header)
+	if (length(n.header)==0)
+		n.header	<- 0
+	# Read data, skip the required lines
+	out	<- read.delim(file=readfile, header=TRUE, colClasses="character", nrows=nspots*n.data[i], skip=n.header-1, strip.white=TRUE, ...)
+	out
+} # .readCtEDS
+
+
+.readCtPlain	<- 
+function(readfile=readfile, header=header, n.features=n.features, n.data=n.data, i=i, ...)
+{
+	# A check for file dimensions. Read a single file.
+	sample	<- read.delim(file=readfile, header=header, ...)
+	nspots	<- nrow(sample)
+	if (nspots != n.features*n.data[1])
+		warning(paste(n.features, "gene names (rows) expected, got", nspots))
+	# Read in the required file
+	out	<- read.delim(file=readfile, header=header, colClasses="character", nrows=nspots*n.data[i], ...)
+	# Return
+	out
+} # .readCtPlain
+
+.readCtSDS	<- 
+function(readfile=readfile, n.data=n.data, i=i, nspots=nspots, ...)
+{
+	# Scan through beginning of file, max 100 lines
+	file.header <- readLines(con=readfile, n=100)
+	n.header	<- grep("^#", file.header)
+	if (length(n.header)==0) 
+		n.header	<- 0
+	# Read data, skip the required lines
+	out	<- read.delim(file=readfile, header=FALSE, colClasses="character", nrows=nspots*n.data[i], skip=n.header, strip.white=TRUE, ...)
+	# Return
+	out
+} # .readCtSDS
+
+.readCtLightCycler	<- 
+function(readfile=readfile, n.data=n.data, i=i, nspots=nspots, ...)
+{
+	# Read data, skip the required lines
+	out	<- read.delim(file=readfile, header=TRUE, as.is=TRUE, nrows=nspots*n.data[i], skip=1, strip.white=TRUE, ...)
+	# Return
+	out
+} # .readCtLightCycler
+
+.readCtCFX	<- function(readfile=readfile, n.data=n.data, i=i, nspots=nspots, ...)
+{
+	# Read data, skip the required lines
+	out	<- read.csv(file=readfile, header=TRUE, as.is=TRUE, nrows=nspots*n.data[i], strip.white=TRUE, ...)
+	# Return
+	out
+} # .readCtCFX
+
+.readCtOpenArray	<- 
+function(readfile=readfile, n.data=n.data, i=i, nspots=nspots, ...)
+{
+	# Read data
+	out	<- read.csv(file=readfile, header=TRUE, as.is=TRUE, nrows=nspots*n.data[i], strip.white=TRUE, ...)
+	# Regard those marked as outliers as "Unreliable"
+	out$ThroughHole.Outlier[out$ThroughHole.Outlier=="False"]	<- "OK"
+	out$ThroughHole.Outlier[out$ThroughHole.Outlier=="True"]	<- "Unreliable"	
+	# Return
+	out
+} # .readCtOpenArray
+
+.readCtBioMark	<- 
+function(readfile=readfile, n.data=n.data, i=i, nspots=nspots, ...)
+{
+	# Scan through beginning of file, max 100 lines
+	file.header <- readLines(con=readfile, n=100)
+	n.header	<- grep("^ID", file.header)-1
+	if (length(n.header)==0) 
+		n.header	<- 0
+	# Read data, skip the required lines
+	out	<- read.csv(file=readfile, header=TRUE, as.is=TRUE, nrows=nspots*n.data[i], skip=n.header, strip.white=TRUE, ...)
+	# Convert the calls into flags
+	out$Call[out$Call=="Pass"] <- "OK"
+	out$Call[out$Call=="Fail"] <- "Undetermined"	
+	# Return
+	out
+} # .readCtBioMark
+
+
+
 readCtDataDav<-
 function (files, path = NULL, n.features = 384, format = "plain",
     column.info, flag, feature, type, position, Ct, header = FALSE,
@@ -283,18 +373,7 @@ function (files, path = NULL, n.features = 384, format = "plain",
         CtHistory = X.hist)
     out
 }
-.readCtEDS	<-
-function(readfile=readfile, n.data=n.data, i=i, nspots=nspots, ...)
-{
-	# Scan through beginning of file, max 100 lines
-	file.header <- readLines(con=readfile, n=100)
-	n.header	<- grep("^Well", file.header)
-	if (length(n.header)==0)
-		n.header	<- 0
-	# Read data, skip the required lines
-	out	<- read.delim(file=readfile, header=TRUE, colClasses="character", nrows=nspots*n.data[i], skip=n.header-1, strip.white=TRUE, ...)
-	out
-} # .readCtEDS
+
 
 head(read.delim(file.path(path000, dpfiles), sep="\t"))
 files <- read.delim(file.path(path000, dpfiles), sep="\t")
@@ -542,7 +621,20 @@ function(q,
 	# Return the normalised object
 	q
 }
+#library(NormqPCR)
 
+#delete.na <- function(DF, n=0) {
+ # DF[rowSums(is.na(DF)) <= n,]
+#}
+
+#user_number=5
+#genorm <- selectHKs(t(delete.na(as.matrix(exprs(xGlico)),0)), method = "geNorm", Symbols = rownames(as.matrix(delete.na(exprs(xGlico),0))), minNrHK = as.numeric(user_number), log = TRUE)
+#normfinder <- selectHKs(as.matrix(t(delete.na(exprs(xGlico),0))), group= files$Treatment , method = "NormFinder", Symbols =rownames(as.matrix(delete.na(exprs(xGlico),0))), minNrHK = as.numeric(user_number), log = TRUE)
+#intersection= intersect(normfinder$ranking, genorm$ranking[1:as.numeric(user_number)])
+
+#cat("\n GeNorm and NormFinder transcripts selected as housekeeping for normalization! \n")
+#intersection
+#dnorm <- normalizeCtData(xGlico , norm="deltaCt", deltaCt.genes=as.vector(intersection)) 
 
 switch(normalizationMethod,
     "deltaCt"={
