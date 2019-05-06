@@ -394,7 +394,7 @@ switch(format,
     },
     "SDS"={
       #columns<- list(feature=3, Ct=6, flag=11)
-      columns <-SDS = list(flag = "Omit",feature = "Detector", type = "Task", position = "Wells", Ct = "Ct")
+      columns <-list(flag = "Omit",feature = "Detector", type = "Task", position = "Wells", Ct = "Ct")
       metadata <- data.frame(labelDescription = c("sampleName", "Treatment"),  row.names = c("sampleName", "Treatment"))
       phenoData <- new("AnnotatedDataFrame", data = files, varMetadata = metadata)
       rownames(phenoData)=as.vector(files$sampleName)
