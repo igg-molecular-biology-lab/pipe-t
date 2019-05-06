@@ -735,7 +735,7 @@ qFiltNAs <- filterCtData(normalizedDataset, remove.category=c("Undetermined","Un
 
 cat("\n Data filtered correctly! \n")
 
-if (is.na(exprs(qFiltNAs))){
+if (anyNA(exprs(qFiltNAs))){
 switch(imputeMethod,
     "knn"={
      imp<-impute.knn(exprs(qFiltNAs) ,k = as.integer(kappa), maxp = as.integer(macsp), rng.seed=362436069)
