@@ -177,7 +177,7 @@ function(readfile=readfile, n.data=n.data, i=i, nspots=nspots, ...)
 	if (length(n.header)==0) 
 		n.header	<- 0
 	# Read data, skip the required lines
-	out	<- read.delim(file=readfile, header=FALSE, colClasses="character", nrows=nspots*n.data[i], skip=n.header, strip.white=TRUE, ...)
+	out	<- read.delim(file=readfile, header=TRUE, colClasses="character", nrows=nspots*n.data[i], skip=n.header-1, strip.white=TRUE, ...)
 	# Return
 	out
 } # .readCtSDS
@@ -256,9 +256,10 @@ function (files, path = NULL, n.features = 384, format = "plain",
     }
     if (missing(column.info)) {
         column.info <- switch(format, EDS = list(flag="EXPFAIL", feature="Target.Name",  position="Well.Position", Ct="CT"),
-          plain = list(flag = 4,
-            feature = 6, type = 7, position = 3, Ct = 8), SDS = list(flag = 4,
-            feature = 6, type = 7, position = 3, Ct = 8), LightCycler = list(feature = "Name",
+          plain = list(flag = 4, feature = 6, type = 7, position = 3, Ct = 8), 
+            #SDS = list(flag = 4,feature = 6, type = 7, position = 3, Ct = 8), 
+            SDS = list(flag = "Omit",feature = "Detector", type = "Task", position = "Wells", Ct = "Ct"), 
+            LightCycler = list(feature = "Name",
             position = "Pos", Ct = "Cp"), CFX = list(feature = "Content",
             position = "Well", Ct = "Cq.Mean"), OpenArray = list(flag = "ThroughHole.Outlier",
             feature = "Assay.Assay.ID", type = "Assay.Assay.Type",
