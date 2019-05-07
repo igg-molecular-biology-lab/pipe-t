@@ -400,8 +400,8 @@ switch(format,
       raw<- readCtDataDav(files = as.vector(files$sampleName), header=FALSE,  format="plain", path = path, sample.info=phenoData,n.features = as.numeric(nfeatures))
     },
     "SDS"={
-      #columns<- list(feature=3, Ct=6, flag=11)
-      columns <-list(flag = "Omit",feature = "Detector", type = "Task", position = "Wells", Ct = "Avg.Ct")
+      columns<- list(feature=3, Ct=6, flag=11)
+      #columns <-list(flag = "Omit",feature = "Detector", type = "Task", position = "Wells", Ct = "Avg.Ct")
       metadata <- data.frame(labelDescription = c("sampleName", "Treatment"),  row.names = c("sampleName", "Treatment"))
       phenoData <- new("AnnotatedDataFrame", data = files, varMetadata = metadata)
       rownames(phenoData)=as.vector(files$sampleName)
