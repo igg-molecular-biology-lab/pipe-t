@@ -177,7 +177,7 @@ function(readfile=readfile, n.data=n.data, i=i, nspots=nspots, ...)
 	if (length(n.header)==0) 
 		n.header	<- 0
 	# Read data, skip the required lines
-	out	<- read.delim(file=readfile, header=TRUE, colClasses="character", nrows=nspots*n.data[i], skip=n.header-1, strip.white=TRUE, ...)
+	out	<- read.delim(file=readfile, header=FALSE, colClasses="character", nrows=nspots*n.data[i], skip=n.header, strip.white=TRUE, ...)
 	# Return
 	out
 } # .readCtSDS
@@ -257,8 +257,8 @@ function (files, path = NULL, n.features = 384, format = "plain",
     if (missing(column.info)) {
         column.info <- switch(format, EDS = list(flag="EXPFAIL", feature="Target.Name",  position="Well.Position", Ct="CT"),
           plain = list(flag = 4, feature = 6, type = 7, position = 3, Ct = 8), 
-            #SDS = list(flag = 4,feature = 6, type = 7, position = 3, Ct = 8), 
-            SDS = list(flag = "Omit",feature = "Detector", type = "Task", position = "Wells", Ct = "Ct"), 
+            SDS = list(flag = 4,feature = 6, type = 7, position = 3, Ct = 8), 
+            #SDS = list(flag = "Omit",feature = "Detector", type = "Task", position = "Pos", Ct = "Avg.Ct"), 
             LightCycler = list(feature = "Name",
             position = "Pos", Ct = "Cp"), CFX = list(feature = "Content",
             position = "Well", Ct = "Cq.Mean"), OpenArray = list(flag = "ThroughHole.Outlier",
@@ -289,8 +289,15 @@ function (files, path = NULL, n.features = 384, format = "plain",
             n.data = n.data, i = i, nspots = nspots, ...), OpenArray = .readCtOpenArray(readfile = readfile,
             n.data = n.data, i = i, nspots = nspots, ...), BioMark = .readCtBioMark(readfile = readfile,
             n.data = n.data, i = i, nspots = nspots, ...))
-
-        data <- matrix(sample[, column.info[["Ct"]]], ncol = n.data[i])
+        #if (format == "SDS") {
+        #    if("Avg Ct" %in% colnames(n.data)){
+        #        data <- matrix(sample[, column.info[["Avg.Ct"]]], ncol = n.data[i])
+        #    } elseif {
+        #      cat("\n Unsupported SDS format! ")
+        #      }
+        #}else{
+      data <- matrix(sample[, column.info[["Ct"]]], ncol = n.data[i])
+       # }
         undeter <- apply(data, 2, function(x) x %in% c("Undetermined",
             "No Ct"))
         X.cat[, cols][undeter] <- "Undetermined"
@@ -394,7 +401,7 @@ switch(format,
     },
     "SDS"={
       #columns<- list(feature=3, Ct=6, flag=11)
-      columns <-list(flag = "Omit",feature = "Detector", type = "Task", position = "Wells", Ct = "Ct")
+      columns <-list(flag = "Omit",feature = "Detector", type = "Task", position = "Wells", Ct = "Avg.Ct")
       metadata <- data.frame(labelDescription = c("sampleName", "Treatment"),  row.names = c("sampleName", "Treatment"))
       phenoData <- new("AnnotatedDataFrame", data = files, varMetadata = metadata)
       rownames(phenoData)=as.vector(files$sampleName)
@@ -631,7 +638,9 @@ function(q,
 
 #user_number=5
 #genorm <- selectHKs(t(delete.na(as.matrix(exprs(xGlico)),0)), method = "geNorm", Symbols = rownames(as.matrix(delete.na(exprs(xGlico),0))), minNrHK = as.numeric(user_number), log = TRUE)
+#genorm
 #normfinder <- selectHKs(as.matrix(t(delete.na(exprs(xGlico),0))), group= files$Treatment , method = "NormFinder", Symbols =rownames(as.matrix(delete.na(exprs(xGlico),0))), minNrHK = as.numeric(user_number), log = TRUE)
+#normfinder
 #intersection= intersect(normfinder$ranking, genorm$ranking[1:as.numeric(user_number)])
 
 #cat("\n GeNorm and NormFinder transcripts selected as housekeeping for normalization! \n")
