@@ -12,6 +12,7 @@
 <requirement type="package" version="1.8_3">r-zoo</requirement>
 <requirement type="package" version="2.10.0">bioconductor-nondetects</requirement>
 <requirement type="package" version="4.1_1">r-hmisc</requirement>
+<requirement type="package" version="1.28.0">bioconductor-normqpcr </requirement>
 </requirements>
 <stdio>
    <exit_code range="1:" />
@@ -23,29 +24,82 @@
     #end for
 
     #if str( $dn.condNorm.normMethod ) == "deltaCt":
-      #if str( $df.condImpute.format ) == "mestdagh" or str( $df.condImpute.format ) == "mean" or str( $df.condImpute.format ) == "median" or str( $df.condImpute.format ) == "nondetects" or str( $df.condImpute.format ) == "cubic": 
-          #if str( $de.condDEA.method ) == "ttest":
-              Rscript $__tool_directory__/pipe-t.R $dp.files "$dp.formatFile" $dp.n $galaxy_output1 "$__tool_directory__/Symlink" $dc.Ctmin $dc.Ctmax $dc.flag $galaxy_output2 $dn.condNorm.normMethod "$dn.condNorm.normalizers" $galaxy_output3 $galaxy_output4 $df.percent $galaxy_output5 $df.condImpute.format $galaxy_output6 $de.condDEA.method $de.condDEA.alternative $de.condDEA.paired $de.condDEA.replicates $de.condDEA.sort $de.condDEA.stringent $de.condDEA.padjust $galaxy_output7 "$df.filtname";
+        #if str( $dn.condNorm.deltamethod.format ) == "userdefined":
+          #if str( $df.condImpute.format ) == "mestdagh" or str( $df.condImpute.format ) == "mean" or str( $df.condImpute.format ) == "median" or str( $df.condImpute.format ) == "nondetects" or str( $df.condImpute.format ) == "cubic":
+              #if str( $de.condDEA.method ) == "ttest":
+                  Rscript $__tool_directory__/pipe-t.R $dp.files "$dp.formatFile" $dp.n $galaxy_output1 "$__tool_directory__/Symlink" $dc.Ctmin $dc.Ctmax $dc.flag $galaxy_output2 $dn.condNorm.normMethod "$dn.condNorm.deltamethod.format" "$dn.condNorm.deltamethod.normalizers" $galaxy_output3 $galaxy_output4 $df.percent $galaxy_output5 $df.condImpute.format $galaxy_output6 $de.condDEA.method $de.condDEA.alternative $de.condDEA.paired $de.condDEA.replicates $de.condDEA.sort $de.condDEA.stringent $de.condDEA.padjust $galaxy_output7 "$df.filtname";
+              #end if
+              #if str( $de.condDEA.method ) == "rp":
+                  Rscript $__tool_directory__/pipe-t.R $dp.files "$dp.formatFile" $dp.n $galaxy_output1 "$__tool_directory__/Symlink" $dc.Ctmin $dc.Ctmax $dc.flag $galaxy_output2 $dn.condNorm.normMethod "$dn.condNorm.deltamethod.format" "$dn.condNorm.deltamethod.normalizers"  $galaxy_output3 $galaxy_output4 $df.percent $galaxy_output5 $df.condImpute.format $galaxy_output6 $de.condDEA.method $galaxy_output7 "$df.filtname";
+              #end if
+              #if str( $de.condDEA.method ) == "none":
+                  Rscript $__tool_directory__/pipe-t.R $dp.files "$dp.formatFile" $dp.n $galaxy_output1 "$__tool_directory__/Symlink" $dc.Ctmin $dc.Ctmax $dc.flag $galaxy_output2 $dn.condNorm.normMethod "$dn.condNorm.deltamethod.format" "$dn.condNorm.deltamethod.normalizers"  $galaxy_output3 $galaxy_output4 $df.percent $galaxy_output5 $df.condImpute.format $galaxy_output6 $de.condDEA.method $galaxy_output7 "$df.filtname";
+              #end if
           #end if
-          #if str( $de.condDEA.method ) == "rp":
-              Rscript $__tool_directory__/pipe-t.R $dp.files "$dp.formatFile" $dp.n $galaxy_output1 "$__tool_directory__/Symlink" $dc.Ctmin $dc.Ctmax $dc.flag $galaxy_output2 $dn.condNorm.normMethod "$dn.condNorm.normalizers" $galaxy_output3 $galaxy_output4 $df.percent $galaxy_output5 $df.condImpute.format $galaxy_output6 $de.condDEA.method $galaxy_output7 "$df.filtname";
-          #end if
-          #if str( $de.condDEA.method ) == "none":
-              Rscript $__tool_directory__/pipe-t.R $dp.files "$dp.formatFile" $dp.n $galaxy_output1 "$__tool_directory__/Symlink" $dc.Ctmin $dc.Ctmax $dc.flag $galaxy_output2 $dn.condNorm.normMethod "$dn.condNorm.normalizers" $galaxy_output3 $galaxy_output4 $df.percent $galaxy_output5 $df.condImpute.format $galaxy_output6 $de.condDEA.method $galaxy_output7 "$df.filtname";
-          #end if
-      #end if
 
-      #if str( $df.condImpute.format ) == "knn":
-          #if str( $de.condDEA.method ) == "ttest":
-                Rscript $__tool_directory__/pipe-t.R $dp.files "$dp.formatFile" $dp.n $galaxy_output1 "$__tool_directory__/Symlink" $dc.Ctmin $dc.Ctmax $dc.flag $galaxy_output2 $dn.condNorm.normMethod "$dn.condNorm.normalizers" $galaxy_output3 $galaxy_output4 $df.percent $galaxy_output5 $df.condImpute.format $df.condImpute.k $df.condImpute.maxp $galaxy_output6 $de.condDEA.method $de.condDEA.alternative $de.condDEA.paired $de.condDEA.replicates $de.condDEA.sort $de.condDEA.stringent $de.condDEA.padjust $galaxy_output7 "$df.filtname";
+          #if str( $df.condImpute.format ) == "knn":
+              #if str( $de.condDEA.method ) == "ttest":
+                    Rscript $__tool_directory__/pipe-t.R $dp.files "$dp.formatFile" $dp.n $galaxy_output1 "$__tool_directory__/Symlink" $dc.Ctmin $dc.Ctmax $dc.flag $galaxy_output2 $dn.condNorm.normMethod "$dn.condNorm.deltamethod.format" "$dn.condNorm.deltamethod.normalizers"  $galaxy_output3 $galaxy_output4 $df.percent $galaxy_output5 $df.condImpute.format $df.condImpute.k $df.condImpute.maxp $galaxy_output6 $de.condDEA.method $de.condDEA.alternative $de.condDEA.paired $de.condDEA.replicates $de.condDEA.sort $de.condDEA.stringent $de.condDEA.padjust $galaxy_output7 "$df.filtname";
+              #end if
+              #if str( $de.condDEA.method ) == "rp":
+                    Rscript $__tool_directory__/pipe-t.R $dp.files "$dp.formatFile" $dp.n $galaxy_output1 "$__tool_directory__/Symlink" $dc.Ctmin $dc.Ctmax $dc.flag $galaxy_output2 $dn.condNorm.normMethod "$dn.condNorm.deltamethod.format" "$dn.condNorm.deltamethod.normalizers"  $galaxy_output3 $galaxy_output4 $df.percent $galaxy_output5 $df.condImpute.format $df.condImpute.k $df.condImpute.maxp $galaxy_output6 $de.condDEA.method $galaxy_output7 "$df.filtname";
+              #end if
+               #if str( $de.condDEA.method ) == "none":
+                    Rscript $__tool_directory__/pipe-t.R $dp.files "$dp.formatFile" $dp.n $galaxy_output1 "$__tool_directory__/Symlink" $dc.Ctmin $dc.Ctmax $dc.flag $galaxy_output2 $dn.condNorm.normMethod "$dn.condNorm.deltamethod.format" "$dn.condNorm.deltamethod.normalizers" $galaxy_output3 $galaxy_output4 $df.percent $galaxy_output5 $df.condImpute.format $df.condImpute.k $df.condImpute.maxp $galaxy_output6 $de.condDEA.method $galaxy_output7 "$df.filtname";
+              #end if
           #end if
-          #if str( $de.condDEA.method ) == "rp":
-                Rscript $__tool_directory__/pipe-t.R $dp.files "$dp.formatFile" $dp.n $galaxy_output1 "$__tool_directory__/Symlink" $dc.Ctmin $dc.Ctmax $dc.flag $galaxy_output2 $dn.condNorm.normMethod "$dn.condNorm.normalizers" $galaxy_output3 $galaxy_output4 $df.percent $galaxy_output5 $df.condImpute.format $df.condImpute.k $df.condImpute.maxp $galaxy_output6 $de.condDEA.method $galaxy_output7 "$df.filtname";
+        #end if
+        #if str( $dn.condNorm.deltamethod.format ) == "genorm":
+            #if str( $df.condImpute.format ) == "mestdagh" or str( $df.condImpute.format ) == "mean" or str( $df.condImpute.format ) == "median" or str( $df.condImpute.format ) == "nondetects" or str( $df.condImpute.format ) == "cubic":
+                #if str( $de.condDEA.method ) == "ttest":
+                    Rscript $__tool_directory__/pipe-t.R $dp.files "$dp.formatFile" $dp.n $galaxy_output1 "$__tool_directory__/Symlink" $dc.Ctmin $dc.Ctmax $dc.flag $galaxy_output2 $dn.condNorm.normMethod "$dn.condNorm.deltamethod.format" $dn.condNorm.deltamethod.minhkgenorm $galaxy_output3 $galaxy_output4 $df.percent $galaxy_output5 $df.condImpute.format $galaxy_output6 $de.condDEA.method $de.condDEA.alternative $de.condDEA.paired $de.condDEA.replicates $de.condDEA.sort $de.condDEA.stringent $de.condDEA.padjust $galaxy_output7 "$df.filtname";
+                #end if
+                #if str( $de.condDEA.method ) == "rp":
+                    Rscript $__tool_directory__/pipe-t.R $dp.files "$dp.formatFile" $dp.n $galaxy_output1 "$__tool_directory__/Symlink" $dc.Ctmin $dc.Ctmax $dc.flag $galaxy_output2 $dn.condNorm.normMethod "$dn.condNorm.deltamethod.format" $dn.condNorm.deltamethod.minhkgenorm $galaxy_output3 $galaxy_output4 $df.percent $galaxy_output5 $df.condImpute.format $galaxy_output6 $de.condDEA.method $galaxy_output7 "$df.filtname";
+                #end if
+                #if str( $de.condDEA.method ) == "none":
+                    Rscript $__tool_directory__/pipe-t.R $dp.files "$dp.formatFile" $dp.n $galaxy_output1 "$__tool_directory__/Symlink" $dc.Ctmin $dc.Ctmax $dc.flag $galaxy_output2 $dn.condNorm.normMethod "$dn.condNorm.deltamethod.format" $dn.condNorm.deltamethod.minhkgenorm  $galaxy_output3 $galaxy_output4 $df.percent $galaxy_output5 $df.condImpute.format $galaxy_output6 $de.condDEA.method $galaxy_output7 "$df.filtname";
+                #end if
+            #end if
+
+            #if str( $df.condImpute.format ) == "knn":
+                #if str( $de.condDEA.method ) == "ttest":
+                      Rscript $__tool_directory__/pipe-t.R $dp.files "$dp.formatFile" $dp.n $galaxy_output1 "$__tool_directory__/Symlink" $dc.Ctmin $dc.Ctmax $dc.flag $galaxy_output2 $dn.condNorm.normMethod "$dn.condNorm.deltamethod.format" $dn.condNorm.deltamethod.minhkgenorm  $galaxy_output3 $galaxy_output4 $df.percent $galaxy_output5 $df.condImpute.format $df.condImpute.k $df.condImpute.maxp $galaxy_output6 $de.condDEA.method $de.condDEA.alternative $de.condDEA.paired $de.condDEA.replicates $de.condDEA.sort $de.condDEA.stringent $de.condDEA.padjust $galaxy_output7 "$df.filtname";
+                #end if
+                #if str( $de.condDEA.method ) == "rp":
+                      Rscript $__tool_directory__/pipe-t.R $dp.files "$dp.formatFile" $dp.n $galaxy_output1 "$__tool_directory__/Symlink" $dc.Ctmin $dc.Ctmax $dc.flag $galaxy_output2 $dn.condNorm.normMethod "$dn.condNorm.deltamethod.format" $dn.condNorm.deltamethod.minhkgenorm  $galaxy_output3 $galaxy_output4 $df.percent $galaxy_output5 $df.condImpute.format $df.condImpute.k $df.condImpute.maxp $galaxy_output6 $de.condDEA.method $galaxy_output7 "$df.filtname";
+                #end if
+                 #if str( $de.condDEA.method ) == "none":
+                      Rscript $__tool_directory__/pipe-t.R $dp.files "$dp.formatFile" $dp.n $galaxy_output1 "$__tool_directory__/Symlink" $dc.Ctmin $dc.Ctmax $dc.flag $galaxy_output2 $dn.condNorm.normMethod "$dn.condNorm.deltamethod.format" $dn.condNorm.deltamethod.minhkgenorm $galaxy_output3 $galaxy_output4 $df.percent $galaxy_output5 $df.condImpute.format $df.condImpute.k $df.condImpute.maxp $galaxy_output6 $de.condDEA.method $galaxy_output7 "$df.filtname";
+                #end if
+            #end if
           #end if
-           #if str( $de.condDEA.method ) == "none":
-                Rscript $__tool_directory__/pipe-t.R $dp.files "$dp.formatFile" $dp.n $galaxy_output1 "$__tool_directory__/Symlink" $dc.Ctmin $dc.Ctmax $dc.flag $galaxy_output2 $dn.condNorm.normMethod "$dn.condNorm.normalizers" $galaxy_output3 $galaxy_output4 $df.percent $galaxy_output5 $df.condImpute.format $df.condImpute.k $df.condImpute.maxp $galaxy_output6 $de.condDEA.method $galaxy_output7 "$df.filtname";
-          #end if
-      #end if
+          #if str( $dn.condNorm.deltamethod.format ) == "normfinder":
+              #if str( $df.condImpute.format ) == "mestdagh" or str( $df.condImpute.format ) == "mean" or str( $df.condImpute.format ) == "median" or str( $df.condImpute.format ) == "nondetects" or str( $df.condImpute.format ) == "cubic":
+                  #if str( $de.condDEA.method ) == "ttest":
+                      Rscript $__tool_directory__/pipe-t.R $dp.files "$dp.formatFile" $dp.n $galaxy_output1 "$__tool_directory__/Symlink" $dc.Ctmin $dc.Ctmax $dc.flag $galaxy_output2 $dn.condNorm.normMethod "$dn.condNorm.deltamethod.format" $dn.condNorm.deltamethod.minhknormfinder $galaxy_output3 $galaxy_output4 $df.percent $galaxy_output5 $df.condImpute.format $galaxy_output6 $de.condDEA.method $de.condDEA.alternative $de.condDEA.paired $de.condDEA.replicates $de.condDEA.sort $de.condDEA.stringent $de.condDEA.padjust $galaxy_output7 "$df.filtname";
+                  #end if
+                  #if str( $de.condDEA.method ) == "rp":
+                      Rscript $__tool_directory__/pipe-t.R $dp.files "$dp.formatFile" $dp.n $galaxy_output1 "$__tool_directory__/Symlink" $dc.Ctmin $dc.Ctmax $dc.flag $galaxy_output2 $dn.condNorm.normMethod "$dn.condNorm.deltamethod.format" $dn.condNorm.deltamethod.minhknormfinder $galaxy_output3 $galaxy_output4 $df.percent $galaxy_output5 $df.condImpute.format $galaxy_output6 $de.condDEA.method $galaxy_output7 "$df.filtname";
+                  #end if
+                  #if str( $de.condDEA.method ) == "none":
+                      Rscript $__tool_directory__/pipe-t.R $dp.files "$dp.formatFile" $dp.n $galaxy_output1 "$__tool_directory__/Symlink" $dc.Ctmin $dc.Ctmax $dc.flag $galaxy_output2 $dn.condNorm.normMethod "$dn.condNorm.deltamethod.format" $dn.condNorm.deltamethod.minhknormfinder $galaxy_output3 $galaxy_output4 $df.percent $galaxy_output5 $df.condImpute.format $galaxy_output6 $de.condDEA.method $galaxy_output7 "$df.filtname";
+                  #end if
+              #end if
+
+              #if str( $df.condImpute.format ) == "knn":
+                  #if str( $de.condDEA.method ) == "ttest":
+                        Rscript $__tool_directory__/pipe-t.R $dp.files "$dp.formatFile" $dp.n $galaxy_output1 "$__tool_directory__/Symlink" $dc.Ctmin $dc.Ctmax $dc.flag $galaxy_output2 $dn.condNorm.normMethod "$dn.condNorm.deltamethod.format" $dn.condNorm.deltamethod.minhknormfinder  $galaxy_output3 $galaxy_output4 $df.percent $galaxy_output5 $df.condImpute.format $df.condImpute.k $df.condImpute.maxp $galaxy_output6 $de.condDEA.method $de.condDEA.alternative $de.condDEA.paired $de.condDEA.replicates $de.condDEA.sort $de.condDEA.stringent $de.condDEA.padjust $galaxy_output7 "$df.filtname";
+                  #end if
+                  #if str( $de.condDEA.method ) == "rp":
+                        Rscript $__tool_directory__/pipe-t.R $dp.files "$dp.formatFile" $dp.n $galaxy_output1 "$__tool_directory__/Symlink" $dc.Ctmin $dc.Ctmax $dc.flag $galaxy_output2 $dn.condNorm.normMethod "$dn.condNorm.deltamethod.format" $dn.condNorm.deltamethod.minhknormfinder  $galaxy_output3 $galaxy_output4 $df.percent $galaxy_output5 $df.condImpute.format $df.condImpute.k $df.condImpute.maxp $galaxy_output6 $de.condDEA.method $galaxy_output7 "$df.filtname";
+                  #end if
+                   #if str( $de.condDEA.method ) == "none":
+                        Rscript $__tool_directory__/pipe-t.R $dp.files "$dp.formatFile" $dp.n $galaxy_output1 "$__tool_directory__/Symlink" $dc.Ctmin $dc.Ctmax $dc.flag $galaxy_output2 $dn.condNorm.normMethod "$dn.condNorm.deltamethod.format" $dn.condNorm.deltamethod.minhknormfinder $galaxy_output3 $galaxy_output4 $df.percent $galaxy_output5 $df.condImpute.format $df.condImpute.k $df.condImpute.maxp $galaxy_output6 $de.condDEA.method $galaxy_output7 "$df.filtname";
+                  #end if
+              #end if
+            #end if
+
     #else
       #if str( $df.condImpute.format ) == "mestdagh" or str( $df.condImpute.format ) == "mean" or str( $df.condImpute.format ) == "median" or str( $df.condImpute.format ) == "nondetects" or str( $df.condImpute.format ) == "cubic":
           #if str( $de.condDEA.method ) == "ttest":
@@ -110,8 +164,22 @@
       <option value="scale.rankinvariant">Scale rank invariant</option>
     </param>
     <when value="deltaCt">
-      <param name="normalizers" type="text" label="Type a comma separated list of housekeeping transcript identifiers that will be used as normalizers." value="U6 snRNA-001973">
-      	  </param>
+       <conditional name="deltamethod">
+        <param name="format" type="select"  label="Select one of the methods from the list below for selecting normalizers." help="">
+          <option value="userdefined" selected="true">User defined</option>
+          <option value="genorm">geNorm</option>
+          <option value="normfinder">NormFinder</option>
+        </param>
+        <when value="userdefined">
+          <param name="normalizers" type="text" label="Type a comma separated list of housekeeping transcript identifiers that will be used as normalizers." value="U6 snRNA-001973"></param>
+        </when>
+        <when value="genorm">
+          <param name="minhkgenorm" type="integer" label="Type the minimum number of housekeeping transcripts that should be considered." value="2"></param>
+        </when>
+        <when value="normfinder">
+          <param name="minhknormfinder" type="integer" label="Type the minimum number of housekeeping transcripts that should be considered." value="1"></param>
+        </when>
+        </conditional>
     </when>
   </conditional>
 </section>

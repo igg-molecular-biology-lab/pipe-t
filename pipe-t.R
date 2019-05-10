@@ -47,49 +47,147 @@ dcflag<-args[8]
 x<-args[9]
 normalizationMethod<-args[10]
 if (normalizationMethod=="deltaCt") {
-    normalizers<-args[11]
-    outputNorm<-args[12]
-    outputECDF<-args[13]
-    percentofnastoremove<-args[14]
-    outputRemaining<-args[15]
-    imputeMethod<-args[16]
-    if (imputeMethod=="knn") {
-      kappa<- args[17]
-      macsp<-args[18]
-      outputIMP<-args[19]
+    submethod<-args[11]
+  switch(submethod,
+      "userdefined"={
+        normalizers<-args[12]
+        outputNorm<-args[13]
+        outputECDF<-args[14]
+        percentofnastoremove<-args[15]
+        outputRemaining<-args[16]
+        imputeMethod<-args[17]
+        if (imputeMethod=="knn") {
+          kappa<- args[18]
+          macsp<-args[19]
+          outputIMP<-args[20]
 
-      DEAMethod<-args[20]
-      if (DEAMethod=="ttest") {
-          alternative<- args[21]
-          paired<-args[22]
-          replicates<- args[23]
-          sort<-args[24]
-          stringent<- args[25]
-          padjust<-args[26]
-          outputDEA<-args[27]
-          filtnames<-args[28]
+          DEAMethod<-args[21]
+          if (DEAMethod=="ttest") {
+              alternative<- args[22]
+              paired<-args[23]
+              replicates<- args[24]
+              sort<-args[25]
+              stringent<- args[26]
+              padjust<-args[27]
+              outputDEA<-args[28]
+              filtnames<-args[29]
+            } else {
+              outputDEA<-args[22]
+              filtnames<-args[23]
+            }
         } else {
-          outputDEA<-args[21]
-          filtnames<-args[22]
+          #mean, median, nondetects, cubic
+            outputIMP<-args[18]
+            DEAMethod<-args[19]
+            if (DEAMethod=="ttest") {
+                alternative<- args[20]
+                paired<-args[21]
+                replicates<- args[22]
+                sort<-args[23]
+                stringent<- args[24]
+                padjust<-args[25]
+                outputDEA<-args[26]
+                filtnames<-args[27]
+              } else {
+                outputDEA<-args[20]
+                filtnames<-args[21]
+              }
         }
-    } else {
-      #mean, median, nondetects, cubic 
-        outputIMP<-args[17]
-        DEAMethod<-args[18]
-        if (DEAMethod=="ttest") {
-            alternative<- args[19]
-            paired<-args[20]
-            replicates<- args[21]
-            sort<-args[22]
-            stringent<- args[23]
-            padjust<-args[24]
-            outputDEA<-args[25]
-            filtnames<-args[26]
-          } else {
-            outputDEA<-args[19]
-            filtnames<-args[20]
-          }
-    }
+      },
+      "genorm"={
+        user_number<-as.numeric(args[12])
+        outputNorm<-args[13]
+        outputECDF<-args[14]
+        percentofnastoremove<-args[15]
+        outputRemaining<-args[16]
+        imputeMethod<-args[17]
+        if (imputeMethod=="knn") {
+          kappa<- args[18]
+          macsp<-args[19]
+          outputIMP<-args[20]
+
+          DEAMethod<-args[21]
+          if (DEAMethod=="ttest") {
+              alternative<- args[22]
+              paired<-args[23]
+              replicates<- args[24]
+              sort<-args[25]
+              stringent<- args[26]
+              padjust<-args[27]
+              outputDEA<-args[28]
+              filtnames<-args[29]
+            } else {
+              outputDEA<-args[22]
+              filtnames<-args[23]
+            }
+        } else {
+          #mean, median, nondetects, cubic
+            outputIMP<-args[18]
+            DEAMethod<-args[19]
+            if (DEAMethod=="ttest") {
+                alternative<- args[20]
+                paired<-args[21]
+                replicates<- args[22]
+                sort<-args[23]
+                stringent<- args[24]
+                padjust<-args[25]
+                outputDEA<-args[26]
+                filtnames<-args[27]
+              } else {
+                outputDEA<-args[20]
+                filtnames<-args[21]
+              }
+        }
+
+      },
+      "normfinder"={
+        user_number<-as.numeric(args[12])
+        outputNorm<-args[13]
+        outputECDF<-args[14]
+        percentofnastoremove<-args[15]
+        outputRemaining<-args[16]
+        imputeMethod<-args[17]
+        if (imputeMethod=="knn") {
+          kappa<- args[18]
+          macsp<-args[19]
+          outputIMP<-args[20]
+
+          DEAMethod<-args[21]
+          if (DEAMethod=="ttest") {
+              alternative<- args[22]
+              paired<-args[23]
+              replicates<- args[24]
+              sort<-args[25]
+              stringent<- args[26]
+              padjust<-args[27]
+              outputDEA<-args[28]
+              filtnames<-args[29]
+            } else {
+              outputDEA<-args[22]
+              filtnames<-args[23]
+            }
+        } else {
+          #mean, median, nondetects, cubic
+            outputIMP<-args[18]
+            DEAMethod<-args[19]
+            if (DEAMethod=="ttest") {
+                alternative<- args[20]
+                paired<-args[21]
+                replicates<- args[22]
+                sort<-args[23]
+                stringent<- args[24]
+                padjust<-args[25]
+                outputDEA<-args[26]
+                filtnames<-args[27]
+              } else {
+                outputDEA<-args[20]
+                filtnames<-args[21]
+              }
+        }
+
+      },
+      stop("Enter something that switches me!")
+  )
   }else {
     outputNorm<-args[11]
     outputECDF<-args[12]
@@ -649,7 +747,27 @@ function(q,
 
 switch(normalizationMethod,
     "deltaCt"={
-      normalizedDataset <- normalizeCtDataDav(xFilter, norm="deltaCt",  deltaCt.genes =explode(normalizers, sep = ","))
+      delete.na <- function(DF, n=0) {
+        DF[rowSums(is.na(DF)) <= n,]
+      }
+      switch(submethod,
+          "userdefined"={
+            normalizedDataset <- normalizeCtDataDav(xFilter, norm="deltaCt",  deltaCt.genes =explode(normalizers, sep = ","))
+          },
+          "genorm"={
+            library(NormqPCR)
+            genorm <- selectHKs(t(delete.na(as.matrix(exprs(xFilter)),0)), method = "geNorm", Symbols = rownames(as.matrix(delete.na(exprs(xFilter),0))), minNrHK = as.numeric(user_number), trace=TRUE, log = TRUE)
+            genorm
+            normalizedDataset <- normalizeCtDataDav(xFilter, norm="deltaCt",  deltaCt.genes =genorm$ranking[1:length(genorm$meanM[genorm$meanM<1.5])])
+          },
+          "normfinder"={
+            library(NormqPCR)
+            normfinder <- selectHKs(as.matrix(t(delete.na(exprs(xFilter),0))), group= files$Treatment , method = "NormFinder", Symbols =rownames(as.matrix(delete.na(exprs(xFilter),0))), minNrHK = as.numeric(user_number),  trace=TRUE, log = TRUE)
+            normfinder
+            normalizedDataset <- normalizeCtDataDav(xFilter, norm="deltaCt",  deltaCt.genes =normfinder$ranking)
+          },
+          stop("Enter something that switches me!")
+      )
     },
     "quantile"={
       normalizedDataset <- normalizeCtDataDav(xFilter, norm=normalizationMethod)
