@@ -266,35 +266,4 @@ OUTPUTS: and returs
 7) A txt file with a number statistics about the significance of each miR\gene
 ]]>
 </help>
-<citations>
-        <citation type="bibtex">
-    @Manual{HTqPCR,
-        title = {HTqPCR: Automated analysis of high-throughput qPCR data.},
-        author = {Heidi Dvinge, Paul Bertone},
-        year = {2009},
-        note = {R package version 1.36.0},
-        url = {http://bioconductor.org/packages/HTqPCR/},
-    }
-        </citation>
-        <citation type="bibtex">
-    @Manual{impute,
-        title = {Impute: Imputation for microarray data.},
-        author = {Trevor Hastie, Robert Tibshirani, Balasubramanian Narasimhan, Gilbert Chu},
-        year = {2018},
-        note = {R package version 1.56.0},
-        url = {http://bioconductor.org/packages/impute/},
-    }
-        </citation>
-        <citation type="bibtex">
-    @Manual{RankProd,
-        title = {RankProd:  Rank Product method for identifying differentially expressed
-genes with application in meta-analysis.},
-        author = {Francesco Del Carratore},
-        year = {2018},
-        note = {R package version 3.8.0},
-        url = {http://bioconductor.org/packages/RankProd/},
-    }
-        </citation>
-    </citations>
-
 </tool>
