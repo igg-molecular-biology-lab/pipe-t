@@ -24,12 +24,8 @@ library(impute)
 library(BBmisc)
 library(affy)
 library(psych)
-#library(gmp)
 library(zoo)
-library(nondetects)
 library(Hmisc)
-#library(missForest)
-#library(mice)
 })
 
 cat("\n R libraries...loaded!\n")
@@ -76,7 +72,7 @@ if (normalizationMethod=="deltaCt") {
               filtnames<-args[23]
             }
         } else {
-          #mean, median, nondetects, cubic
+          #mean, median, cubic
             outputIMP<-args[18]
             DEAMethod<-args[19]
             if (DEAMethod=="ttest") {
@@ -121,7 +117,7 @@ if (normalizationMethod=="deltaCt") {
               filtnames<-args[23]
             }
         } else {
-          #mean, median, nondetects, cubic
+          #mean, median, cubic
             outputIMP<-args[18]
             DEAMethod<-args[19]
             if (DEAMethod=="ttest") {
@@ -167,7 +163,7 @@ if (normalizationMethod=="deltaCt") {
               filtnames<-args[23]
             }
         } else {
-          #mean, median, nondetects, cubic
+          #mean, median, cubic
             outputIMP<-args[18]
             DEAMethod<-args[19]
             if (DEAMethod=="ttest") {
@@ -216,7 +212,7 @@ if (normalizationMethod=="deltaCt") {
           filtnames<-args[21]
         }
      } else {
-       #mean, median, nondetects, cubic 
+       #mean, median, cubic 
         outputIMP<-args[16]
         DEAMethod<-args[17]
           if (DEAMethod=="ttest") {
@@ -893,9 +889,6 @@ switch(imputeMethod,
     },
     "median"={
       exprs(qFiltNAs)<-impute(exprs(qFiltNAs),median)
-    },
-    "nondetects"={
-      qFiltNAs <- qpcrImpute(qFiltNAs, outform=c("Single"),linkglm = c("logit"))
     },
     stop("Enter something that switches me!")
 )

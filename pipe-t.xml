@@ -10,7 +10,6 @@
 <requirement type="package" version="1.11.0">r-bbmisc</requirement>
 <requirement type="package" version="1.8.4">r-psych</requirement>
 <requirement type="package" version="1.8_3">r-zoo</requirement>
-<requirement type="package" version="2.10.0">bioconductor-nondetects</requirement>
 <requirement type="package" version="4.1_1">r-hmisc</requirement>
 <requirement type="package" version="1.28.0">bioconductor-normqpcr </requirement>
 </requirements>
@@ -25,7 +24,7 @@
 
     #if str( $dn.condNorm.normMethod ) == "deltaCt":
         #if str( $dn.condNorm.deltamethod.format ) == "userdefined":
-          #if str( $df.condImpute.format ) == "mestdagh" or str( $df.condImpute.format ) == "mean" or str( $df.condImpute.format ) == "median" or str( $df.condImpute.format ) == "nondetects" or str( $df.condImpute.format ) == "cubic":
+          #if str( $df.condImpute.format ) == "mestdagh" or str( $df.condImpute.format ) == "mean" or str( $df.condImpute.format ) == "median" or str( $df.condImpute.format ) == "cubic":
               #if str( $de.condDEA.method ) == "ttest":
                   Rscript $__tool_directory__/pipe-t.R $dp.files "$dp.formatFile" $dp.n $galaxy_output1 "$__tool_directory__/Symlink" $dc.Ctmin $dc.Ctmax $dc.flag $galaxy_output2 $dn.condNorm.normMethod "$dn.condNorm.deltamethod.format" "$dn.condNorm.deltamethod.normalizers" $galaxy_output3 $galaxy_output4 $df.percent $galaxy_output5 $df.condImpute.format $galaxy_output6 $de.condDEA.method $de.condDEA.alternative $de.condDEA.paired $de.condDEA.replicates $de.condDEA.sort $de.condDEA.stringent $de.condDEA.padjust $galaxy_output7 "$df.filtname";
               #end if
@@ -50,7 +49,7 @@
           #end if
         #end if
         #if str( $dn.condNorm.deltamethod.format ) == "genorm":
-            #if str( $df.condImpute.format ) == "mestdagh" or str( $df.condImpute.format ) == "mean" or str( $df.condImpute.format ) == "median" or str( $df.condImpute.format ) == "nondetects" or str( $df.condImpute.format ) == "cubic":
+            #if str( $df.condImpute.format ) == "mestdagh" or str( $df.condImpute.format ) == "mean" or str( $df.condImpute.format ) == "median" or str( $df.condImpute.format ) == "cubic":
                 #if str( $de.condDEA.method ) == "ttest":
                     Rscript $__tool_directory__/pipe-t.R $dp.files "$dp.formatFile" $dp.n $galaxy_output1 "$__tool_directory__/Symlink" $dc.Ctmin $dc.Ctmax $dc.flag $galaxy_output2 $dn.condNorm.normMethod "$dn.condNorm.deltamethod.format" $dn.condNorm.deltamethod.minhkgenorm $galaxy_output3 $galaxy_output4 $df.percent $galaxy_output5 $df.condImpute.format $galaxy_output6 $de.condDEA.method $de.condDEA.alternative $de.condDEA.paired $de.condDEA.replicates $de.condDEA.sort $de.condDEA.stringent $de.condDEA.padjust $galaxy_output7 "$df.filtname";
                 #end if
@@ -75,7 +74,7 @@
             #end if
           #end if
           #if str( $dn.condNorm.deltamethod.format ) == "normfinder":
-              #if str( $df.condImpute.format ) == "mestdagh" or str( $df.condImpute.format ) == "mean" or str( $df.condImpute.format ) == "median" or str( $df.condImpute.format ) == "nondetects" or str( $df.condImpute.format ) == "cubic":
+              #if str( $df.condImpute.format ) == "mestdagh" or str( $df.condImpute.format ) == "mean" or str( $df.condImpute.format ) == "median" or str( $df.condImpute.format ) == "cubic":
                   #if str( $de.condDEA.method ) == "ttest":
                       Rscript $__tool_directory__/pipe-t.R $dp.files "$dp.formatFile" $dp.n $galaxy_output1 "$__tool_directory__/Symlink" $dc.Ctmin $dc.Ctmax $dc.flag $galaxy_output2 $dn.condNorm.normMethod "$dn.condNorm.deltamethod.format" $dn.condNorm.deltamethod.minhknormfinder $galaxy_output3 $galaxy_output4 $df.percent $galaxy_output5 $df.condImpute.format $galaxy_output6 $de.condDEA.method $de.condDEA.alternative $de.condDEA.paired $de.condDEA.replicates $de.condDEA.sort $de.condDEA.stringent $de.condDEA.padjust $galaxy_output7 "$df.filtname";
                   #end if
@@ -101,7 +100,7 @@
             #end if
 
     #else
-      #if str( $df.condImpute.format ) == "mestdagh" or str( $df.condImpute.format ) == "mean" or str( $df.condImpute.format ) == "median" or str( $df.condImpute.format ) == "nondetects" or str( $df.condImpute.format ) == "cubic":
+      #if str( $df.condImpute.format ) == "mestdagh" or str( $df.condImpute.format ) == "mean" or str( $df.condImpute.format ) == "median" or str( $df.condImpute.format ) == "cubic":
           #if str( $de.condDEA.method ) == "ttest":
               Rscript $__tool_directory__/pipe-t.R $dp.files "$dp.formatFile" $dp.n $galaxy_output1 "$__tool_directory__/Symlink" $dc.Ctmin $dc.Ctmax $dc.flag $galaxy_output2 $dn.condNorm.normMethod $galaxy_output3 $galaxy_output4 $df.percent $galaxy_output5 $df.condImpute.format $galaxy_output6 $de.condDEA.method $de.condDEA.alternative $de.condDEA.paired $de.condDEA.replicates $de.condDEA.sort $de.condDEA.stringent $de.condDEA.padjust $galaxy_output7 "$df.filtname";
           #end if
@@ -195,7 +194,6 @@
       <option value="mean">Mean</option>
       <option value="median">Median</option>
       <option value="cubic">Cubic Spline</option>
-      <option value="nondetects">Non-detects</option>
     </param>
     <when value="knn">
       <param name="k" type="integer" min="1" max="100" value="10" label="Type a number of neighbors to use by the KNN imputation method" />
