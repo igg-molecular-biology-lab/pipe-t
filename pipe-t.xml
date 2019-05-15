@@ -254,15 +254,15 @@ biological replicates will result in the final result being Undetermined. If str
 <help>
 <![CDATA[
 **What it does**
-INPUTS: This tool parses a list of RTqPCR file and a file with the groups
+INPUTS: This tool parses a list of RT-qPCR file and a file associating these files and one of two groups
 OUTPUTS: and returs
 1) A txt file with the raw Ct data
-2) A PNG file with a boxplot of Ct data after data categorization for each sample
-3) A txt file with deltaCt data after data normalization
+2) A PNG file of a boxplot with the Ct data after data categorization for each sample
+3) A txt file with normalized data
 4) A PNG file with the Empirical cumulative distribution before and after data normalization
-5) A PNG file with boxplot of deltaCt data after data normalization
-6) A txt file after imputation of missing values
-7) A txt file with a number statistics about the significance of each miR\gene
+5) A PNG file of a boxplot with the normalzied data for each sample
+6) A txt file with imputed data for each missing value
+7) A txt file with the results of the differntial expression analyis
 ]]>
 </help>
 </tool>
