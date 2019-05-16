@@ -17,7 +17,10 @@ RUN apt-get install -y libxml2-dev libcurl4-openssl-dev curl libcairo2-dev
 #RUN chown root:ssl-cert /etc/ssl-cert-snakeoil.key
 #RUN sed -i -e "s/\/ssl\/private//g" /etc/postgresql/9.3/main/postgresql.conf
 ADD docker/galaxy.yml /etc/galaxy/galaxy.yml
-ADD docker/galaxy.yml /etc/galaxy/galaxy.yml
+ADD docker/dependency_resolvers_conf.yml /etc/galaxy/dependency_resolvers_conf.yml
+# ADD docker/dependency_resolvers_conf.yml /etc/galaxy/dependency_resolvers_conf.yml
+ADD docker/dependency_resolvers_conf.yml $GALAXY_ROOT/config/dependency_resolvers_conf.yml
+
 
 #install pipe_t from toolshed
 ADD docker/tools.yml $GALAXY_ROOT/tools.yaml
