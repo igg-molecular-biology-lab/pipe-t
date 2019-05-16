@@ -795,8 +795,8 @@ gm<-na.omit(gm)
 PY = ecdf(gm)
 
 plot_colors <- c(rgb(r=0.0,g=0.0,b=0.9), "red", "forestgreen",rgb(r=0.0,g=0.0,b=0.0),rgb(r=0.5,g=0.0,b=0.3),rgb(r=0.0,g=0.4,b=0.4))
-
-plot(P,cex.lab=3, cex.axis = 2,col=plot_colors[1],xlim=c(0.0,600), mar = c(8,8,8,8), ylim=c(0.0,1),xaxp = c(0.0, 600, 6),yaxp = c(0.0, 1, 10), cex=1.3, lwd=5, main=paste("p-value=", formatC(ks.test(vec,gm)$p.value, format = "e", digits = 2)),xlab="CV(%)",ylab="Empirical Cumulative Distribution")
+par(mar = c(8,8,8,8))
+plot(P,cex.lab=3, cex.axis = 2,col=plot_colors[1],xlim=c(0.0,600), ylim=c(0.0,1),xaxp = c(0.0, 600, 6),yaxp = c(0.0, 1, 10), cex=1.3, lwd=5, main=paste("p-value=", formatC(ks.test(vec,gm)$p.value, format = "e", digits = 2)),xlab="CV(%)",ylab="Empirical Cumulative Distribution")
 lines(PY, lwd=5, col=plot_colors[6],cex=1.3)
 legend("bottomright", c("not normalized", "normalized"), cex=1.3, col=c(plot_colors[1],plot_colors[6]), lwd=c(5,5));
 dev.off()
