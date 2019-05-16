@@ -569,8 +569,8 @@ png(x,    # create PNG for the heat map
   height = 10*300,
   res = 300,            # 300 pixels per inch
   pointsize = 8)
- par(mar = c(8, 8,8, 8)) 
-  plotCtBoxes(xFilter, cex.lab=3, cex.axis = 2,stratify=NULL, xlab = "Samples", ylab="Ct", names=as.character(seq(1, ncol(xFilter), 1)))       # smaller font size
+ 
+  plotCtBoxes(xFilter, cex.lab=3, cex.axis = 2,stratify=NULL, xlab = "Samples", ylab="Ct", mar = c(8,8,8,8), names=as.character(seq(1, ncol(xFilter), 1)))       # smaller font size
 dev.off()
 
 #write.table(exprs(xFilter), file=x, quote=FALSE,  row.names=TRUE, col.names=TRUE,sep = "\t")
@@ -795,8 +795,8 @@ gm<-na.omit(gm)
 PY = ecdf(gm)
 
 plot_colors <- c(rgb(r=0.0,g=0.0,b=0.9), "red", "forestgreen",rgb(r=0.0,g=0.0,b=0.0),rgb(r=0.5,g=0.0,b=0.3),rgb(r=0.0,g=0.4,b=0.4))
-par(mar = c(8, 8,8, 8)) # Set the margin on all sides to 8
-plot(P,cex.lab=3, cex.axis = 2,col=plot_colors[1],xlim=c(0.0,600),  ylim=c(0.0,1),xaxp = c(0.0, 600, 6),yaxp = c(0.0, 1, 10), cex=1.3, lwd=5, main=paste("p-value=", formatC(ks.test(vec,gm)$p.value, format = "e", digits = 2)),xlab="CV(%)",ylab="Empirical Cumulative Distribution")
+
+plot(P,cex.lab=3, cex.axis = 2,col=plot_colors[1],xlim=c(0.0,600), mar = c(8,8,8,8), ylim=c(0.0,1),xaxp = c(0.0, 600, 6),yaxp = c(0.0, 1, 10), cex=1.3, lwd=5, main=paste("p-value=", formatC(ks.test(vec,gm)$p.value, format = "e", digits = 2)),xlab="CV(%)",ylab="Empirical Cumulative Distribution")
 lines(PY, lwd=5, col=plot_colors[6],cex=1.3)
 legend("bottomright", c("not normalized", "normalized"), cex=1.3, col=c(plot_colors[1],plot_colors[6]), lwd=c(5,5));
 dev.off()
@@ -811,8 +811,8 @@ png(outputIMP,    # create PNG for the heat map
   height = 10*300,
   res = 300,            # 300 pixels per inch
   pointsize = 8)
-  par(mar = c(8, 8,8, 8))
-  plotCtBoxes(normalizedDataset, cex.lab=3, cex.axis = 2,stratify=NULL, xlab = "Samples", ylab="DeltaCt", names=as.character(seq(1, ncol(normalizedDataset), 1)))       # smaller font size
+ 
+  plotCtBoxes(normalizedDataset, cex.lab=3, cex.axis = 2,stratify=NULL, xlab = "Samples", ylab="DeltaCt", mar = c(8,8,8,8), names=as.character(seq(1, ncol(normalizedDataset), 1)))       # smaller font size
 dev.off()
 
 ################################################## Filtering based on number of NAs##################################################
