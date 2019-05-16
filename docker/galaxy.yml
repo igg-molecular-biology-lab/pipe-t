@@ -1266,18 +1266,18 @@ galaxy:
   # admin_users: admin1@domain.com, admin2@domain.com
 
   # Force everyone to log in (disable anonymous access).
-  require_login: true
+  # require_login: true
 
   # Show the site's welcome page (see welcome_url) alongside the login
   # page (even if require_login is True)
-  show_welcome_with_login: true
+  # show_welcome_with_login: true
 
   # Allow unregistered users to create new accounts (otherwise, they
   # will have to be created by an admin).
-  allow_user_creation: true
+  # allow_user_creation: true
 
   # Allow administrators to delete accounts.
-  allow_user_deletion: true
+  # allow_user_deletion: true
 
   # Allow administrators to log in as other users (useful for debugging)
   #allow_user_impersonation: false
@@ -1289,7 +1289,7 @@ galaxy:
   # Allow users to remove their datasets from disk immediately
   # (otherwise, datasets will be removed after a time period specified
   # by an administrator in the cleanup scripts run via cron)
-  allow_user_dataset_purge: true
+  # allow_user_dataset_purge: true
 
   # By default, users' data will be public, but setting this to True
   # will cause it to be private.  Does not affect existing users and
