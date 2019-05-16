@@ -8,7 +8,7 @@ MAINTAINER D. CANGELOSI, davidecangelosi@gaslini.org
 
 ENV GALAXY_CONFIG_BRAND="Galaxy PIPE-T"
 ENV ENABLE_TTS_INSTALL True
- 
+
 RUN apt-get -y update
 RUN apt-get install -y libxml2-dev libcurl4-openssl-dev curl libcairo2-dev
 
@@ -16,6 +16,7 @@ RUN apt-get install -y libxml2-dev libcurl4-openssl-dev curl libcairo2-dev
 #RUN cp /etc/ssl/private/ssl-cert-snakeoil.key /etc/
 #RUN chown root:ssl-cert /etc/ssl-cert-snakeoil.key
 #RUN sed -i -e "s/\/ssl\/private//g" /etc/postgresql/9.3/main/postgresql.conf
+ADD docker/galaxy.yml /etc/galaxy/galaxy.yaml
 
 #install pipe_t from toolshed
 ADD tools.yml $GALAXY_ROOT/tools.yaml
