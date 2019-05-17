@@ -30,7 +30,7 @@ RUN install-tools $GALAXY_ROOT/tools.yaml && \
 #RUN chown galaxy:galaxy /usr/local/lib/R/site-library
 
 # Mark folders as imported from the host.
-#VOLUME ["/export/", "/data/", "/var/lib/docker"]
+VOLUME ["/export/", "/data/", "/var/lib/docker"]
 
 # Expose port 80 (webserver), 21 (FTP server), 8800 (Proxy)
 EXPOSE :80
