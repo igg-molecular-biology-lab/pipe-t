@@ -569,7 +569,8 @@ png(x,    # create PNG for the heat map
   height = 10*300,
   res = 300,            # 300 pixels per inch
   pointsize = 8)
-  plotCtBoxes(xFilter, stratify=NULL, xlab = "Samples", ylab="Ct", names=as.character(seq(1, ncol(xFilter), 1)))       # smaller font size
+ 
+  plotCtBoxes(xFilter, cex.lab=3, cex.axis = 2,stratify=NULL, xlab = "Samples", ylab="Ct", mar = c(8,8,8,8), names=as.character(seq(1, ncol(xFilter), 1)))       # smaller font size
 dev.off()
 
 #write.table(exprs(xFilter), file=x, quote=FALSE,  row.names=TRUE, col.names=TRUE,sep = "\t")
@@ -724,22 +725,6 @@ function(q,
 	# Return the normalised object
 	q
 }
-#library(NormqPCR)
-
-#delete.na <- function(DF, n=0) {
- # DF[rowSums(is.na(DF)) <= n,]
-#}
-
-#user_number=5
-#genorm <- selectHKs(t(delete.na(as.matrix(exprs(xGlico)),0)), method = "geNorm", Symbols = rownames(as.matrix(delete.na(exprs(xGlico),0))), minNrHK = as.numeric(user_number), log = TRUE)
-#genorm
-#normfinder <- selectHKs(as.matrix(t(delete.na(exprs(xGlico),0))), group= files$Treatment , method = "NormFinder", Symbols =rownames(as.matrix(delete.na(exprs(xGlico),0))), minNrHK = as.numeric(user_number), log = TRUE)
-#normfinder
-#intersection= intersect(normfinder$ranking, genorm$ranking[1:as.numeric(user_number)])
-
-#cat("\n GeNorm and NormFinder transcripts selected as housekeeping for normalization! \n")
-#intersection
-#dnorm <- normalizeCtData(xGlico , norm="deltaCt", deltaCt.genes=as.vector(intersection)) 
 
 switch(normalizationMethod,
     "deltaCt"={
@@ -783,29 +768,11 @@ switch(normalizationMethod,
     stop("Enter something that switches me!")
 )
 
-  #if (normalizationMethod=="deltaCt") {
-#normalize CT data
-
-#normalizedDataset <- normalizeCtDataDav(xFilter, norm="deltaCt",  deltaCt.genes =explode(normalizers, sep = ","))
-#} else {
-#normalizedDataset <- normalizeCtDataDav(xFilter, norm=normalizationMethod)
-
-#}
+  
 cat("\n Data normalized correctly! \n")
 write.table(exprs(normalizedDataset), file=outputNorm, quote=FALSE,  row.names=TRUE, col.names=TRUE,sep = "\t")
 
 
-#normalizedDataset
-####################################################################################################################
-#Check noise reduction by empirical cumulative distribution
-
-#X = rnorm(100) # X is a sample of 100 normally distributed random variables
-# P = ecdf(X)    # P is a function giving the empirical CDF of X
-#Y = rnorm(1000) # X is a sample of 100 normally distributed random variables
-# PY = ecdf(Y)
-#plot℗
-
-#lines(PY)
 png(outputECDF,    # create PNG for the heat map
   width = 10*300,        # 5 x 300 pixels
   height = 10*300,
@@ -828,8 +795,8 @@ gm<-na.omit(gm)
 PY = ecdf(gm)
 
 plot_colors <- c(rgb(r=0.0,g=0.0,b=0.9), "red", "forestgreen",rgb(r=0.0,g=0.0,b=0.0),rgb(r=0.5,g=0.0,b=0.3),rgb(r=0.0,g=0.4,b=0.4))
-
-plot(P,col=plot_colors[1],xlim=c(0.0,600),  ylim=c(0.0,1),xaxp = c(0.0, 600, 6),yaxp = c(0.0, 1, 10), cex=1.3, lwd=5, main=NULL,xlab="CV(%)",ylab="Empirical Cumulative Distribution")
+par(mar = c(8,8,8,8))
+plot(P,cex.lab=3, cex.axis = 2,col=plot_colors[1],xlim=c(0.0,600), ylim=c(0.0,1),xaxp = c(0.0, 600, 6),yaxp = c(0.0, 1, 10), cex=1.3, lwd=5, main=paste("p-value=", formatC(ks.test(vec,gm)$p.value, format = "e", digits = 2)),xlab="CV(%)",ylab="Empirical Cumulative Distribution")
 lines(PY, lwd=5, col=plot_colors[6],cex=1.3)
 legend("bottomright", c("not normalized", "normalized"), cex=1.3, col=c(plot_colors[1],plot_colors[6]), lwd=c(5,5));
 dev.off()
@@ -844,7 +811,8 @@ png(outputIMP,    # create PNG for the heat map
   height = 10*300,
   res = 300,            # 300 pixels per inch
   pointsize = 8)
-  plotCtBoxes(normalizedDataset, stratify=NULL, xlab = "Samples", ylab="DeltaCt", names=as.character(seq(1, ncol(normalizedDataset), 1)))       # smaller font size
+ 
+  plotCtBoxes(normalizedDataset, cex.lab=3, cex.axis = 2,stratify=NULL, xlab = "Samples", ylab="DeltaCt", mar = c(8,8,8,8), names=as.character(seq(1, ncol(normalizedDataset), 1)))       # smaller font size
 dev.off()
 
 ################################################## Filtering based on number of NAs##################################################
