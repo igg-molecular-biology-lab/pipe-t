@@ -1,0 +1,390 @@
+SDS 2.3 RQ Results	1.2
+Filename	110A.sdm
+Assay Type	RQ Study
+EmbeddedFile	B06-303-A
+Run DateTime	Mon May 11 11:45:13 GMT 2009
+Operator	
+ThermalCycleParams	
+
+#  	Status	Detector	Sample	Task	Avg Ct	Avg Delta Ct	Delta Ct SD	Delta Delta Ct SD	RQ	Omit	Wells Omitted	Hide	RQ Min	RQ Max	PlateID	
+1	Analyzed	MammU6-4395470	B06-303-A	Endogenous Control	20.115					false	0/4	false				
+2	Analyzed	RNU44-4373384	B06-303-A	Target	25.964	5.849		0.000	1.000	false	0/1	false				
+3	Analyzed	RNU48-4373383	B06-303-A	Target	23.195	3.080		0.000	1.000	false	0/1	false				
+4	Analyzed	ath-miR159a-4373390	B06-303-A	Target	40.000	19.885				false	0/1	false				
+5	Analyzed	has-miR-155-4395459	B06-303-A	Target	40.000	19.885				false	0/1	false				
+6	Analyzed	hsa-let-7a-4373169	B06-303-A	Target	29.230	9.115		0.000	1.000	false	0/1	false				
+7	Analyzed	hsa-let-7b-4395446	B06-303-A	Target	25.875	5.760		0.000	1.000	false	0/1	false				
+8	Analyzed	hsa-let-7c-4373167	B06-303-A	Target	29.761	9.646		0.000	1.000	false	0/1	false				
+9	Analyzed	hsa-let-7d-4395394	B06-303-A	Target	29.201	9.086		0.000	1.000	false	0/1	false				
+10	Analyzed	hsa-let-7e-4395517	B06-303-A	Target	26.726	6.612		0.000	1.000	false	0/1	false				
+11	Analyzed	hsa-let-7f-4373164	B06-303-A	Target	34.168	14.053		0.000	1.000	false	0/1	false				
+12	Analyzed	hsa-let-7g-4395393	B06-303-A	Target	27.744	7.630		0.000	1.000	false	0/1	false				
+13	Analyzed	hsa-miR-1-4395333	B06-303-A	Target	37.223	17.109		0.000	1.000	false	0/1	false				
+14	Analyzed	hsa-miR-100-4373160	B06-303-A	Target	26.173	6.058		0.000	1.000	false	0/1	false				
+15	Analyzed	hsa-miR-101-4395364	B06-303-A	Target	33.526	13.411		0.000	1.000	false	0/1	false				
+16	Analyzed	hsa-miR-103-4373158	B06-303-A	Target	29.320	9.205		0.000	1.000	false	0/1	false				
+17	Analyzed	hsa-miR-105-4395278	B06-303-A	Target	36.586	16.472		0.000	1.000	false	0/1	false				
+18	Analyzed	hsa-miR-106a-4395280	B06-303-A	Target	24.533	4.418		0.000	1.000	false	0/1	false				
+19	Analyzed	hsa-miR-106b-4373155	B06-303-A	Target	27.614	7.499		0.000	1.000	false	0/1	false				
+20	Analyzed	hsa-miR-107-4373154	B06-303-A	Target	40.000	19.885				false	0/1	false				
+21	Analyzed	hsa-miR-10a-4373153	B06-303-A	Target	28.956	8.841		0.000	1.000	false	0/1	false				
+22	Analyzed	hsa-miR-10b-4395329	B06-303-A	Target	31.091	10.976		0.000	1.000	false	0/1	false				
+23	Analyzed	hsa-miR-122-4395356	B06-303-A	Target	40.000	19.885				false	0/1	false				
+24	Analyzed	hsa-miR-124-4373295	B06-303-A	Target	27.157	7.043		0.000	1.000	false	0/1	false				
+25	Analyzed	hsa-miR-125a-3p-4395310	B06-303-A	Target	33.437	13.323		0.000	1.000	false	0/1	false				
+26	Analyzed	hsa-miR-125a-5p-4395309	B06-303-A	Target	29.937	9.822		0.000	1.000	false	0/1	false				
+27	Analyzed	hsa-miR-125b-4373148	B06-303-A	Target	26.530	6.415		0.000	1.000	false	0/1	false				
+28	Analyzed	hsa-miR-126-4395339	B06-303-A	Target	23.658	3.543		0.000	1.000	false	0/1	false				
+29	Analyzed	hsa-miR-127-3p-4373147	B06-303-A	Target	29.122	9.007		0.000	1.000	false	0/1	false				
+30	Analyzed	hsa-miR-127-5p-4395340	B06-303-A	Target	40.000	19.885				false	0/1	false				
+31	Analyzed	hsa-miR-128-4395327	B06-303-A	Target	32.573	12.458		0.000	1.000	false	0/1	false				
+32	Analyzed	hsa-miR-129-3p-4373297	B06-303-A	Target	40.000	19.885				false	0/1	false				
+33	Analyzed	hsa-miR-129-5p-4373171	B06-303-A	Target	40.000	19.885				false	0/1	false				
+34	Analyzed	hsa-miR-130a-4373145	B06-303-A	Target	30.874	10.759		0.000	1.000	false	0/1	false				
+35	Analyzed	hsa-miR-130b-4373144	B06-303-A	Target	29.978	9.863		0.000	1.000	false	0/1	false				
+36	Analyzed	hsa-miR-132-4373143	B06-303-A	Target	28.775	8.661		0.000	1.000	false	0/1	false				
+37	Analyzed	hsa-miR-133a-4395357	B06-303-A	Target	32.167	12.052		0.000	1.000	false	0/1	false				
+38	Analyzed	hsa-miR-133b-4395358	B06-303-A	Target	34.976	14.861		0.000	1.000	false	0/1	false				
+39	Analyzed	hsa-miR-134-4373299	B06-303-A	Target	34.700	14.585		0.000	1.000	false	0/1	false				
+40	Analyzed	hsa-miR-135a-4373140	B06-303-A	Target	36.877	16.763		0.000	1.000	false	0/1	false				
+41	Analyzed	hsa-miR-135b-4395372	B06-303-A	Target	29.455	9.340		0.000	1.000	false	0/1	false				
+42	Analyzed	hsa-miR-136-4373173	B06-303-A	Target	40.000	19.885				false	0/1	false				
+43	Analyzed	hsa-miR-137-4373301	B06-303-A	Target	40.000	19.885				false	0/1	false				
+44	Analyzed	hsa-miR-138-4395395	B06-303-A	Target	29.512	9.397		0.000	1.000	false	0/1	false				
+45	Analyzed	hsa-miR-139-3p-4395424	B06-303-A	Target	40.000	19.885				false	0/1	false				
+46	Analyzed	hsa-miR-139-5p-4395400	B06-303-A	Target	30.320	10.205		0.000	1.000	false	0/1	false				
+47	Analyzed	hsa-miR-140-3p-4395345	B06-303-A	Target	30.602	10.487		0.000	1.000	false	0/1	false				
+48	Analyzed	hsa-miR-140-5p-4373374	B06-303-A	Target	27.266	7.151		0.000	1.000	false	0/1	false				
+49	Analyzed	hsa-miR-141-4373137	B06-303-A	Target	27.810	7.695		0.000	1.000	false	0/1	false				
+50	Analyzed	hsa-miR-142-3p-4373136	B06-303-A	Target	27.122	7.007		0.000	1.000	false	0/1	false				
+51	Analyzed	hsa-miR-142-5p-4395359	B06-303-A	Target	33.472	13.357		0.000	1.000	false	0/1	false				
+52	Analyzed	hsa-miR-143-4395360	B06-303-A	Target	26.939	6.824		0.000	1.000	false	0/1	false				
+53	Analyzed	hsa-miR-145-4395389	B06-303-A	Target	24.144	4.030		0.000	1.000	false	0/1	false				
+54	Analyzed	hsa-miR-146a-4373132	B06-303-A	Target	24.426	4.311		0.000	1.000	false	0/1	false				
+55	Analyzed	hsa-miR-146b-3p-4395472	B06-303-A	Target	32.803	12.689		0.000	1.000	false	0/1	false				
+56	Analyzed	hsa-miR-146b-5p-4373178	B06-303-A	Target	25.763	5.648		0.000	1.000	false	0/1	false				
+57	Analyzed	hsa-miR-147-4373131	B06-303-A	Target	40.000	19.885				false	0/1	false				
+58	Analyzed	hsa-miR-147b-4395373	B06-303-A	Target	35.429	15.315		0.000	1.000	false	0/1	false				
+59	Analyzed	hsa-miR-148a-4373130	B06-303-A	Target	28.956	8.841		0.000	1.000	false	0/1	false				
+60	Analyzed	hsa-miR-148b-4373129	B06-303-A	Target	34.062	13.947		0.000	1.000	false	0/1	false				
+61	Analyzed	hsa-miR-149-4395366	B06-303-A	Target	28.199	8.084		0.000	1.000	false	0/1	false				
+62	Analyzed	hsa-miR-150-4373127	B06-303-A	Target	25.268	5.154		0.000	1.000	false	0/1	false				
+63	Analyzed	hsa-miR-152-4395170	B06-303-A	Target	30.380	10.265		0.000	1.000	false	0/1	false				
+64	Analyzed	hsa-miR-153-4373305	B06-303-A	Target	34.955	14.840		0.000	1.000	false	0/1	false				
+65	Analyzed	hsa-miR-154-4373270	B06-303-A	Target	40.000	19.885				false	0/1	false				
+66	Analyzed	hsa-miR-15a-4373123	B06-303-A	Target	32.216	12.102		0.000	1.000	false	0/1	false				
+67	Analyzed	hsa-miR-15b-4373122	B06-303-A	Target	29.603	9.488		0.000	1.000	false	0/1	false				
+68	Analyzed	hsa-miR-16-4373121	B06-303-A	Target	23.925	3.810		0.000	1.000	false	0/1	false				
+69	Analyzed	hsa-miR-17-4395419	B06-303-A	Target	25.064	4.949		0.000	1.000	false	0/1	false				
+70	Analyzed	hsa-miR-181a-4373117	B06-303-A	Target	30.111	9.996		0.000	1.000	false	0/1	false				
+71	Analyzed	hsa-miR-181c-4373115	B06-303-A	Target	34.930	14.815		0.000	1.000	false	0/1	false				
+72	Analyzed	hsa-miR-182-4395445	B06-303-A	Target	31.823	11.709		0.000	1.000	false	0/1	false				
+73	Analyzed	hsa-miR-183-4395380	B06-303-A	Target	33.119	13.004		0.000	1.000	false	0/1	false				
+74	Analyzed	hsa-miR-184-4373113	B06-303-A	Target	33.926	13.812		0.000	1.000	false	0/1	false				
+75	Analyzed	hsa-miR-185-4395382	B06-303-A	Target	29.990	9.875		0.000	1.000	false	0/1	false				
+76	Analyzed	hsa-miR-186-4395396	B06-303-A	Target	28.126	8.011		0.000	1.000	false	0/1	false				
+77	Analyzed	hsa-miR-187-4373307	B06-303-A	Target	37.240	17.125		0.000	1.000	false	0/1	false				
+78	Analyzed	hsa-miR-188-3p-4395217	B06-303-A	Target	40.000	19.885				false	0/1	false				
+79	Analyzed	hsa-miR-18a-4395533	B06-303-A	Target	31.076	10.961		0.000	1.000	false	0/1	false				
+80	Analyzed	hsa-miR-18b-4395328	B06-303-A	Target	40.000	19.885				false	0/1	false				
+81	Analyzed	hsa-miR-190-4373110	B06-303-A	Target	36.916	16.801		0.000	1.000	false	0/1	false				
+82	Analyzed	hsa-miR-191-4395410	B06-303-A	Target	24.881	4.767		0.000	1.000	false	0/1	false				
+83	Analyzed	hsa-miR-192-4373108	B06-303-A	Target	32.366	12.251		0.000	1.000	false	0/1	false				
+84	Analyzed	hsa-miR-193a-3p-4395361	B06-303-A	Target	34.285	14.170		0.000	1.000	false	0/1	false				
+85	Analyzed	hsa-miR-193a-5p-4395392	B06-303-A	Target	30.848	10.733		0.000	1.000	false	0/1	false				
+86	Analyzed	hsa-miR-193b-4395478	B06-303-A	Target	28.696	8.581		0.000	1.000	false	0/1	false				
+87	Analyzed	hsa-miR-194-4373106	B06-303-A	Target	40.000	19.885				false	0/1	false				
+88	Analyzed	hsa-miR-195-4373105	B06-303-A	Target	27.802	7.687		0.000	1.000	false	0/1	false				
+89	Analyzed	hsa-miR-196b-4395326	B06-303-A	Target	31.186	11.072		0.000	1.000	false	0/1	false				
+90	Analyzed	hsa-miR-197-4373102	B06-303-A	Target	30.307	10.193		0.000	1.000	false	0/1	false				
+91	Analyzed	hsa-miR-198-4395384	B06-303-A	Target	34.478	14.363		0.000	1.000	false	0/1	false				
+92	Analyzed	hsa-miR-199a-3p-4395415	B06-303-A	Target	27.603	7.488		0.000	1.000	false	0/1	false				
+93	Analyzed	hsa-miR-199a-5p-4373272	B06-303-A	Target	34.194	14.079		0.000	1.000	false	0/1	false				
+94	Analyzed	hsa-miR-199b-5p-4373100	B06-303-A	Target	40.000	19.885				false	0/1	false				
+95	Analyzed	hsa-miR-19a-4373099	B06-303-A	Target	28.481	8.366		0.000	1.000	false	0/1	false				
+96	Analyzed	hsa-miR-19b-4373098	B06-303-A	Target	25.191	5.076		0.000	1.000	false	0/1	false				
+97	Analyzed	hsa-miR-200a-4378069	B06-303-A	Target	26.247	6.132		0.000	1.000	false	0/1	false				
+98	Analyzed	hsa-miR-200b-4395362	B06-303-A	Target	24.792	4.677		0.000	1.000	false	0/1	false				
+99	Analyzed	hsa-miR-200c-4395411	B06-303-A	Target	23.427	3.312		0.000	1.000	false	0/1	false				
+100	Analyzed	hsa-miR-202-4395474	B06-303-A	Target	31.932	11.817		0.000	1.000	false	0/1	false				
+101	Analyzed	hsa-miR-203-4373095	B06-303-A	Target	27.875	7.760		0.000	1.000	false	0/1	false				
+102	Analyzed	hsa-miR-204-4373094	B06-303-A	Target	32.068	11.953		0.000	1.000	false	0/1	false				
+103	Analyzed	hsa-miR-205-4373093	B06-303-A	Target	25.955	5.840		0.000	1.000	false	0/1	false				
+104	Analyzed	hsa-miR-208-4373091	B06-303-A	Target	40.000	19.885				false	0/1	false				
+105	Analyzed	hsa-miR-208b-4395401	B06-303-A	Target	40.000	19.885				false	0/1	false				
+106	Analyzed	hsa-miR-20a-4373286	B06-303-A	Target	26.126	6.011		0.000	1.000	false	0/1	false				
+107	Analyzed	hsa-miR-20b-4373263	B06-303-A	Target	31.895	11.780		0.000	1.000	false	0/1	false				
+108	Analyzed	hsa-miR-21-4373090	B06-303-A	Target	24.527	4.412		0.000	1.000	false	0/1	false				
+109	Analyzed	hsa-miR-210-4373089	B06-303-A	Target	28.971	8.856		0.000	1.000	false	0/1	false				
+110	Analyzed	hsa-miR-211-4373088	B06-303-A	Target	40.000	19.885				false	0/1	false				
+111	Analyzed	hsa-miR-212-4373087	B06-303-A	Target	31.679	11.564		0.000	1.000	false	0/1	false				
+112	Analyzed	hsa-miR-214-4395417	B06-303-A	Target	28.953	8.838		0.000	1.000	false	0/1	false				
+113	Analyzed	hsa-miR-215-4373084	B06-303-A	Target	40.000	19.885				false	0/1	false				
+114	Analyzed	hsa-miR-216a-4395331	B06-303-A	Target	40.000	19.885				false	0/1	false				
+115	Analyzed	hsa-miR-216b-4395437	B06-303-A	Target	40.000	19.885				false	0/1	false				
+116	Analyzed	hsa-miR-217-4395448	B06-303-A	Target	40.000	19.885				false	0/1	false				
+117	Analyzed	hsa-miR-218-4373081	B06-303-A	Target	29.612	9.497		0.000	1.000	false	0/1	false				
+118	Analyzed	hsa-miR-219-1-3p-4395206	B06-303-A	Target	40.000	19.885				false	0/1	false				
+119	Analyzed	hsa-miR-219-2-3p-4395501	B06-303-A	Target	40.000	19.885				false	0/1	false				
+120	Analyzed	hsa-miR-219-5p-4373080	B06-303-A	Target	40.000	19.885				false	0/1	false				
+121	Analyzed	hsa-miR-22-4373079	B06-303-A	Target	33.787	13.672		0.000	1.000	false	0/1	false				
+122	Analyzed	hsa-miR-220-4373078	B06-303-A	Target	40.000	19.885				false	0/1	false				
+123	Analyzed	hsa-miR-220b-4395317	B06-303-A	Target	40.000	19.885				false	0/1	false				
+124	Analyzed	hsa-miR-220c-4395322	B06-303-A	Target	40.000	19.885				false	0/1	false				
+125	Analyzed	hsa-miR-221-4373077	B06-303-A	Target	27.215	7.100		0.000	1.000	false	0/1	false				
+126	Analyzed	hsa-miR-222-4395387	B06-303-A	Target	22.578	2.463		0.000	1.000	false	0/1	false				
+127	Analyzed	hsa-miR-223-4395406	B06-303-A	Target	22.893	2.778		0.000	1.000	false	0/1	false				
+128	Analyzed	hsa-miR-224-4395210	B06-303-A	Target	29.944	9.829		0.000	1.000	false	0/1	false				
+129	Analyzed	hsa-miR-23a-4373074	B06-303-A	Target	32.932	12.817		0.000	1.000	false	0/1	false				
+130	Analyzed	hsa-miR-23b-4373073	B06-303-A	Target	32.359	12.244		0.000	1.000	false	0/1	false				
+131	Analyzed	hsa-miR-24-4373072	B06-303-A	Target	23.976	3.862		0.000	1.000	false	0/1	false				
+132	Analyzed	hsa-miR-25-4373071	B06-303-A	Target	27.831	7.716		0.000	1.000	false	0/1	false				
+133	Analyzed	hsa-miR-26a-4395166	B06-303-A	Target	25.732	5.617		0.000	1.000	false	0/1	false				
+134	Analyzed	hsa-miR-26b-4395167	B06-303-A	Target	27.805	7.690		0.000	1.000	false	0/1	false				
+135	Analyzed	hsa-miR-27a-4373287	B06-303-A	Target	26.344	6.229		0.000	1.000	false	0/1	false				
+136	Analyzed	hsa-miR-27b-4373068	B06-303-A	Target	29.292	9.177		0.000	1.000	false	0/1	false				
+137	Analyzed	hsa-miR-28-3p-4395557	B06-303-A	Target	26.979	6.864		0.000	1.000	false	0/1	false				
+138	Analyzed	hsa-miR-28-5p-4373067	B06-303-A	Target	28.906	8.791		0.000	1.000	false	0/1	false				
+139	Analyzed	hsa-miR-296-3p-4395212	B06-303-A	Target	37.523	17.408		0.000	1.000	false	0/1	false				
+140	Analyzed	hsa-miR-296-5p-4373066	B06-303-A	Target	31.218	11.103		0.000	1.000	false	0/1	false				
+141	Analyzed	hsa-miR-298-4395301	B06-303-A	Target	40.000	19.885				false	0/1	false				
+142	Analyzed	hsa-miR-299-3p-4373189	B06-303-A	Target	40.000	19.885				false	0/1	false				
+143	Analyzed	hsa-miR-299-5p-4373188	B06-303-A	Target	40.000	19.885				false	0/1	false				
+144	Analyzed	hsa-miR-29a-4395223	B06-303-A	Target	24.946	4.831		0.000	1.000	false	0/1	false				
+145	Analyzed	hsa-miR-29b-4373288	B06-303-A	Target	31.354	11.239		0.000	1.000	false	0/1	false				
+146	Analyzed	hsa-miR-29c-4395171	B06-303-A	Target	28.875	8.761		0.000	1.000	false	0/1	false				
+147	Analyzed	hsa-miR-301a-4373064	B06-303-A	Target	32.109	11.995		0.000	1.000	false	0/1	false				
+148	Analyzed	hsa-miR-301b-4395503	B06-303-A	Target	34.998	14.883		0.000	1.000	false	0/1	false				
+149	Analyzed	hsa-miR-302a-4378070	B06-303-A	Target	40.000	19.885				false	0/1	false				
+150	Analyzed	hsa-miR-302b-4378071	B06-303-A	Target	40.000	19.885				false	0/1	false				
+151	Analyzed	hsa-miR-302c-4378072	B06-303-A	Target	40.000	19.885				false	0/1	false				
+152	Analyzed	hsa-miR-30b-4373290	B06-303-A	Target	26.094	5.979		0.000	1.000	false	0/1	false				
+153	Analyzed	hsa-miR-30c-4373060	B06-303-A	Target	25.613	5.498		0.000	1.000	false	0/1	false				
+154	Analyzed	hsa-miR-31-4395390	B06-303-A	Target	29.696	9.581		0.000	1.000	false	0/1	false				
+155	Analyzed	hsa-miR-32-4395220	B06-303-A	Target	34.209	14.094		0.000	1.000	false	0/1	false				
+156	Analyzed	hsa-miR-320-4395388	B06-303-A	Target	25.516	5.401		0.000	1.000	false	0/1	false				
+157	Analyzed	hsa-miR-323-3p-4395338	B06-303-A	Target	33.537	13.422		0.000	1.000	false	0/1	false				
+158	Analyzed	hsa-miR-324-3p-4395272	B06-303-A	Target	29.925	9.810		0.000	1.000	false	0/1	false				
+159	Analyzed	hsa-miR-324-5p-4373052	B06-303-A	Target	30.300	10.185		0.000	1.000	false	0/1	false				
+160	Analyzed	hsa-miR-325-4373051	B06-303-A	Target	40.000	19.885				false	0/1	false				
+161	Analyzed	hsa-miR-326-4373050	B06-303-A	Target	40.000	19.885				false	0/1	false				
+162	Analyzed	hsa-miR-328-4373049	B06-303-A	Target	30.530	10.415		0.000	1.000	false	0/1	false				
+163	Analyzed	hsa-miR-329-4373191	B06-303-A	Target	40.000	19.885				false	0/1	false				
+164	Analyzed	hsa-miR-330-3p-4373047	B06-303-A	Target	36.104	15.990		0.000	1.000	false	0/1	false				
+165	Analyzed	hsa-miR-330-5p-4395341	B06-303-A	Target	40.000	19.885				false	0/1	false				
+166	Analyzed	hsa-miR-331-3p-4373046	B06-303-A	Target	26.828	6.713		0.000	1.000	false	0/1	false				
+167	Analyzed	hsa-miR-331-5p-4395344	B06-303-A	Target	32.798	12.683		0.000	1.000	false	0/1	false				
+168	Analyzed	hsa-miR-335-4373045	B06-303-A	Target	31.972	11.858		0.000	1.000	false	0/1	false				
+169	Analyzed	hsa-miR-337-5p-4395267	B06-303-A	Target	36.642	16.528		0.000	1.000	false	0/1	false				
+170	Analyzed	hsa-miR-338-3p-4395363	B06-303-A	Target	40.000	19.885				false	0/1	false				
+171	Analyzed	hsa-miR-339-3p-4395295	B06-303-A	Target	31.538	11.423		0.000	1.000	false	0/1	false				
+172	Analyzed	hsa-miR-339-5p-4395368	B06-303-A	Target	33.364	13.249		0.000	1.000	false	0/1	false				
+173	Analyzed	hsa-miR-33b-4395196	B06-303-A	Target	40.000	19.885				false	0/1	false				
+174	Analyzed	hsa-miR-340-4395369	B06-303-A	Target	30.647	10.532		0.000	1.000	false	0/1	false				
+175	Analyzed	hsa-miR-342-3p-4395371	B06-303-A	Target	26.821	6.706		0.000	1.000	false	0/1	false				
+176	Analyzed	hsa-miR-342-5p-4395258	B06-303-A	Target	36.724	16.609		0.000	1.000	false	0/1	false				
+177	Analyzed	hsa-miR-345-4395297	B06-303-A	Target	27.442	7.327		0.000	1.000	false	0/1	false				
+178	Analyzed	hsa-miR-346-4373038	B06-303-A	Target	38.439	18.324		0.000	1.000	false	0/1	false				
+179	Analyzed	hsa-miR-34a-4395168	B06-303-A	Target	27.023	6.908		0.000	1.000	false	0/1	false				
+180	Analyzed	hsa-miR-34c-5p-4373036	B06-303-A	Target	30.153	10.039		0.000	1.000	false	0/1	false				
+181	Analyzed	hsa-miR-361-5p-4373035	B06-303-A	Target	32.549	12.434		0.000	1.000	false	0/1	false				
+182	Analyzed	hsa-miR-362-3p-4395228	B06-303-A	Target	35.322	15.207		0.000	1.000	false	0/1	false				
+183	Analyzed	hsa-miR-362-5p-4378092	B06-303-A	Target	30.022	9.907		0.000	1.000	false	0/1	false				
+184	Analyzed	hsa-miR-363-4378090	B06-303-A	Target	40.000	19.885				false	0/1	false				
+185	Analyzed	hsa-miR-365-4373194	B06-303-A	Target	30.406	10.291		0.000	1.000	false	0/1	false				
+186	Analyzed	hsa-miR-367-4373034	B06-303-A	Target	38.418	18.303		0.000	1.000	false	0/1	false				
+187	Analyzed	hsa-miR-369-3p-4373032	B06-303-A	Target	40.000	19.885				false	0/1	false				
+188	Analyzed	hsa-miR-369-5p-4373195	B06-303-A	Target	40.000	19.885				false	0/1	false				
+189	Analyzed	hsa-miR-370-4395386	B06-303-A	Target	40.000	19.885				false	0/1	false				
+190	Analyzed	hsa-miR-371-3p-4395235	B06-303-A	Target	40.000	19.885				false	0/1	false				
+191	Analyzed	hsa-miR-372-4373029	B06-303-A	Target	36.332	16.217		0.000	1.000	false	0/1	false				
+192	Analyzed	hsa-miR-373-4378073	B06-303-A	Target	40.000	19.885				false	0/1	false				
+193	Analyzed	hsa-miR-374a-4373028	B06-303-A	Target	29.384	9.270		0.000	1.000	false	0/1	false				
+194	Analyzed	hsa-miR-374b-4381045	B06-303-A	Target	27.342	7.228		0.000	1.000	false	0/1	false				
+195	Analyzed	hsa-miR-375-4373027	B06-303-A	Target	28.477	8.362		0.000	1.000	false	0/1	false				
+196	Analyzed	hsa-miR-376a-4373026	B06-303-A	Target	33.877	13.762		0.000	1.000	false	0/1	false				
+197	Analyzed	hsa-miR-376b-4373196	B06-303-A	Target	36.962	16.848		0.000	1.000	false	0/1	false				
+198	Analyzed	hsa-miR-376c-4395233	B06-303-A	Target	32.279	12.164		0.000	1.000	false	0/1	false				
+199	Analyzed	hsa-miR-377-4373025	B06-303-A	Target	40.000	19.885				false	0/1	false				
+200	Analyzed	hsa-miR-379-4373349	B06-303-A	Target	40.000	19.885				false	0/1	false				
+201	Analyzed	hsa-miR-380-4373022	B06-303-A	Target	40.000	19.885				false	0/1	false				
+202	Analyzed	hsa-miR-381-4373020	B06-303-A	Target	35.985	15.871		0.000	1.000	false	0/1	false				
+203	Analyzed	hsa-miR-382-4373019	B06-303-A	Target	38.305	18.190		0.000	1.000	false	0/1	false				
+204	Analyzed	hsa-miR-383-4373018	B06-303-A	Target	37.785	17.670		0.000	1.000	false	0/1	false				
+205	Analyzed	hsa-miR-384-4373017	B06-303-A	Target	40.000	19.885				false	0/1	false				
+206	Analyzed	hsa-miR-409-5p-4395442	B06-303-A	Target	40.000	19.885				false	0/1	false				
+207	Analyzed	hsa-miR-410-4378093	B06-303-A	Target	36.615	16.500		0.000	1.000	false	0/1	false				
+208	Analyzed	hsa-miR-411-4381013	B06-303-A	Target	33.610	13.495		0.000	1.000	false	0/1	false				
+209	Analyzed	hsa-miR-412-4373199	B06-303-A	Target	40.000	19.885				false	0/1	false				
+210	Analyzed	hsa-miR-422a-4395408	B06-303-A	Target	30.278	10.163		0.000	1.000	false	0/1	false				
+211	Analyzed	hsa-miR-423-5p-4395451	B06-303-A	Target	35.167	15.053		0.000	1.000	false	0/1	false				
+212	Analyzed	hsa-miR-424-4373201	B06-303-A	Target	40.000	19.885				false	0/1	false				
+213	Analyzed	hsa-miR-425-4380926	B06-303-A	Target	29.211	9.096		0.000	1.000	false	0/1	false				
+214	Analyzed	hsa-miR-429-4373203	B06-303-A	Target	27.932	7.817		0.000	1.000	false	0/1	false				
+215	Analyzed	hsa-miR-431-4395173	B06-303-A	Target	40.000	19.885				false	0/1	false				
+216	Analyzed	hsa-miR-433-4373205	B06-303-A	Target	37.560	17.445		0.000	1.000	false	0/1	false				
+217	Analyzed	hsa-miR-448-4373206	B06-303-A	Target	40.000	19.885				false	0/1	false				
+218	Analyzed	hsa-miR-449a-4373207	B06-303-A	Target	31.042	10.928		0.000	1.000	false	0/1	false				
+219	Analyzed	hsa-miR-449b-4381011	B06-303-A	Target	31.619	11.505		0.000	1.000	false	0/1	false				
+220	Analyzed	hsa-miR-450a-4395414	B06-303-A	Target	35.241	15.126		0.000	1.000	false	0/1	false				
+221	Analyzed	hsa-miR-450b-3p-4395319	B06-303-A	Target	40.000	19.885				false	0/1	false				
+222	Analyzed	hsa-miR-450b-5p-4395318	B06-303-A	Target	40.000	19.885				false	0/1	false				
+223	Analyzed	hsa-miR-451-4373360	B06-303-A	Target	29.352	9.237		0.000	1.000	false	0/1	false				
+224	Analyzed	hsa-miR-452-4395440	B06-303-A	Target	31.981	11.866		0.000	1.000	false	0/1	false				
+225	Analyzed	hsa-miR-453-4395429	B06-303-A	Target	40.000	19.885				false	0/1	false				
+226	Analyzed	hsa-miR-454-4395434	B06-303-A	Target	28.980	8.865		0.000	1.000	false	0/1	false				
+227	Analyzed	hsa-miR-455-3p-4395355	B06-303-A	Target	36.223	16.109		0.000	1.000	false	0/1	false				
+228	Analyzed	hsa-miR-455-5p-4378098	B06-303-A	Target	31.752	11.638		0.000	1.000	false	0/1	false				
+229	Analyzed	hsa-miR-483-5p-4395449	B06-303-A	Target	31.827	11.712		0.000	1.000	false	0/1	false				
+230	Analyzed	hsa-miR-484-4381032	B06-303-A	Target	25.096	4.981		0.000	1.000	false	0/1	false				
+231	Analyzed	hsa-miR-485-3p-4378095	B06-303-A	Target	36.179	16.064		0.000	1.000	false	0/1	false				
+232	Analyzed	hsa-miR-485-5p-4373212	B06-303-A	Target	40.000	19.885				false	0/1	false				
+233	Analyzed	hsa-miR-486-3p-4395204	B06-303-A	Target	40.000	19.885				false	0/1	false				
+234	Analyzed	hsa-miR-486-5p-4378096	B06-303-A	Target	29.095	8.980		0.000	1.000	false	0/1	false				
+235	Analyzed	hsa-miR-487a-4378097	B06-303-A	Target	36.212	16.097		0.000	1.000	false	0/1	false				
+236	Analyzed	hsa-miR-487b-4378102	B06-303-A	Target	39.174	19.059		0.000	1.000	false	0/1	false				
+237	Analyzed	hsa-miR-488-4395468	B06-303-A	Target	38.007	17.892		0.000	1.000	false	0/1	false				
+238	Analyzed	hsa-miR-489-4395469	B06-303-A	Target	33.579	13.465		0.000	1.000	false	0/1	false				
+239	Analyzed	hsa-miR-490-3p-4373215	B06-303-A	Target	40.000	19.885				false	0/1	false				
+240	Analyzed	hsa-miR-491-3p-4395471	B06-303-A	Target	40.000	19.885				false	0/1	false				
+241	Analyzed	hsa-miR-491-5p-4381053	B06-303-A	Target	31.013	10.898		0.000	1.000	false	0/1	false				
+242	Analyzed	hsa-miR-492-4373217	B06-303-A	Target	40.000	19.885				false	0/1	false				
+243	Analyzed	hsa-miR-493-4395475	B06-303-A	Target	34.920	14.805		0.000	1.000	false	0/1	false				
+244	Analyzed	hsa-miR-494-4395476	B06-303-A	Target	24.297	4.182		0.000	1.000	false	0/1	false				
+245	Analyzed	hsa-miR-495-4381078	B06-303-A	Target	36.440	16.325		0.000	1.000	false	0/1	false				
+246	Analyzed	hsa-miR-496-4386771	B06-303-A	Target	40.000	19.885				false	0/1	false				
+247	Analyzed	hsa-miR-499-3p-4395538	B06-303-A	Target	40.000	19.885				false	0/1	false				
+248	Analyzed	hsa-miR-499-5p-4381047	B06-303-A	Target	40.000	19.885				false	0/1	false				
+249	Analyzed	hsa-miR-500-4395539	B06-303-A	Target	31.000	10.885		0.000	1.000	false	0/1	false				
+250	Analyzed	hsa-miR-501-3p-4395546	B06-303-A	Target	40.000	19.885				false	0/1	false				
+251	Analyzed	hsa-miR-501-5p-4373226	B06-303-A	Target	34.892	14.777		0.000	1.000	false	0/1	false				
+252	Analyzed	hsa-miR-502-3p-4395194	B06-303-A	Target	33.832	13.717		0.000	1.000	false	0/1	false				
+253	Analyzed	hsa-miR-502-5p-4373227	B06-303-A	Target	34.326	14.211		0.000	1.000	false	0/1	false				
+254	Analyzed	hsa-miR-503-4373228	B06-303-A	Target	36.319	16.204		0.000	1.000	false	0/1	false				
+255	Analyzed	hsa-miR-504-4395195	B06-303-A	Target	36.637	16.522		0.000	1.000	false	0/1	false				
+256	Analyzed	hsa-miR-505-4395200	B06-303-A	Target	39.664	19.549		0.000	1.000	false	0/1	false				
+257	Analyzed	hsa-miR-506-4373231	B06-303-A	Target	40.000	19.885				false	0/1	false				
+258	Analyzed	hsa-miR-507-4373232	B06-303-A	Target	40.000	19.885				false	0/1	false				
+259	Analyzed	hsa-miR-508-3p-4373233	B06-303-A	Target	40.000	19.885				false	0/1	false				
+260	Analyzed	hsa-miR-508-5p-4395203	B06-303-A	Target	40.000	19.885				false	0/1	false				
+261	Analyzed	hsa-miR-509-3-5p-4395266	B06-303-A	Target	40.000	19.885				false	0/1	false				
+262	Analyzed	hsa-miR-509-5p-4395346	B06-303-A	Target	33.971	13.856		0.000	1.000	false	0/1	false				
+263	Analyzed	hsa-miR-510-4395352	B06-303-A	Target	40.000	19.885				false	0/1	false				
+264	Analyzed	hsa-miR-511-4373236	B06-303-A	Target	32.016	11.902		0.000	1.000	false	0/1	false				
+265	Analyzed	hsa-miR-512-3p-4381034	B06-303-A	Target	40.000	19.885				false	0/1	false				
+266	Analyzed	hsa-miR-512-5p-4373238	B06-303-A	Target	40.000	19.885				false	0/1	false				
+267	Analyzed	hsa-miR-513-5p-4395201	B06-303-A	Target	40.000	19.885				false	0/1	false				
+268	Analyzed	hsa-miR-515-3p-4395480	B06-303-A	Target	40.000	19.885				false	0/1	false				
+269	Analyzed	hsa-miR-515-5p-4373242	B06-303-A	Target	40.000	19.885				false	0/1	false				
+270	Analyzed	hsa-miR-516a-5p-4395527	B06-303-A	Target	40.000	19.885				false	0/1	false				
+271	Analyzed	hsa-miR-516b-4395172	B06-303-A	Target	40.000	19.885				false	0/1	false				
+272	Analyzed	hsa-miR-517a-4395513	B06-303-A	Target	40.000	19.885				false	0/1	false				
+273	Analyzed	hsa-miR-517b-4373244	B06-303-A	Target	40.000	19.885				false	0/1	false				
+274	Analyzed	hsa-miR-517c-4373264	B06-303-A	Target	40.000	19.885				false	0/1	false				
+275	Analyzed	hsa-miR-518a-3p-4395508	B06-303-A	Target	40.000	19.885				false	0/1	false				
+276	Analyzed	hsa-miR-518a-5p-4395507	B06-303-A	Target	40.000	19.885				false	0/1	false				
+277	Analyzed	hsa-miR-518b-4373246	B06-303-A	Target	33.466	13.351		0.000	1.000	false	0/1	false				
+278	Analyzed	hsa-miR-518c-4395512	B06-303-A	Target	40.000	19.885				false	0/1	false				
+279	Analyzed	hsa-miR-518d-3p-4373248	B06-303-A	Target	40.000	19.885				false	0/1	false				
+280	Analyzed	hsa-miR-518d-5p-4395500	B06-303-A	Target	40.000	19.885				false	0/1	false				
+281	Analyzed	hsa-miR-518e-4395506	B06-303-A	Target	35.739	15.624		0.000	1.000	false	0/1	false				
+282	Analyzed	hsa-miR-518f-4395499	B06-303-A	Target	37.287	17.172		0.000	1.000	false	0/1	false				
+283	Analyzed	hsa-miR-519a-4395526	B06-303-A	Target	40.000	19.885				false	0/1	false				
+284	Analyzed	hsa-miR-519c-3p-4373251	B06-303-A	Target	40.000	19.885				false	0/1	false				
+285	Analyzed	hsa-miR-519d-4395514	B06-303-A	Target	35.624	15.510		0.000	1.000	false	0/1	false				
+286	Analyzed	hsa-miR-519e-4395481	B06-303-A	Target	40.000	19.885				false	0/1	false				
+287	Analyzed	hsa-miR-520a-3p-4373268	B06-303-A	Target	40.000	19.885				false	0/1	false				
+288	Analyzed	hsa-miR-520a-5p-4378085	B06-303-A	Target	40.000	19.885				false	0/1	false				
+289	Analyzed	hsa-miR-520b-4373252	B06-303-A	Target	35.824	15.709		0.000	1.000	false	0/1	false				
+290	Analyzed	hsa-miR-520d-5p-4395504	B06-303-A	Target	40.000	19.885				false	0/1	false				
+291	Analyzed	hsa-miR-520e-4373255	B06-303-A	Target	40.000	19.885				false	0/1	false				
+292	Analyzed	hsa-miR-520f-4373256	B06-303-A	Target	40.000	19.885				false	0/1	false				
+293	Analyzed	hsa-miR-520g-4373257	B06-303-A	Target	40.000	19.885				false	0/1	false				
+294	Analyzed	hsa-miR-521-4373259	B06-303-A	Target	40.000	19.885				false	0/1	false				
+295	Analyzed	hsa-miR-522-4395524	B06-303-A	Target	35.917	15.802		0.000	1.000	false	0/1	false				
+296	Analyzed	hsa-miR-523-4395497	B06-303-A	Target	33.985	13.870		0.000	1.000	false	0/1	false				
+297	Analyzed	hsa-miR-524-5p-4395174	B06-303-A	Target	40.000	19.885				false	0/1	false				
+298	Analyzed	hsa-miR-525-3p-4395496	B06-303-A	Target	40.000	19.885				false	0/1	false				
+299	Analyzed	hsa-miR-525-5p-4378088	B06-303-A	Target	40.000	19.885				false	0/1	false				
+300	Analyzed	hsa-miR-526b-4395493	B06-303-A	Target	40.000	19.885				false	0/1	false				
+301	Analyzed	hsa-miR-532-3p-4395466	B06-303-A	Target	30.047	9.932		0.000	1.000	false	0/1	false				
+302	Analyzed	hsa-miR-532-5p-4380928	B06-303-A	Target	27.293	7.178		0.000	1.000	false	0/1	false				
+303	Analyzed	hsa-miR-539-4378103	B06-303-A	Target	31.849	11.734		0.000	1.000	false	0/1	false				
+304	Analyzed	hsa-miR-541-4395312	B06-303-A	Target	40.000	19.885				false	0/1	false				
+305	Analyzed	hsa-miR-542-3p-4378101	B06-303-A	Target	35.226	15.111		0.000	1.000	false	0/1	false				
+306	Analyzed	hsa-miR-542-5p-4395351	B06-303-A	Target	40.000	19.885				false	0/1	false				
+307	Analyzed	hsa-miR-544-4395376	B06-303-A	Target	40.000	19.885				false	0/1	false				
+308	Analyzed	hsa-miR-545-4395378	B06-303-A	Target	35.918	15.803		0.000	1.000	false	0/1	false				
+309	Analyzed	hsa-miR-548a-3p-4380948	B06-303-A	Target	40.000	19.885				false	0/1	false				
+310	Analyzed	hsa-miR-548a-5p-4395523	B06-303-A	Target	40.000	19.885				false	0/1	false				
+311	Analyzed	hsa-miR-548b-3p-4380951	B06-303-A	Target	40.000	19.885				false	0/1	false				
+312	Analyzed	hsa-miR-548b-5p-4395519	B06-303-A	Target	34.508	14.394		0.000	1.000	false	0/1	false				
+313	Analyzed	hsa-miR-548c-3p-4380993	B06-303-A	Target	40.000	19.885				false	0/1	false				
+314	Analyzed	hsa-miR-548c-5p-4395540	B06-303-A	Target	33.167	13.052		0.000	1.000	false	0/1	false				
+315	Analyzed	hsa-miR-548d-3p-4381008	B06-303-A	Target	40.000	19.885				false	0/1	false				
+316	Analyzed	hsa-miR-548d-5p-4395348	B06-303-A	Target	34.646	14.532		0.000	1.000	false	0/1	false				
+317	Analyzed	hsa-miR-551b-4380945	B06-303-A	Target	34.730	14.616		0.000	1.000	false	0/1	false				
+318	Analyzed	hsa-miR-556-3p-4395456	B06-303-A	Target	40.000	19.885				false	0/1	false				
+319	Analyzed	hsa-miR-556-5p-4395455	B06-303-A	Target	40.000	19.885				false	0/1	false				
+320	Analyzed	hsa-miR-561-4380938	B06-303-A	Target	40.000	19.885				false	0/1	false				
+321	Analyzed	hsa-miR-570-4395458	B06-303-A	Target	36.862	16.748		0.000	1.000	false	0/1	false				
+322	Analyzed	hsa-miR-574-3p-4395460	B06-303-A	Target	27.187	7.073		0.000	1.000	false	0/1	false				
+323	Analyzed	hsa-miR-576-3p-4395462	B06-303-A	Target	33.268	13.153		0.000	1.000	false	0/1	false				
+324	Analyzed	hsa-miR-576-5p-4395461	B06-303-A	Target	40.000	19.885				false	0/1	false				
+325	Analyzed	hsa-miR-579-4395509	B06-303-A	Target	34.795	14.680		0.000	1.000	false	0/1	false				
+326	Analyzed	hsa-miR-582-3p-4395510	B06-303-A	Target	34.776	14.661		0.000	1.000	false	0/1	false				
+327	Analyzed	hsa-miR-582-5p-4395175	B06-303-A	Target	38.419	18.304		0.000	1.000	false	0/1	false				
+328	Analyzed	hsa-miR-589-4395520	B06-303-A	Target	40.000	19.885				false	0/1	false				
+329	Analyzed	hsa-miR-590-5p-4395176	B06-303-A	Target	31.731	11.617		0.000	1.000	false	0/1	false				
+330	Analyzed	hsa-miR-597-4380960	B06-303-A	Target	40.000	19.885				false	0/1	false				
+331	Analyzed	hsa-miR-598-4395179	B06-303-A	Target	33.362	13.247		0.000	1.000	false	0/1	false				
+332	Analyzed	hsa-miR-615-3p-4386777	B06-303-A	Target	40.000	19.885				false	0/1	false				
+333	Analyzed	hsa-miR-615-5p-4395464	B06-303-A	Target	40.000	19.885				false	0/1	false				
+334	Analyzed	hsa-miR-616-4395525	B06-303-A	Target	40.000	19.885				false	0/1	false				
+335	Analyzed	hsa-miR-618-4380996	B06-303-A	Target	37.332	17.218		0.000	1.000	false	0/1	false				
+336	Analyzed	hsa-miR-624-4395541	B06-303-A	Target	40.000	19.885				false	0/1	false				
+337	Analyzed	hsa-miR-625-4395542	B06-303-A	Target	35.670	15.556		0.000	1.000	false	0/1	false				
+338	Analyzed	hsa-miR-627-4380967	B06-303-A	Target	35.268	15.154		0.000	1.000	false	0/1	false				
+339	Analyzed	hsa-miR-628-5p-4395544	B06-303-A	Target	31.943	11.828		0.000	1.000	false	0/1	false				
+340	Analyzed	hsa-miR-629-4395547	B06-303-A	Target	33.791	13.676		0.000	1.000	false	0/1	false				
+341	Analyzed	hsa-miR-636-4395199	B06-303-A	Target	32.920	12.805		0.000	1.000	false	0/1	false				
+342	Analyzed	hsa-miR-642-4380995	B06-303-A	Target	32.425	12.311		0.000	1.000	false	0/1	false				
+343	Analyzed	hsa-miR-651-4381007	B06-303-A	Target	40.000	19.885				false	0/1	false				
+344	Analyzed	hsa-miR-652-4395463	B06-303-A	Target	29.923	9.808		0.000	1.000	false	0/1	false				
+345	Analyzed	hsa-miR-653-4395403	B06-303-A	Target	40.000	19.885				false	0/1	false				
+346	Analyzed	hsa-miR-654-3p-4395350	B06-303-A	Target	35.608	15.494		0.000	1.000	false	0/1	false				
+347	Analyzed	hsa-miR-654-5p-4381014	B06-303-A	Target	40.000	19.885				false	0/1	false				
+348	Analyzed	hsa-miR-655-4381015	B06-303-A	Target	37.056	16.942		0.000	1.000	false	0/1	false				
+349	Analyzed	hsa-miR-660-4380925	B06-303-A	Target	28.434	8.319		0.000	1.000	false	0/1	false				
+350	Analyzed	hsa-miR-671-3p-4395433	B06-303-A	Target	34.641	14.526		0.000	1.000	false	0/1	false				
+351	Analyzed	hsa-miR-672-4395438	B06-303-A	Target	40.000	19.885				false	0/1	false				
+352	Analyzed	hsa-miR-674-4395193	B06-303-A	Target	40.000	19.885				false	0/1	false				
+353	Analyzed	hsa-miR-708-4395452	B06-303-A	Target	26.162	6.047		0.000	1.000	false	0/1	false				
+354	Analyzed	hsa-miR-744-4395435	B06-303-A	Target	28.925	8.810		0.000	1.000	false	0/1	false				
+355	Analyzed	hsa-miR-758-4395180	B06-303-A	Target	40.000	19.885				false	0/1	false				
+356	Analyzed	hsa-miR-871-4395465	B06-303-A	Target	40.000	19.885				false	0/1	false				
+357	Analyzed	hsa-miR-872-4395375	B06-303-A	Target	40.000	19.885				false	0/1	false				
+358	Analyzed	hsa-miR-873-4395467	B06-303-A	Target	40.000	19.885				false	0/1	false				
+359	Analyzed	hsa-miR-874-4395379	B06-303-A	Target	40.000	19.885				false	0/1	false				
+360	Analyzed	hsa-miR-875-3p-4395315	B06-303-A	Target	40.000	19.885				false	0/1	false				
+361	Analyzed	hsa-miR-876-3p-4395336	B06-303-A	Target	40.000	19.885				false	0/1	false				
+362	Analyzed	hsa-miR-876-5p-4395316	B06-303-A	Target	40.000	19.885				false	0/1	false				
+363	Analyzed	hsa-miR-885-3p-4395483	B06-303-A	Target	40.000	19.885				false	0/1	false				
+364	Analyzed	hsa-miR-885-5p-4395407	B06-303-A	Target	35.307	15.192		0.000	1.000	false	0/1	false				
+365	Analyzed	hsa-miR-886-3p-4395305	B06-303-A	Target	26.257	6.142		0.000	1.000	false	0/1	false				
+366	Analyzed	hsa-miR-886-5p-4395304	B06-303-A	Target	27.214	7.099		0.000	1.000	false	0/1	false				
+367	Analyzed	hsa-miR-887-4395485	B06-303-A	Target	40.000	19.885				false	0/1	false				
+368	Analyzed	hsa-miR-888-4395323	B06-303-A	Target	40.000	19.885				false	0/1	false				
+369	Analyzed	hsa-miR-889-4395313	B06-303-A	Target	40.000	19.885				false	0/1	false				
+370	Analyzed	hsa-miR-890-4395320	B06-303-A	Target	40.000	19.885				false	0/1	false				
+371	Analyzed	hsa-miR-891a-4395302	B06-303-A	Target	40.000	19.885				false	0/1	false				
+372	Analyzed	hsa-miR-891b-4395321	B06-303-A	Target	40.000	19.885				false	0/1	false				
+373	Analyzed	hsa-miR-892a-4395306	B06-303-A	Target	40.000	19.885				false	0/1	false				
+374	Analyzed	hsa-miR-9-4373285	B06-303-A	Target	28.963	8.848		0.000	1.000	false	0/1	false				
+375	Analyzed	hsa-miR-92a-4395169	B06-303-A	Target	25.896	5.782		0.000	1.000	false	0/1	false				
+376	Analyzed	hsa-miR-93-4373302	B06-303-A	Target	25.665	5.551		0.000	1.000	false	0/1	false				
+377	Analyzed	hsa-miR-95-4373011	B06-303-A	Target	33.007	12.893		0.000	1.000	false	0/1	false				
+378	Analyzed	hsa-miR-96-4373372	B06-303-A	Target	40.000	19.885				false	0/1	false				
+379	Analyzed	hsa-miR-98-4373009	B06-303-A	Target	32.995	12.881		0.000	1.000	false	0/1	false				
+380	Analyzed	hsa-miR-99a-4373008	B06-303-A	Target	26.570	6.455		0.000	1.000	false	0/1	false				
+381	Analyzed	hsa-miR-99b-4373007	B06-303-A	Target	29.580	9.465		0.000	1.000	false	0/1	false				

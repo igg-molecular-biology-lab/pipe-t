@@ -1,0 +1,390 @@
+SDS 2.3 RQ Results	1.2
+Filename	149A.sdm
+Assay Type	RQ Study
+EmbeddedFile	CNMP-149-A
+Run DateTime	Mon Sep 06 08:42:30 GMT 2010
+Operator	
+ThermalCycleParams	
+
+#  	Status	Detector	Sample	Task	Avg Ct	Avg Delta Ct	Delta Ct SD	Delta Delta Ct SD	RQ	Omit	Wells Omitted	Hide	RQ Min	RQ Max	PlateID	
+1	Analyzed	MammU6-4395470	CNMP-149-A	Endogenous Control	19.851					false	0/4	false				
+2	Analyzed	RNU44-4373384	CNMP-149-A	Target	25.047	5.196		0.000	1.000	false	0/1	false				
+3	Analyzed	RNU48-4373383	CNMP-149-A	Target	23.138	3.287		0.000	1.000	false	0/1	false				
+4	Analyzed	ath-miR159a-4373390	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+5	Analyzed	has-miR-155-4395459	CNMP-149-A	Target	25.893	6.042		0.000	1.000	false	0/1	false				
+6	Analyzed	hsa-let-7a-4373169	CNMP-149-A	Target	29.096	9.245		0.000	1.000	false	0/1	false				
+7	Analyzed	hsa-let-7b-4395446	CNMP-149-A	Target	25.293	5.442		0.000	1.000	false	0/1	false				
+8	Analyzed	hsa-let-7c-4373167	CNMP-149-A	Target	28.985	9.134		0.000	1.000	false	0/1	false				
+9	Analyzed	hsa-let-7d-4395394	CNMP-149-A	Target	27.969	8.118		0.000	1.000	false	0/1	false				
+10	Analyzed	hsa-let-7e-4395517	CNMP-149-A	Target	25.637	5.786		0.000	1.000	false	0/1	false				
+11	Analyzed	hsa-let-7f-4373164	CNMP-149-A	Target	33.746	13.895		0.000	1.000	false	0/1	false				
+12	Analyzed	hsa-let-7g-4395393	CNMP-149-A	Target	26.537	6.686		0.000	1.000	false	0/1	false				
+13	Analyzed	hsa-miR-1-4395333	CNMP-149-A	Target	39.237	19.386		0.000	1.000	false	0/1	false				
+14	Analyzed	hsa-miR-100-4373160	CNMP-149-A	Target	25.426	5.575		0.000	1.000	false	0/1	false				
+15	Analyzed	hsa-miR-101-4395364	CNMP-149-A	Target	33.450	13.599		0.000	1.000	false	0/1	false				
+16	Analyzed	hsa-miR-103-4373158	CNMP-149-A	Target	28.927	9.076		0.000	1.000	false	0/1	false				
+17	Analyzed	hsa-miR-105-4395278	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+18	Analyzed	hsa-miR-106a-4395280	CNMP-149-A	Target	24.197	4.346		0.000	1.000	false	0/1	false				
+19	Analyzed	hsa-miR-106b-4373155	CNMP-149-A	Target	28.825	8.974		0.000	1.000	false	0/1	false				
+20	Analyzed	hsa-miR-107-4373154	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+21	Analyzed	hsa-miR-10a-4373153	CNMP-149-A	Target	27.702	7.851		0.000	1.000	false	0/1	false				
+22	Analyzed	hsa-miR-10b-4395329	CNMP-149-A	Target	31.402	11.551		0.000	1.000	false	0/1	false				
+23	Analyzed	hsa-miR-122-4395356	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+24	Analyzed	hsa-miR-124-4373295	CNMP-149-A	Target	30.144	10.293		0.000	1.000	false	0/1	false				
+25	Analyzed	hsa-miR-125a-3p-4395310	CNMP-149-A	Target	33.444	13.593		0.000	1.000	false	0/1	false				
+26	Analyzed	hsa-miR-125a-5p-4395309	CNMP-149-A	Target	27.789	7.938		0.000	1.000	false	0/1	false				
+27	Analyzed	hsa-miR-125b-4373148	CNMP-149-A	Target	26.044	6.193		0.000	1.000	false	0/1	false				
+28	Analyzed	hsa-miR-126-4395339	CNMP-149-A	Target	22.639	2.788		0.000	1.000	false	0/1	false				
+29	Analyzed	hsa-miR-127-3p-4373147	CNMP-149-A	Target	28.705	8.854		0.000	1.000	false	0/1	false				
+30	Analyzed	hsa-miR-127-5p-4395340	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+31	Analyzed	hsa-miR-128-4395327	CNMP-149-A	Target	33.668	13.817		0.000	1.000	false	0/1	false				
+32	Analyzed	hsa-miR-129-3p-4373297	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+33	Analyzed	hsa-miR-129-5p-4373171	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+34	Analyzed	hsa-miR-130a-4373145	CNMP-149-A	Target	31.176	11.325		0.000	1.000	false	0/1	false				
+35	Analyzed	hsa-miR-130b-4373144	CNMP-149-A	Target	31.685	11.834		0.000	1.000	false	0/1	false				
+36	Analyzed	hsa-miR-132-4373143	CNMP-149-A	Target	28.272	8.421		0.000	1.000	false	0/1	false				
+37	Analyzed	hsa-miR-133a-4395357	CNMP-149-A	Target	31.376	11.525		0.000	1.000	false	0/1	false				
+38	Analyzed	hsa-miR-133b-4395358	CNMP-149-A	Target	36.803	16.952		0.000	1.000	false	0/1	false				
+39	Analyzed	hsa-miR-134-4373299	CNMP-149-A	Target	33.677	13.826		0.000	1.000	false	0/1	false				
+40	Analyzed	hsa-miR-135a-4373140	CNMP-149-A	Target	35.647	15.796		0.000	1.000	false	0/1	false				
+41	Analyzed	hsa-miR-135b-4395372	CNMP-149-A	Target	27.469	7.618		0.000	1.000	false	0/1	false				
+42	Analyzed	hsa-miR-136-4373173	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+43	Analyzed	hsa-miR-137-4373301	CNMP-149-A	Target	33.909	14.058		0.000	1.000	false	0/1	false				
+44	Analyzed	hsa-miR-138-4395395	CNMP-149-A	Target	27.846	7.995		0.000	1.000	false	0/1	false				
+45	Analyzed	hsa-miR-139-3p-4395424	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+46	Analyzed	hsa-miR-139-5p-4395400	CNMP-149-A	Target	29.574	9.723		0.000	1.000	false	0/1	false				
+47	Analyzed	hsa-miR-140-3p-4395345	CNMP-149-A	Target	29.638	9.787		0.000	1.000	false	0/1	false				
+48	Analyzed	hsa-miR-140-5p-4373374	CNMP-149-A	Target	26.489	6.638		0.000	1.000	false	0/1	false				
+49	Analyzed	hsa-miR-141-4373137	CNMP-149-A	Target	28.563	8.712		0.000	1.000	false	0/1	false				
+50	Analyzed	hsa-miR-142-3p-4373136	CNMP-149-A	Target	27.903	8.052		0.000	1.000	false	0/1	false				
+51	Analyzed	hsa-miR-142-5p-4395359	CNMP-149-A	Target	34.545	14.694		0.000	1.000	false	0/1	false				
+52	Analyzed	hsa-miR-143-4395360	CNMP-149-A	Target	26.847	6.996		0.000	1.000	false	0/1	false				
+53	Analyzed	hsa-miR-145-4395389	CNMP-149-A	Target	23.397	3.546		0.000	1.000	false	0/1	false				
+54	Analyzed	hsa-miR-146a-4373132	CNMP-149-A	Target	24.008	4.157		0.000	1.000	false	0/1	false				
+55	Analyzed	hsa-miR-146b-3p-4395472	CNMP-149-A	Target	32.815	12.964		0.000	1.000	false	0/1	false				
+56	Analyzed	hsa-miR-146b-5p-4373178	CNMP-149-A	Target	24.105	4.254		0.000	1.000	false	0/1	false				
+57	Analyzed	hsa-miR-147-4373131	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+58	Analyzed	hsa-miR-147b-4395373	CNMP-149-A	Target	36.026	16.175		0.000	1.000	false	0/1	false				
+59	Analyzed	hsa-miR-148a-4373130	CNMP-149-A	Target	29.420	9.569		0.000	1.000	false	0/1	false				
+60	Analyzed	hsa-miR-148b-4373129	CNMP-149-A	Target	32.336	12.485		0.000	1.000	false	0/1	false				
+61	Analyzed	hsa-miR-149-4395366	CNMP-149-A	Target	29.473	9.622		0.000	1.000	false	0/1	false				
+62	Analyzed	hsa-miR-150-4373127	CNMP-149-A	Target	24.073	4.222		0.000	1.000	false	0/1	false				
+63	Analyzed	hsa-miR-152-4395170	CNMP-149-A	Target	28.812	8.961		0.000	1.000	false	0/1	false				
+64	Analyzed	hsa-miR-153-4373305	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+65	Analyzed	hsa-miR-154-4373270	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+66	Analyzed	hsa-miR-15a-4373123	CNMP-149-A	Target	32.459	12.608		0.000	1.000	false	0/1	false				
+67	Analyzed	hsa-miR-15b-4373122	CNMP-149-A	Target	28.750	8.899		0.000	1.000	false	0/1	false				
+68	Analyzed	hsa-miR-16-4373121	CNMP-149-A	Target	23.095	3.244		0.000	1.000	false	0/1	false				
+69	Analyzed	hsa-miR-17-4395419	CNMP-149-A	Target	24.252	4.401		0.000	1.000	false	0/1	false				
+70	Analyzed	hsa-miR-181a-4373117	CNMP-149-A	Target	29.188	9.337		0.000	1.000	false	0/1	false				
+71	Analyzed	hsa-miR-181c-4373115	CNMP-149-A	Target	36.001	16.150		0.000	1.000	false	0/1	false				
+72	Analyzed	hsa-miR-182-4395445	CNMP-149-A	Target	32.794	12.943		0.000	1.000	false	0/1	false				
+73	Analyzed	hsa-miR-183-4395380	CNMP-149-A	Target	34.917	15.066		0.000	1.000	false	0/1	false				
+74	Analyzed	hsa-miR-184-4373113	CNMP-149-A	Target	32.283	12.432		0.000	1.000	false	0/1	false				
+75	Analyzed	hsa-miR-185-4395382	CNMP-149-A	Target	30.814	10.963		0.000	1.000	false	0/1	false				
+76	Analyzed	hsa-miR-186-4395396	CNMP-149-A	Target	26.750	6.899		0.000	1.000	false	0/1	false				
+77	Analyzed	hsa-miR-187-4373307	CNMP-149-A	Target	34.420	14.569		0.000	1.000	false	0/1	false				
+78	Analyzed	hsa-miR-188-3p-4395217	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+79	Analyzed	hsa-miR-18a-4395533	CNMP-149-A	Target	31.740	11.889		0.000	1.000	false	0/1	false				
+80	Analyzed	hsa-miR-18b-4395328	CNMP-149-A	Target	38.103	18.252		0.000	1.000	false	0/1	false				
+81	Analyzed	hsa-miR-190-4373110	CNMP-149-A	Target	35.108	15.257		0.000	1.000	false	0/1	false				
+82	Analyzed	hsa-miR-191-4395410	CNMP-149-A	Target	23.920	4.069		0.000	1.000	false	0/1	false				
+83	Analyzed	hsa-miR-192-4373108	CNMP-149-A	Target	30.823	10.972		0.000	1.000	false	0/1	false				
+84	Analyzed	hsa-miR-193a-3p-4395361	CNMP-149-A	Target	31.956	12.105		0.000	1.000	false	0/1	false				
+85	Analyzed	hsa-miR-193a-5p-4395392	CNMP-149-A	Target	31.163	11.312		0.000	1.000	false	0/1	false				
+86	Analyzed	hsa-miR-193b-4395478	CNMP-149-A	Target	25.679	5.828		0.000	1.000	false	0/1	false				
+87	Analyzed	hsa-miR-194-4373106	CNMP-149-A	Target	30.930	11.079		0.000	1.000	false	0/1	false				
+88	Analyzed	hsa-miR-195-4373105	CNMP-149-A	Target	26.325	6.474		0.000	1.000	false	0/1	false				
+89	Analyzed	hsa-miR-196b-4395326	CNMP-149-A	Target	34.146	14.295		0.000	1.000	false	0/1	false				
+90	Analyzed	hsa-miR-197-4373102	CNMP-149-A	Target	30.404	10.553		0.000	1.000	false	0/1	false				
+91	Analyzed	hsa-miR-198-4395384	CNMP-149-A	Target	38.308	18.457		0.000	1.000	false	0/1	false				
+92	Analyzed	hsa-miR-199a-3p-4395415	CNMP-149-A	Target	25.428	5.577		0.000	1.000	false	0/1	false				
+93	Analyzed	hsa-miR-199a-5p-4373272	CNMP-149-A	Target	32.450	12.599		0.000	1.000	false	0/1	false				
+94	Analyzed	hsa-miR-199b-5p-4373100	CNMP-149-A	Target	32.369	12.518		0.000	1.000	false	0/1	false				
+95	Analyzed	hsa-miR-19a-4373099	CNMP-149-A	Target	29.401	9.550		0.000	1.000	false	0/1	false				
+96	Analyzed	hsa-miR-19b-4373098	CNMP-149-A	Target	25.311	5.460		0.000	1.000	false	0/1	false				
+97	Analyzed	hsa-miR-200a-4378069	CNMP-149-A	Target	28.196	8.345		0.000	1.000	false	0/1	false				
+98	Analyzed	hsa-miR-200b-4395362	CNMP-149-A	Target	25.877	6.026		0.000	1.000	false	0/1	false				
+99	Analyzed	hsa-miR-200c-4395411	CNMP-149-A	Target	24.605	4.754		0.000	1.000	false	0/1	false				
+100	Analyzed	hsa-miR-202-4395474	CNMP-149-A	Target	33.043	13.192		0.000	1.000	false	0/1	false				
+101	Analyzed	hsa-miR-203-4373095	CNMP-149-A	Target	28.177	8.326		0.000	1.000	false	0/1	false				
+102	Analyzed	hsa-miR-204-4373094	CNMP-149-A	Target	32.655	12.803		0.000	1.000	false	0/1	false				
+103	Analyzed	hsa-miR-205-4373093	CNMP-149-A	Target	29.146	9.295		0.000	1.000	false	0/1	false				
+104	Analyzed	hsa-miR-208-4373091	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+105	Analyzed	hsa-miR-208b-4395401	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+106	Analyzed	hsa-miR-20a-4373286	CNMP-149-A	Target	26.200	6.349		0.000	1.000	false	0/1	false				
+107	Analyzed	hsa-miR-20b-4373263	CNMP-149-A	Target	30.395	10.544		0.000	1.000	false	0/1	false				
+108	Analyzed	hsa-miR-21-4373090	CNMP-149-A	Target	23.703	3.852		0.000	1.000	false	0/1	false				
+109	Analyzed	hsa-miR-210-4373089	CNMP-149-A	Target	27.573	7.722		0.000	1.000	false	0/1	false				
+110	Analyzed	hsa-miR-211-4373088	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+111	Analyzed	hsa-miR-212-4373087	CNMP-149-A	Target	32.416	12.565		0.000	1.000	false	0/1	false				
+112	Analyzed	hsa-miR-214-4395417	CNMP-149-A	Target	26.981	7.130		0.000	1.000	false	0/1	false				
+113	Analyzed	hsa-miR-215-4373084	CNMP-149-A	Target	34.884	15.033		0.000	1.000	false	0/1	false				
+114	Analyzed	hsa-miR-216a-4395331	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+115	Analyzed	hsa-miR-216b-4395437	CNMP-149-A	Target	36.759	16.908		0.000	1.000	false	0/1	false				
+116	Analyzed	hsa-miR-217-4395448	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+117	Analyzed	hsa-miR-218-4373081	CNMP-149-A	Target	29.629	9.778		0.000	1.000	false	0/1	false				
+118	Analyzed	hsa-miR-219-1-3p-4395206	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+119	Analyzed	hsa-miR-219-2-3p-4395501	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+120	Analyzed	hsa-miR-219-5p-4373080	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+121	Analyzed	hsa-miR-22-4373079	CNMP-149-A	Target	32.097	12.246		0.000	1.000	false	0/1	false				
+122	Analyzed	hsa-miR-220-4373078	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+123	Analyzed	hsa-miR-220b-4395317	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+124	Analyzed	hsa-miR-220c-4395322	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+125	Analyzed	hsa-miR-221-4373077	CNMP-149-A	Target	28.232	8.381		0.000	1.000	false	0/1	false				
+126	Analyzed	hsa-miR-222-4395387	CNMP-149-A	Target	22.014	2.163		0.000	1.000	false	0/1	false				
+127	Analyzed	hsa-miR-223-4395406	CNMP-149-A	Target	22.900	3.049		0.000	1.000	false	0/1	false				
+128	Analyzed	hsa-miR-224-4395210	CNMP-149-A	Target	28.350	8.499		0.000	1.000	false	0/1	false				
+129	Analyzed	hsa-miR-23a-4373074	CNMP-149-A	Target	38.041	18.190		0.000	1.000	false	0/1	false				
+130	Analyzed	hsa-miR-23b-4373073	CNMP-149-A	Target	31.970	12.119		0.000	1.000	false	0/1	false				
+131	Analyzed	hsa-miR-24-4373072	CNMP-149-A	Target	22.420	2.569		0.000	1.000	false	0/1	false				
+132	Analyzed	hsa-miR-25-4373071	CNMP-149-A	Target	29.215	9.364		0.000	1.000	false	0/1	false				
+133	Analyzed	hsa-miR-26a-4395166	CNMP-149-A	Target	23.791	3.940		0.000	1.000	false	0/1	false				
+134	Analyzed	hsa-miR-26b-4395167	CNMP-149-A	Target	26.619	6.768		0.000	1.000	false	0/1	false				
+135	Analyzed	hsa-miR-27a-4373287	CNMP-149-A	Target	25.996	6.145		0.000	1.000	false	0/1	false				
+136	Analyzed	hsa-miR-27b-4373068	CNMP-149-A	Target	28.949	9.098		0.000	1.000	false	0/1	false				
+137	Analyzed	hsa-miR-28-3p-4395557	CNMP-149-A	Target	26.787	6.936		0.000	1.000	false	0/1	false				
+138	Analyzed	hsa-miR-28-5p-4373067	CNMP-149-A	Target	29.168	9.317		0.000	1.000	false	0/1	false				
+139	Analyzed	hsa-miR-296-3p-4395212	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+140	Analyzed	hsa-miR-296-5p-4373066	CNMP-149-A	Target	33.933	14.082		0.000	1.000	false	0/1	false				
+141	Analyzed	hsa-miR-298-4395301	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+142	Analyzed	hsa-miR-299-3p-4373189	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+143	Analyzed	hsa-miR-299-5p-4373188	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+144	Analyzed	hsa-miR-29a-4395223	CNMP-149-A	Target	24.152	4.301		0.000	1.000	false	0/1	false				
+145	Analyzed	hsa-miR-29b-4373288	CNMP-149-A	Target	30.966	11.115		0.000	1.000	false	0/1	false				
+146	Analyzed	hsa-miR-29c-4395171	CNMP-149-A	Target	29.018	9.167		0.000	1.000	false	0/1	false				
+147	Analyzed	hsa-miR-301a-4373064	CNMP-149-A	Target	32.105	12.254		0.000	1.000	false	0/1	false				
+148	Analyzed	hsa-miR-301b-4395503	CNMP-149-A	Target	37.732	17.881		0.000	1.000	false	0/1	false				
+149	Analyzed	hsa-miR-302a-4378070	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+150	Analyzed	hsa-miR-302b-4378071	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+151	Analyzed	hsa-miR-302c-4378072	CNMP-149-A	Target	37.039	17.188		0.000	1.000	false	0/1	false				
+152	Analyzed	hsa-miR-30b-4373290	CNMP-149-A	Target	24.960	5.109		0.000	1.000	false	0/1	false				
+153	Analyzed	hsa-miR-30c-4373060	CNMP-149-A	Target	24.197	4.346		0.000	1.000	false	0/1	false				
+154	Analyzed	hsa-miR-31-4395390	CNMP-149-A	Target	26.840	6.989		0.000	1.000	false	0/1	false				
+155	Analyzed	hsa-miR-32-4395220	CNMP-149-A	Target	34.940	15.089		0.000	1.000	false	0/1	false				
+156	Analyzed	hsa-miR-320-4395388	CNMP-149-A	Target	25.613	5.762		0.000	1.000	false	0/1	false				
+157	Analyzed	hsa-miR-323-3p-4395338	CNMP-149-A	Target	32.444	12.593		0.000	1.000	false	0/1	false				
+158	Analyzed	hsa-miR-324-3p-4395272	CNMP-149-A	Target	30.663	10.812		0.000	1.000	false	0/1	false				
+159	Analyzed	hsa-miR-324-5p-4373052	CNMP-149-A	Target	30.401	10.550		0.000	1.000	false	0/1	false				
+160	Analyzed	hsa-miR-325-4373051	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+161	Analyzed	hsa-miR-326-4373050	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+162	Analyzed	hsa-miR-328-4373049	CNMP-149-A	Target	30.451	10.600		0.000	1.000	false	0/1	false				
+163	Analyzed	hsa-miR-329-4373191	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+164	Analyzed	hsa-miR-330-3p-4373047	CNMP-149-A	Target	35.221	15.370		0.000	1.000	false	0/1	false				
+165	Analyzed	hsa-miR-330-5p-4395341	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+166	Analyzed	hsa-miR-331-3p-4373046	CNMP-149-A	Target	26.868	7.017		0.000	1.000	false	0/1	false				
+167	Analyzed	hsa-miR-331-5p-4395344	CNMP-149-A	Target	35.335	15.484		0.000	1.000	false	0/1	false				
+168	Analyzed	hsa-miR-335-4373045	CNMP-149-A	Target	32.079	12.228		0.000	1.000	false	0/1	false				
+169	Analyzed	hsa-miR-337-5p-4395267	CNMP-149-A	Target	34.786	14.935		0.000	1.000	false	0/1	false				
+170	Analyzed	hsa-miR-338-3p-4395363	CNMP-149-A	Target	33.266	13.415		0.000	1.000	false	0/1	false				
+171	Analyzed	hsa-miR-339-3p-4395295	CNMP-149-A	Target	30.061	10.210		0.000	1.000	false	0/1	false				
+172	Analyzed	hsa-miR-339-5p-4395368	CNMP-149-A	Target	32.336	12.485		0.000	1.000	false	0/1	false				
+173	Analyzed	hsa-miR-33b-4395196	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+174	Analyzed	hsa-miR-340-4395369	CNMP-149-A	Target	30.815	10.964		0.000	1.000	false	0/1	false				
+175	Analyzed	hsa-miR-342-3p-4395371	CNMP-149-A	Target	24.992	5.141		0.000	1.000	false	0/1	false				
+176	Analyzed	hsa-miR-342-5p-4395258	CNMP-149-A	Target	35.132	15.281		0.000	1.000	false	0/1	false				
+177	Analyzed	hsa-miR-345-4395297	CNMP-149-A	Target	27.653	7.802		0.000	1.000	false	0/1	false				
+178	Analyzed	hsa-miR-346-4373038	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+179	Analyzed	hsa-miR-34a-4395168	CNMP-149-A	Target	25.471	5.620		0.000	1.000	false	0/1	false				
+180	Analyzed	hsa-miR-34c-5p-4373036	CNMP-149-A	Target	31.565	11.714		0.000	1.000	false	0/1	false				
+181	Analyzed	hsa-miR-361-5p-4373035	CNMP-149-A	Target	32.205	12.354		0.000	1.000	false	0/1	false				
+182	Analyzed	hsa-miR-362-3p-4395228	CNMP-149-A	Target	34.779	14.928		0.000	1.000	false	0/1	false				
+183	Analyzed	hsa-miR-362-5p-4378092	CNMP-149-A	Target	31.417	11.566		0.000	1.000	false	0/1	false				
+184	Analyzed	hsa-miR-363-4378090	CNMP-149-A	Target	34.103	14.252		0.000	1.000	false	0/1	false				
+185	Analyzed	hsa-miR-365-4373194	CNMP-149-A	Target	27.832	7.981		0.000	1.000	false	0/1	false				
+186	Analyzed	hsa-miR-367-4373034	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+187	Analyzed	hsa-miR-369-3p-4373032	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+188	Analyzed	hsa-miR-369-5p-4373195	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+189	Analyzed	hsa-miR-370-4395386	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+190	Analyzed	hsa-miR-371-3p-4395235	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+191	Analyzed	hsa-miR-372-4373029	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+192	Analyzed	hsa-miR-373-4378073	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+193	Analyzed	hsa-miR-374a-4373028	CNMP-149-A	Target	29.831	9.980		0.000	1.000	false	0/1	false				
+194	Analyzed	hsa-miR-374b-4381045	CNMP-149-A	Target	26.916	7.065		0.000	1.000	false	0/1	false				
+195	Analyzed	hsa-miR-375-4373027	CNMP-149-A	Target	26.596	6.745		0.000	1.000	false	0/1	false				
+196	Analyzed	hsa-miR-376a-4373026	CNMP-149-A	Target	37.410	17.559		0.000	1.000	false	0/1	false				
+197	Analyzed	hsa-miR-376b-4373196	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+198	Analyzed	hsa-miR-376c-4395233	CNMP-149-A	Target	32.676	12.825		0.000	1.000	false	0/1	false				
+199	Analyzed	hsa-miR-377-4373025	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+200	Analyzed	hsa-miR-379-4373349	CNMP-149-A	Target	32.767	12.916		0.000	1.000	false	0/1	false				
+201	Analyzed	hsa-miR-380-4373022	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+202	Analyzed	hsa-miR-381-4373020	CNMP-149-A	Target	36.834	16.983		0.000	1.000	false	0/1	false				
+203	Analyzed	hsa-miR-382-4373019	CNMP-149-A	Target	36.571	16.720		0.000	1.000	false	0/1	false				
+204	Analyzed	hsa-miR-383-4373018	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+205	Analyzed	hsa-miR-384-4373017	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+206	Analyzed	hsa-miR-409-5p-4395442	CNMP-149-A	Target	38.488	18.637		0.000	1.000	false	0/1	false				
+207	Analyzed	hsa-miR-410-4378093	CNMP-149-A	Target	36.019	16.168		0.000	1.000	false	0/1	false				
+208	Analyzed	hsa-miR-411-4381013	CNMP-149-A	Target	31.895	12.044		0.000	1.000	false	0/1	false				
+209	Analyzed	hsa-miR-412-4373199	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+210	Analyzed	hsa-miR-422a-4395408	CNMP-149-A	Target	30.066	10.215		0.000	1.000	false	0/1	false				
+211	Analyzed	hsa-miR-423-5p-4395451	CNMP-149-A	Target	32.981	13.130		0.000	1.000	false	0/1	false				
+212	Analyzed	hsa-miR-424-4373201	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+213	Analyzed	hsa-miR-425-4380926	CNMP-149-A	Target	30.436	10.585		0.000	1.000	false	0/1	false				
+214	Analyzed	hsa-miR-429-4373203	CNMP-149-A	Target	28.439	8.588		0.000	1.000	false	0/1	false				
+215	Analyzed	hsa-miR-431-4395173	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+216	Analyzed	hsa-miR-433-4373205	CNMP-149-A	Target	35.377	15.526		0.000	1.000	false	0/1	false				
+217	Analyzed	hsa-miR-448-4373206	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+218	Analyzed	hsa-miR-449a-4373207	CNMP-149-A	Target	31.297	11.446		0.000	1.000	false	0/1	false				
+219	Analyzed	hsa-miR-449b-4381011	CNMP-149-A	Target	31.985	12.134		0.000	1.000	false	0/1	false				
+220	Analyzed	hsa-miR-450a-4395414	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+221	Analyzed	hsa-miR-450b-3p-4395319	CNMP-149-A	Target	37.254	17.403		0.000	1.000	false	0/1	false				
+222	Analyzed	hsa-miR-450b-5p-4395318	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+223	Analyzed	hsa-miR-451-4373360	CNMP-149-A	Target	27.810	7.959		0.000	1.000	false	0/1	false				
+224	Analyzed	hsa-miR-452-4395440	CNMP-149-A	Target	31.812	11.961		0.000	1.000	false	0/1	false				
+225	Analyzed	hsa-miR-453-4395429	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+226	Analyzed	hsa-miR-454-4395434	CNMP-149-A	Target	28.608	8.757		0.000	1.000	false	0/1	false				
+227	Analyzed	hsa-miR-455-3p-4395355	CNMP-149-A	Target	31.273	11.422		0.000	1.000	false	0/1	false				
+228	Analyzed	hsa-miR-455-5p-4378098	CNMP-149-A	Target	30.828	10.977		0.000	1.000	false	0/1	false				
+229	Analyzed	hsa-miR-483-5p-4395449	CNMP-149-A	Target	32.246	12.395		0.000	1.000	false	0/1	false				
+230	Analyzed	hsa-miR-484-4381032	CNMP-149-A	Target	25.430	5.579		0.000	1.000	false	0/1	false				
+231	Analyzed	hsa-miR-485-3p-4378095	CNMP-149-A	Target	35.901	16.050		0.000	1.000	false	0/1	false				
+232	Analyzed	hsa-miR-485-5p-4373212	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+233	Analyzed	hsa-miR-486-3p-4395204	CNMP-149-A	Target	33.091	13.240		0.000	1.000	false	0/1	false				
+234	Analyzed	hsa-miR-486-5p-4378096	CNMP-149-A	Target	26.910	7.059		0.000	1.000	false	0/1	false				
+235	Analyzed	hsa-miR-487a-4378097	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+236	Analyzed	hsa-miR-487b-4378102	CNMP-149-A	Target	34.137	14.286		0.000	1.000	false	0/1	false				
+237	Analyzed	hsa-miR-488-4395468	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+238	Analyzed	hsa-miR-489-4395469	CNMP-149-A	Target	31.382	11.531		0.000	1.000	false	0/1	false				
+239	Analyzed	hsa-miR-490-3p-4373215	CNMP-149-A	Target	38.335	18.484		0.000	1.000	false	0/1	false				
+240	Analyzed	hsa-miR-491-3p-4395471	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+241	Analyzed	hsa-miR-491-5p-4381053	CNMP-149-A	Target	29.840	9.989		0.000	1.000	false	0/1	false				
+242	Analyzed	hsa-miR-492-4373217	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+243	Analyzed	hsa-miR-493-4395475	CNMP-149-A	Target	34.762	14.911		0.000	1.000	false	0/1	false				
+244	Analyzed	hsa-miR-494-4395476	CNMP-149-A	Target	25.676	5.825		0.000	1.000	false	0/1	false				
+245	Analyzed	hsa-miR-495-4381078	CNMP-149-A	Target	32.329	12.478		0.000	1.000	false	0/1	false				
+246	Analyzed	hsa-miR-496-4386771	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+247	Analyzed	hsa-miR-499-3p-4395538	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+248	Analyzed	hsa-miR-499-5p-4381047	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+249	Analyzed	hsa-miR-500-4395539	CNMP-149-A	Target	31.367	11.516		0.000	1.000	false	0/1	false				
+250	Analyzed	hsa-miR-501-3p-4395546	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+251	Analyzed	hsa-miR-501-5p-4373226	CNMP-149-A	Target	39.823	19.972		0.000	1.000	false	0/1	false				
+252	Analyzed	hsa-miR-502-3p-4395194	CNMP-149-A	Target	35.217	15.366		0.000	1.000	false	0/1	false				
+253	Analyzed	hsa-miR-502-5p-4373227	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+254	Analyzed	hsa-miR-503-4373228	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+255	Analyzed	hsa-miR-504-4395195	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+256	Analyzed	hsa-miR-505-4395200	CNMP-149-A	Target	35.374	15.523		0.000	1.000	false	0/1	false				
+257	Analyzed	hsa-miR-506-4373231	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+258	Analyzed	hsa-miR-507-4373232	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+259	Analyzed	hsa-miR-508-3p-4373233	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+260	Analyzed	hsa-miR-508-5p-4395203	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+261	Analyzed	hsa-miR-509-3-5p-4395266	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+262	Analyzed	hsa-miR-509-5p-4395346	CNMP-149-A	Target	39.419	19.568		0.000	1.000	false	0/1	false				
+263	Analyzed	hsa-miR-510-4395352	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+264	Analyzed	hsa-miR-511-4373236	CNMP-149-A	Target	33.260	13.409		0.000	1.000	false	0/1	false				
+265	Analyzed	hsa-miR-512-3p-4381034	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+266	Analyzed	hsa-miR-512-5p-4373238	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+267	Analyzed	hsa-miR-513-5p-4395201	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+268	Analyzed	hsa-miR-515-3p-4395480	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+269	Analyzed	hsa-miR-515-5p-4373242	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+270	Analyzed	hsa-miR-516a-5p-4395527	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+271	Analyzed	hsa-miR-516b-4395172	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+272	Analyzed	hsa-miR-517a-4395513	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+273	Analyzed	hsa-miR-517b-4373244	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+274	Analyzed	hsa-miR-517c-4373264	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+275	Analyzed	hsa-miR-518a-3p-4395508	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+276	Analyzed	hsa-miR-518a-5p-4395507	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+277	Analyzed	hsa-miR-518b-4373246	CNMP-149-A	Target	34.202	14.351		0.000	1.000	false	0/1	false				
+278	Analyzed	hsa-miR-518c-4395512	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+279	Analyzed	hsa-miR-518d-3p-4373248	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+280	Analyzed	hsa-miR-518d-5p-4395500	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+281	Analyzed	hsa-miR-518e-4395506	CNMP-149-A	Target	37.506	17.655		0.000	1.000	false	0/1	false				
+282	Analyzed	hsa-miR-518f-4395499	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+283	Analyzed	hsa-miR-519a-4395526	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+284	Analyzed	hsa-miR-519c-3p-4373251	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+285	Analyzed	hsa-miR-519d-4395514	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+286	Analyzed	hsa-miR-519e-4395481	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+287	Analyzed	hsa-miR-520a-3p-4373268	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+288	Analyzed	hsa-miR-520a-5p-4378085	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+289	Analyzed	hsa-miR-520b-4373252	CNMP-149-A	Target	38.637	18.786		0.000	1.000	false	0/1	false				
+290	Analyzed	hsa-miR-520d-5p-4395504	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+291	Analyzed	hsa-miR-520e-4373255	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+292	Analyzed	hsa-miR-520f-4373256	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+293	Analyzed	hsa-miR-520g-4373257	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+294	Analyzed	hsa-miR-521-4373259	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+295	Analyzed	hsa-miR-522-4395524	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+296	Analyzed	hsa-miR-523-4395497	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+297	Analyzed	hsa-miR-524-5p-4395174	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+298	Analyzed	hsa-miR-525-3p-4395496	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+299	Analyzed	hsa-miR-525-5p-4378088	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+300	Analyzed	hsa-miR-526b-4395493	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+301	Analyzed	hsa-miR-532-3p-4395466	CNMP-149-A	Target	29.690	9.839		0.000	1.000	false	0/1	false				
+302	Analyzed	hsa-miR-532-5p-4380928	CNMP-149-A	Target	27.650	7.799		0.000	1.000	false	0/1	false				
+303	Analyzed	hsa-miR-539-4378103	CNMP-149-A	Target	31.627	11.776		0.000	1.000	false	0/1	false				
+304	Analyzed	hsa-miR-541-4395312	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+305	Analyzed	hsa-miR-542-3p-4378101	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+306	Analyzed	hsa-miR-542-5p-4395351	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+307	Analyzed	hsa-miR-544-4395376	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+308	Analyzed	hsa-miR-545-4395378	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+309	Analyzed	hsa-miR-548a-3p-4380948	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+310	Analyzed	hsa-miR-548a-5p-4395523	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+311	Analyzed	hsa-miR-548b-3p-4380951	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+312	Analyzed	hsa-miR-548b-5p-4395519	CNMP-149-A	Target	37.520	17.669		0.000	1.000	false	0/1	false				
+313	Analyzed	hsa-miR-548c-3p-4380993	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+314	Analyzed	hsa-miR-548c-5p-4395540	CNMP-149-A	Target	35.202	15.351		0.000	1.000	false	0/1	false				
+315	Analyzed	hsa-miR-548d-3p-4381008	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+316	Analyzed	hsa-miR-548d-5p-4395348	CNMP-149-A	Target	38.787	18.936		0.000	1.000	false	0/1	false				
+317	Analyzed	hsa-miR-551b-4380945	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+318	Analyzed	hsa-miR-556-3p-4395456	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+319	Analyzed	hsa-miR-556-5p-4395455	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+320	Analyzed	hsa-miR-561-4380938	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+321	Analyzed	hsa-miR-570-4395458	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+322	Analyzed	hsa-miR-574-3p-4395460	CNMP-149-A	Target	25.738	5.887		0.000	1.000	false	0/1	false				
+323	Analyzed	hsa-miR-576-3p-4395462	CNMP-149-A	Target	34.942	15.091		0.000	1.000	false	0/1	false				
+324	Analyzed	hsa-miR-576-5p-4395461	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+325	Analyzed	hsa-miR-579-4395509	CNMP-149-A	Target	34.695	14.844		0.000	1.000	false	0/1	false				
+326	Analyzed	hsa-miR-582-3p-4395510	CNMP-149-A	Target	39.788	19.937		0.000	1.000	false	0/1	false				
+327	Analyzed	hsa-miR-582-5p-4395175	CNMP-149-A	Target	35.044	15.193		0.000	1.000	false	0/1	false				
+328	Analyzed	hsa-miR-589-4395520	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+329	Analyzed	hsa-miR-590-5p-4395176	CNMP-149-A	Target	31.643	11.792		0.000	1.000	false	0/1	false				
+330	Analyzed	hsa-miR-597-4380960	CNMP-149-A	Target	36.383	16.532		0.000	1.000	false	0/1	false				
+331	Analyzed	hsa-miR-598-4395179	CNMP-149-A	Target	33.506	13.655		0.000	1.000	false	0/1	false				
+332	Analyzed	hsa-miR-615-3p-4386777	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+333	Analyzed	hsa-miR-615-5p-4395464	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+334	Analyzed	hsa-miR-616-4395525	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+335	Analyzed	hsa-miR-618-4380996	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+336	Analyzed	hsa-miR-624-4395541	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+337	Analyzed	hsa-miR-625-4395542	CNMP-149-A	Target	33.437	13.586		0.000	1.000	false	0/1	false				
+338	Analyzed	hsa-miR-627-4380967	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+339	Analyzed	hsa-miR-628-5p-4395544	CNMP-149-A	Target	32.163	12.312		0.000	1.000	false	0/1	false				
+340	Analyzed	hsa-miR-629-4395547	CNMP-149-A	Target	36.087	16.236		0.000	1.000	false	0/1	false				
+341	Analyzed	hsa-miR-636-4395199	CNMP-149-A	Target	34.883	15.032		0.000	1.000	false	0/1	false				
+342	Analyzed	hsa-miR-642-4380995	CNMP-149-A	Target	32.179	12.328		0.000	1.000	false	0/1	false				
+343	Analyzed	hsa-miR-651-4381007	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+344	Analyzed	hsa-miR-652-4395463	CNMP-149-A	Target	29.645	9.794		0.000	1.000	false	0/1	false				
+345	Analyzed	hsa-miR-653-4395403	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+346	Analyzed	hsa-miR-654-3p-4395350	CNMP-149-A	Target	35.583	15.732		0.000	1.000	false	0/1	false				
+347	Analyzed	hsa-miR-654-5p-4381014	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+348	Analyzed	hsa-miR-655-4381015	CNMP-149-A	Target	35.201	15.350		0.000	1.000	false	0/1	false				
+349	Analyzed	hsa-miR-660-4380925	CNMP-149-A	Target	28.849	8.998		0.000	1.000	false	0/1	false				
+350	Analyzed	hsa-miR-671-3p-4395433	CNMP-149-A	Target	34.986	15.135		0.000	1.000	false	0/1	false				
+351	Analyzed	hsa-miR-672-4395438	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+352	Analyzed	hsa-miR-674-4395193	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+353	Analyzed	hsa-miR-708-4395452	CNMP-149-A	Target	27.344	7.493		0.000	1.000	false	0/1	false				
+354	Analyzed	hsa-miR-744-4395435	CNMP-149-A	Target	29.311	9.460		0.000	1.000	false	0/1	false				
+355	Analyzed	hsa-miR-758-4395180	CNMP-149-A	Target	35.638	15.787		0.000	1.000	false	0/1	false				
+356	Analyzed	hsa-miR-871-4395465	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+357	Analyzed	hsa-miR-872-4395375	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+358	Analyzed	hsa-miR-873-4395467	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+359	Analyzed	hsa-miR-874-4395379	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+360	Analyzed	hsa-miR-875-3p-4395315	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+361	Analyzed	hsa-miR-876-3p-4395336	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+362	Analyzed	hsa-miR-876-5p-4395316	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+363	Analyzed	hsa-miR-885-3p-4395483	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+364	Analyzed	hsa-miR-885-5p-4395407	CNMP-149-A	Target	32.384	12.533		0.000	1.000	false	0/1	false				
+365	Analyzed	hsa-miR-886-3p-4395305	CNMP-149-A	Target	24.550	4.699		0.000	1.000	false	0/1	false				
+366	Analyzed	hsa-miR-886-5p-4395304	CNMP-149-A	Target	25.035	5.184		0.000	1.000	false	0/1	false				
+367	Analyzed	hsa-miR-887-4395485	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+368	Analyzed	hsa-miR-888-4395323	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+369	Analyzed	hsa-miR-889-4395313	CNMP-149-A	Target	39.627	19.776		0.000	1.000	false	0/1	false				
+370	Analyzed	hsa-miR-890-4395320	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+371	Analyzed	hsa-miR-891a-4395302	CNMP-149-A	Target	39.303	19.452		0.000	1.000	false	0/1	false				
+372	Analyzed	hsa-miR-891b-4395321	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+373	Analyzed	hsa-miR-892a-4395306	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+374	Analyzed	hsa-miR-9-4373285	CNMP-149-A	Target	33.915	14.064		0.000	1.000	false	0/1	false				
+375	Analyzed	hsa-miR-92a-4395169	CNMP-149-A	Target	26.948	7.097		0.000	1.000	false	0/1	false				
+376	Analyzed	hsa-miR-93-4373302	CNMP-149-A	Target	26.805	6.954		0.000	1.000	false	0/1	false				
+377	Analyzed	hsa-miR-95-4373011	CNMP-149-A	Target	31.524	11.673		0.000	1.000	false	0/1	false				
+378	Analyzed	hsa-miR-96-4373372	CNMP-149-A	Target	40.000	20.149				false	0/1	false				
+379	Analyzed	hsa-miR-98-4373009	CNMP-149-A	Target	33.892	14.041		0.000	1.000	false	0/1	false				
+380	Analyzed	hsa-miR-99a-4373008	CNMP-149-A	Target	26.184	6.333		0.000	1.000	false	0/1	false				
+381	Analyzed	hsa-miR-99b-4373007	CNMP-149-A	Target	28.955	9.104		0.000	1.000	false	0/1	false				
