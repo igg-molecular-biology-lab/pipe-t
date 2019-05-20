@@ -210,4 +210,4 @@ Here, we included the 7 output files returned by PIPE-T using the parameters set
 
 ![enter image description here](https://raw.githubusercontent.com/igg-molecular-biology-lab/pipe-t/master/images/25.jpg)
 ![enter image description here](https://raw.githubusercontent.com/igg-molecular-biology-lab/pipe-t/master/images/26.jpg)
-![enter image description here](https://raw.githubusercontent.com/igg-molecular-biology-lab/pipe-t/master/images/27.jpg)
+![enter image description here](https://raw.githubusercontent.com/igg-molecular-biology-lab/pipe-t/master/images/27.png)
