@@ -402,7 +402,7 @@ function (files, path = NULL, n.features = 384, format = "plain",
         else {
             data[data %in% nas | is.na(data) | data == 0] <- na.value
         }
-        X[, cols] <- suppressWarnings(apply(data, 2, function(x) as.numeric(as.character(x))))
+        X[, cols] <- suppressWarnings({apply(data, 2, function(x) as.numeric(as.character(x)))})
         if ("flag" %in% names(column.info)) {
             flags <- matrix(sample[, column.info[["flag"]]],
                 ncol = n.data[i])
