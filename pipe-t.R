@@ -271,7 +271,7 @@ function(readfile=readfile, n.data=n.data, i=i, nspots=nspots, ...)
 	if (length(n.header)==0) 
 		n.header	<- 0
 	# Read data, skip the required lines
-	out	<- read.delim(file=readfile, header=FALSE, colClasses="character", nrows=nspots*n.data[i], skip=n.header, strip.white=TRUE, ...)
+	out	<- read.delim(file=readfile, header=TRUE, colClasses="character", nrows=nspots*n.data[i], skip=n.header-1, strip.white=TRUE, ...)
 	# Return
 	out
 } # .readCtSDS
@@ -351,8 +351,8 @@ function (files, path = NULL, n.features = 384, format = "plain",
     if (missing(column.info)) {
         column.info <- switch(format, EDS = list(flag="EXPFAIL", feature="Target.Name",  position="Well.Position", Ct="CT"),
           plain = list(flag = 4, feature = 6, type = 7, position = 3, Ct = 8), 
-            SDS = list(flag = 4,feature = 6, type = 7, position = 3, Ct = 8), 
-            #SDS = list(flag = "Omit",feature = "Detector", type = "Task", position = "Pos", Ct = "Avg.Ct"), 
+            #SDS = list(flag = 4,feature = 6, type = 7, position = 3, Ct = 8), 
+            SDS = list(flag = "Omit",feature = "Detector", type = "Task", position = "Pos", Ct = "Avg.Ct"), 
             LightCycler = list(feature = "Name",
             position = "Pos", Ct = "Cp"), CFX = list(feature = "Content",
             position = "Well", Ct = "Cq.Mean"), OpenArray = list(flag = "ThroughHole.Outlier",
@@ -402,7 +402,7 @@ function (files, path = NULL, n.features = 384, format = "plain",
         else {
             data[data %in% nas | is.na(data) | data == 0] <- na.value
         }
-        X[, cols] <- apply(data, 2, function(x) as.numeric(as.character(x)))
+        X[, cols] <- suppressWarnings(apply(data, 2, function(x) as.numeric(as.character(x))))
         if ("flag" %in% names(column.info)) {
             flags <- matrix(sample[, column.info[["flag"]]],
                 ncol = n.data[i])
@@ -494,12 +494,12 @@ switch(format,
       raw<- readCtDataDav(files = as.vector(files$sampleName), header=FALSE,  format="plain", path = path, sample.info=phenoData,n.features = as.numeric(nfeatures))
     },
     "SDS"={
-      columns<- list(feature=3, Ct=6, flag=11)
+      #columns<- list(feature=3, Ct=6, flag=11)
       #columns <-list(flag = "Omit",feature = "Detector", type = "Task", position = "Wells", Ct = "Avg.Ct")
       metadata <- data.frame(labelDescription = c("sampleName", "Treatment"),  row.names = c("sampleName", "Treatment"))
       phenoData <- new("AnnotatedDataFrame", data = files, varMetadata = metadata)
       rownames(phenoData)=as.vector(files$sampleName)
-      raw<- readCtDataDav(files = files$sampleName, format="SDS",column.info=columns, path = path, sample.info=phenoData, n.features=as.numeric(nfeatures))
+      raw<- readCtDataDav(files = files$sampleName, header=TRUE,format="SDS",path = path, sample.info=phenoData, n.features=as.numeric(nfeatures))
     },
     "LightCycler"={
       metadata <- data.frame(labelDescription = c("sampleName", "Treatment"),  row.names = c("sampleName", "Treatment"))
