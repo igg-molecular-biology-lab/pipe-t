@@ -58,7 +58,7 @@ if (normalizationMethod=="deltaCt") {
           outputIMP<-args[20]
 
           DEAMethod<-args[21]
-          if (DEAMethod=="ttest") {
+          if (DEAMethod=="ttest" || DEAMethod=="wtest") {
               alternative<- args[22]
               paired<-args[23]
               replicates<- args[24]
@@ -75,7 +75,7 @@ if (normalizationMethod=="deltaCt") {
           #mean, median, cubic
             outputIMP<-args[18]
             DEAMethod<-args[19]
-            if (DEAMethod=="ttest") {
+            if (DEAMethod=="ttest" || DEAMethod=="wtest") {
                 alternative<- args[20]
                 paired<-args[21]
                 replicates<- args[22]
@@ -103,7 +103,7 @@ if (normalizationMethod=="deltaCt") {
           outputIMP<-args[20]
 
           DEAMethod<-args[21]
-          if (DEAMethod=="ttest") {
+          if (DEAMethod=="ttest" || DEAMethod=="wtest") {
               alternative<- args[22]
               paired<-args[23]
               replicates<- args[24]
@@ -120,7 +120,7 @@ if (normalizationMethod=="deltaCt") {
           #mean, median, cubic
             outputIMP<-args[18]
             DEAMethod<-args[19]
-            if (DEAMethod=="ttest") {
+            if (DEAMethod=="ttest" || DEAMethod=="wtest") {
                 alternative<- args[20]
                 paired<-args[21]
                 replicates<- args[22]
@@ -149,7 +149,7 @@ if (normalizationMethod=="deltaCt") {
           outputIMP<-args[20]
 
           DEAMethod<-args[21]
-          if (DEAMethod=="ttest") {
+          if (DEAMethod=="ttest" || DEAMethod=="wtest") {
               alternative<- args[22]
               paired<-args[23]
               replicates<- args[24]
@@ -166,7 +166,7 @@ if (normalizationMethod=="deltaCt") {
           #mean, median, cubic
             outputIMP<-args[18]
             DEAMethod<-args[19]
-            if (DEAMethod=="ttest") {
+            if (DEAMethod=="ttest" || DEAMethod=="wtest") {
                 alternative<- args[20]
                 paired<-args[21]
                 replicates<- args[22]
@@ -198,7 +198,7 @@ if (normalizationMethod=="deltaCt") {
 
       DEAMethod<-args[19]
      
-      if (DEAMethod=="ttest") {
+      if (DEAMethod=="ttest" || DEAMethod=="wtest") {
           alternative<- args[20]
           paired<-args[21]
           replicates<- args[22]
@@ -215,7 +215,7 @@ if (normalizationMethod=="deltaCt") {
        #mean, median, cubic 
         outputIMP<-args[16]
         DEAMethod<-args[17]
-          if (DEAMethod=="ttest") {
+          if (DEAMethod=="ttest" || DEAMethod=="wtest") {
             alternative<- args[18]
             paired<-args[19]
             replicates<- args[20]
@@ -867,6 +867,23 @@ cat("\n Imputation completed! \n")
 }
 
 write.table(exprs(qFiltNAs), file=outputRemaining, quote=FALSE,  row.names=TRUE, col.names=TRUE, sep = "\t")
+
+switch(DEAMethod,
+    "ttest"={
+     #Differential expression analysis (paired t test+BH). Returns Fold change in linear scale.
+      DEG<-ttestCtData(qFiltNAs, groups = files$Treatment, alternative = alternative, paired = ifelse(paired=="TRUE", TRUE, FALSE), replicates =ifelse(replicates=="TRUE", TRUE, FALSE), sort=ifelse(sort=="TRUE", TRUE, FALSE), stringent=ifelse(stringent=="TRUE", TRUE, FALSE), p.adjust=padjust)
+      write.table(DEG, file=outputDEA, quote=FALSE,  row.names=TRUE, col.names=TRUE,sep = "\t")
+    },
+    "wtest"={
+      DEG<-mannwhitneyCtData(qFiltNAs, groups = files$Treatment, alternative = alternative, paired = ifelse(paired=="TRUE", TRUE, FALSE), replicates =ifelse(replicates=="TRUE", TRUE, FALSE), sort=ifelse(sort=="TRUE", TRUE, FALSE), stringent=ifelse(stringent=="TRUE", TRUE, FALSE), p.adjust=padjust)
+      write.table(DEG, file=outputDEA, quote=FALSE,  row.names=TRUE, col.names=TRUE,sep = "\t")
+    },
+    "rp"={
+      DEG<-RP(exprs(qFiltNAs), as.numeric(pData(qFiltNAs)$Treatment)-1, num.perm = 1000,logged = TRUE, gene.names = featureNames(qFiltNAs), huge=TRUE, plot = FALSE, rand = 123)
+ write.table(DEG[1:5], file=outputDEA, quote=FALSE,  row.names=TRUE, col.names=TRUE,sep = "\t")
+    },
+    stop("Enter something that switches me!")
+)
 
 if (DEAMethod=="ttest") {
  #Differential expression analysis (paired t test+BH). Returns Fold change in linear scale.

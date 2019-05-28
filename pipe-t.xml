@@ -28,6 +28,9 @@
               #if str( $de.condDEA.method ) == "ttest":
                   Rscript $__tool_directory__/pipe-t.R $dp.files "$dp.formatFile" $dp.n $galaxy_output1 "$__tool_directory__/Symlink" $dc.Ctmin $dc.Ctmax $dc.flag $galaxy_output2 $dn.condNorm.normMethod "$dn.condNorm.deltamethod.format" "$dn.condNorm.deltamethod.normalizers" $galaxy_output3 $galaxy_output4 $df.percent $galaxy_output5 $df.condImpute.format $galaxy_output6 $de.condDEA.method $de.condDEA.alternative $de.condDEA.paired $de.condDEA.replicates $de.condDEA.sort $de.condDEA.stringent $de.condDEA.padjust $galaxy_output7 "$df.filtname";
               #end if
+              #if str( $de.condDEA.method ) == "wtest":
+                  Rscript $__tool_directory__/pipe-t.R $dp.files "$dp.formatFile" $dp.n $galaxy_output1 "$__tool_directory__/Symlink" $dc.Ctmin $dc.Ctmax $dc.flag $galaxy_output2 $dn.condNorm.normMethod "$dn.condNorm.deltamethod.format" "$dn.condNorm.deltamethod.normalizers" $galaxy_output3 $galaxy_output4 $df.percent $galaxy_output5 $df.condImpute.format $galaxy_output6 $de.condDEA.method $de.condDEA.alternative $de.condDEA.paired $de.condDEA.replicates $de.condDEA.sort $de.condDEA.stringent $de.condDEA.padjust $galaxy_output7 "$df.filtname";
+              #end if
               #if str( $de.condDEA.method ) == "rp":
                   Rscript $__tool_directory__/pipe-t.R $dp.files "$dp.formatFile" $dp.n $galaxy_output1 "$__tool_directory__/Symlink" $dc.Ctmin $dc.Ctmax $dc.flag $galaxy_output2 $dn.condNorm.normMethod "$dn.condNorm.deltamethod.format" "$dn.condNorm.deltamethod.normalizers"  $galaxy_output3 $galaxy_output4 $df.percent $galaxy_output5 $df.condImpute.format $galaxy_output6 $de.condDEA.method $galaxy_output7 "$df.filtname";
               #end if
@@ -38,6 +41,9 @@
 
           #if str( $df.condImpute.format ) == "knn":
               #if str( $de.condDEA.method ) == "ttest":
+                    Rscript $__tool_directory__/pipe-t.R $dp.files "$dp.formatFile" $dp.n $galaxy_output1 "$__tool_directory__/Symlink" $dc.Ctmin $dc.Ctmax $dc.flag $galaxy_output2 $dn.condNorm.normMethod "$dn.condNorm.deltamethod.format" "$dn.condNorm.deltamethod.normalizers"  $galaxy_output3 $galaxy_output4 $df.percent $galaxy_output5 $df.condImpute.format $df.condImpute.k $df.condImpute.maxp $galaxy_output6 $de.condDEA.method $de.condDEA.alternative $de.condDEA.paired $de.condDEA.replicates $de.condDEA.sort $de.condDEA.stringent $de.condDEA.padjust $galaxy_output7 "$df.filtname";
+              #end if
+              #if str( $de.condDEA.method ) == "wtest":
                     Rscript $__tool_directory__/pipe-t.R $dp.files "$dp.formatFile" $dp.n $galaxy_output1 "$__tool_directory__/Symlink" $dc.Ctmin $dc.Ctmax $dc.flag $galaxy_output2 $dn.condNorm.normMethod "$dn.condNorm.deltamethod.format" "$dn.condNorm.deltamethod.normalizers"  $galaxy_output3 $galaxy_output4 $df.percent $galaxy_output5 $df.condImpute.format $df.condImpute.k $df.condImpute.maxp $galaxy_output6 $de.condDEA.method $de.condDEA.alternative $de.condDEA.paired $de.condDEA.replicates $de.condDEA.sort $de.condDEA.stringent $de.condDEA.padjust $galaxy_output7 "$df.filtname";
               #end if
               #if str( $de.condDEA.method ) == "rp":
@@ -53,6 +59,9 @@
                 #if str( $de.condDEA.method ) == "ttest":
                     Rscript $__tool_directory__/pipe-t.R $dp.files "$dp.formatFile" $dp.n $galaxy_output1 "$__tool_directory__/Symlink" $dc.Ctmin $dc.Ctmax $dc.flag $galaxy_output2 $dn.condNorm.normMethod "$dn.condNorm.deltamethod.format" $dn.condNorm.deltamethod.minhkgenorm $galaxy_output3 $galaxy_output4 $df.percent $galaxy_output5 $df.condImpute.format $galaxy_output6 $de.condDEA.method $de.condDEA.alternative $de.condDEA.paired $de.condDEA.replicates $de.condDEA.sort $de.condDEA.stringent $de.condDEA.padjust $galaxy_output7 "$df.filtname";
                 #end if
+                 #if str( $de.condDEA.method ) == "wtest":
+                    Rscript $__tool_directory__/pipe-t.R $dp.files "$dp.formatFile" $dp.n $galaxy_output1 "$__tool_directory__/Symlink" $dc.Ctmin $dc.Ctmax $dc.flag $galaxy_output2 $dn.condNorm.normMethod "$dn.condNorm.deltamethod.format" $dn.condNorm.deltamethod.minhkgenorm $galaxy_output3 $galaxy_output4 $df.percent $galaxy_output5 $df.condImpute.format $galaxy_output6 $de.condDEA.method $de.condDEA.alternative $de.condDEA.paired $de.condDEA.replicates $de.condDEA.sort $de.condDEA.stringent $de.condDEA.padjust $galaxy_output7 "$df.filtname";
+                #end if
                 #if str( $de.condDEA.method ) == "rp":
                     Rscript $__tool_directory__/pipe-t.R $dp.files "$dp.formatFile" $dp.n $galaxy_output1 "$__tool_directory__/Symlink" $dc.Ctmin $dc.Ctmax $dc.flag $galaxy_output2 $dn.condNorm.normMethod "$dn.condNorm.deltamethod.format" $dn.condNorm.deltamethod.minhkgenorm $galaxy_output3 $galaxy_output4 $df.percent $galaxy_output5 $df.condImpute.format $galaxy_output6 $de.condDEA.method $galaxy_output7 "$df.filtname";
                 #end if
@@ -63,6 +72,9 @@
 
             #if str( $df.condImpute.format ) == "knn":
                 #if str( $de.condDEA.method ) == "ttest":
+                      Rscript $__tool_directory__/pipe-t.R $dp.files "$dp.formatFile" $dp.n $galaxy_output1 "$__tool_directory__/Symlink" $dc.Ctmin $dc.Ctmax $dc.flag $galaxy_output2 $dn.condNorm.normMethod "$dn.condNorm.deltamethod.format" $dn.condNorm.deltamethod.minhkgenorm  $galaxy_output3 $galaxy_output4 $df.percent $galaxy_output5 $df.condImpute.format $df.condImpute.k $df.condImpute.maxp $galaxy_output6 $de.condDEA.method $de.condDEA.alternative $de.condDEA.paired $de.condDEA.replicates $de.condDEA.sort $de.condDEA.stringent $de.condDEA.padjust $galaxy_output7 "$df.filtname";
+                #end if
+                 #if str( $de.condDEA.method ) == "wtest":
                       Rscript $__tool_directory__/pipe-t.R $dp.files "$dp.formatFile" $dp.n $galaxy_output1 "$__tool_directory__/Symlink" $dc.Ctmin $dc.Ctmax $dc.flag $galaxy_output2 $dn.condNorm.normMethod "$dn.condNorm.deltamethod.format" $dn.condNorm.deltamethod.minhkgenorm  $galaxy_output3 $galaxy_output4 $df.percent $galaxy_output5 $df.condImpute.format $df.condImpute.k $df.condImpute.maxp $galaxy_output6 $de.condDEA.method $de.condDEA.alternative $de.condDEA.paired $de.condDEA.replicates $de.condDEA.sort $de.condDEA.stringent $de.condDEA.padjust $galaxy_output7 "$df.filtname";
                 #end if
                 #if str( $de.condDEA.method ) == "rp":
@@ -78,6 +90,9 @@
                   #if str( $de.condDEA.method ) == "ttest":
                       Rscript $__tool_directory__/pipe-t.R $dp.files "$dp.formatFile" $dp.n $galaxy_output1 "$__tool_directory__/Symlink" $dc.Ctmin $dc.Ctmax $dc.flag $galaxy_output2 $dn.condNorm.normMethod "$dn.condNorm.deltamethod.format" $dn.condNorm.deltamethod.minhknormfinder $galaxy_output3 $galaxy_output4 $df.percent $galaxy_output5 $df.condImpute.format $galaxy_output6 $de.condDEA.method $de.condDEA.alternative $de.condDEA.paired $de.condDEA.replicates $de.condDEA.sort $de.condDEA.stringent $de.condDEA.padjust $galaxy_output7 "$df.filtname";
                   #end if
+                   #if str( $de.condDEA.method ) == "wtest":
+                      Rscript $__tool_directory__/pipe-t.R $dp.files "$dp.formatFile" $dp.n $galaxy_output1 "$__tool_directory__/Symlink" $dc.Ctmin $dc.Ctmax $dc.flag $galaxy_output2 $dn.condNorm.normMethod "$dn.condNorm.deltamethod.format" $dn.condNorm.deltamethod.minhknormfinder $galaxy_output3 $galaxy_output4 $df.percent $galaxy_output5 $df.condImpute.format $galaxy_output6 $de.condDEA.method $de.condDEA.alternative $de.condDEA.paired $de.condDEA.replicates $de.condDEA.sort $de.condDEA.stringent $de.condDEA.padjust $galaxy_output7 "$df.filtname";
+                  #end if
                   #if str( $de.condDEA.method ) == "rp":
                       Rscript $__tool_directory__/pipe-t.R $dp.files "$dp.formatFile" $dp.n $galaxy_output1 "$__tool_directory__/Symlink" $dc.Ctmin $dc.Ctmax $dc.flag $galaxy_output2 $dn.condNorm.normMethod "$dn.condNorm.deltamethod.format" $dn.condNorm.deltamethod.minhknormfinder $galaxy_output3 $galaxy_output4 $df.percent $galaxy_output5 $df.condImpute.format $galaxy_output6 $de.condDEA.method $galaxy_output7 "$df.filtname";
                   #end if
@@ -88,6 +103,9 @@
 
               #if str( $df.condImpute.format ) == "knn":
                   #if str( $de.condDEA.method ) == "ttest":
+                        Rscript $__tool_directory__/pipe-t.R $dp.files "$dp.formatFile" $dp.n $galaxy_output1 "$__tool_directory__/Symlink" $dc.Ctmin $dc.Ctmax $dc.flag $galaxy_output2 $dn.condNorm.normMethod "$dn.condNorm.deltamethod.format" $dn.condNorm.deltamethod.minhknormfinder  $galaxy_output3 $galaxy_output4 $df.percent $galaxy_output5 $df.condImpute.format $df.condImpute.k $df.condImpute.maxp $galaxy_output6 $de.condDEA.method $de.condDEA.alternative $de.condDEA.paired $de.condDEA.replicates $de.condDEA.sort $de.condDEA.stringent $de.condDEA.padjust $galaxy_output7 "$df.filtname";
+                  #end if
+                  #if str( $de.condDEA.method ) == "wtest":
                         Rscript $__tool_directory__/pipe-t.R $dp.files "$dp.formatFile" $dp.n $galaxy_output1 "$__tool_directory__/Symlink" $dc.Ctmin $dc.Ctmax $dc.flag $galaxy_output2 $dn.condNorm.normMethod "$dn.condNorm.deltamethod.format" $dn.condNorm.deltamethod.minhknormfinder  $galaxy_output3 $galaxy_output4 $df.percent $galaxy_output5 $df.condImpute.format $df.condImpute.k $df.condImpute.maxp $galaxy_output6 $de.condDEA.method $de.condDEA.alternative $de.condDEA.paired $de.condDEA.replicates $de.condDEA.sort $de.condDEA.stringent $de.condDEA.padjust $galaxy_output7 "$df.filtname";
                   #end if
                   #if str( $de.condDEA.method ) == "rp":
@@ -104,6 +122,9 @@
           #if str( $de.condDEA.method ) == "ttest":
               Rscript $__tool_directory__/pipe-t.R $dp.files "$dp.formatFile" $dp.n $galaxy_output1 "$__tool_directory__/Symlink" $dc.Ctmin $dc.Ctmax $dc.flag $galaxy_output2 $dn.condNorm.normMethod $galaxy_output3 $galaxy_output4 $df.percent $galaxy_output5 $df.condImpute.format $galaxy_output6 $de.condDEA.method $de.condDEA.alternative $de.condDEA.paired $de.condDEA.replicates $de.condDEA.sort $de.condDEA.stringent $de.condDEA.padjust $galaxy_output7 "$df.filtname";
           #end if
+           #if str( $de.condDEA.method ) == "wtest":
+              Rscript $__tool_directory__/pipe-t.R $dp.files "$dp.formatFile" $dp.n $galaxy_output1 "$__tool_directory__/Symlink" $dc.Ctmin $dc.Ctmax $dc.flag $galaxy_output2 $dn.condNorm.normMethod $galaxy_output3 $galaxy_output4 $df.percent $galaxy_output5 $df.condImpute.format $galaxy_output6 $de.condDEA.method $de.condDEA.alternative $de.condDEA.paired $de.condDEA.replicates $de.condDEA.sort $de.condDEA.stringent $de.condDEA.padjust $galaxy_output7 "$df.filtname";
+          #end if
           #if str( $de.condDEA.method ) == "rp":
               Rscript $__tool_directory__/pipe-t.R $dp.files "$dp.formatFile" $dp.n $galaxy_output1 "$__tool_directory__/Symlink" $dc.Ctmin $dc.Ctmax $dc.flag $galaxy_output2 $dn.condNorm.normMethod $galaxy_output3 $galaxy_output4 $df.percent $galaxy_output5 $df.condImpute.format $galaxy_output6 $de.condDEA.method $galaxy_output7 "$df.filtname";
           #end if
@@ -114,6 +135,9 @@
 
       #if str( $df.condImpute.format ) == "knn":
           #if str( $de.condDEA.method ) == "ttest":
+                Rscript $__tool_directory__/pipe-t.R $dp.files "$dp.formatFile" $dp.n $galaxy_output1 "$__tool_directory__/Symlink" $dc.Ctmin $dc.Ctmax $dc.flag $galaxy_output2 $dn.condNorm.normMethod $galaxy_output3 $galaxy_output4 $df.percent $galaxy_output5 $df.condImpute.format $df.condImpute.k $df.condImpute.maxp $galaxy_output6 $de.condDEA.method $de.condDEA.alternative $de.condDEA.paired $de.condDEA.replicates $de.condDEA.sort $de.condDEA.stringent $de.condDEA.padjust $galaxy_output7 "$df.filtname";
+          #end if
+          #if str( $de.condDEA.method ) == "wtest":
                 Rscript $__tool_directory__/pipe-t.R $dp.files "$dp.formatFile" $dp.n $galaxy_output1 "$__tool_directory__/Symlink" $dc.Ctmin $dc.Ctmax $dc.flag $galaxy_output2 $dn.condNorm.normMethod $galaxy_output3 $galaxy_output4 $df.percent $galaxy_output5 $df.condImpute.format $df.condImpute.k $df.condImpute.maxp $galaxy_output6 $de.condDEA.method $de.condDEA.alternative $de.condDEA.paired $de.condDEA.replicates $de.condDEA.sort $de.condDEA.stringent $de.condDEA.padjust $galaxy_output7 "$df.filtname";
           #end if
           #if str( $de.condDEA.method ) == "rp":
@@ -204,11 +228,41 @@
   <section name="de" title="Differential expression analysis" expanded="true">
     <conditional name="condDEA">
       <param name="method" type="select"  label="Select one of the methods from the list below or NONE.">
+        
         <option value="ttest" selected="true">T-test and fold change</option>
+        <option value="wtest" selected="true"> Two sample Wilcoxon test and fold change</option>
         <option value="rp">Rank Product (Only for unpaired data)</option>
         <option value="none">NONE</option>
       </param>
       <when value="ttest">
+        <param name="alternative" type="select"  label="Select one of the types of alternative hypothesis to assess significance.">
+          <option value="two.sided" selected="true">Two sided</option>
+          <option value="greater">Greater</option>
+          <option value="less">Lower</option>
+        </param>
+        <param name="paired" type="select" label="Select TRUE if you want a paired analysis." help="Pairing of samples will follow the order of the sampleNames in the input file">
+            <option value="TRUE" >TRUE</option>
+            <option value="FALSE" selected="true">FALSE</option>
+        </param>
+        <param name="replicates" type="select" label="Select TRUE if you have replicated transcripts in your data" help="If replicated transcripts are present in the data, the statistics will be calculated once for each replicated transcript, rather than separately.">
+            <option value="TRUE" selected="true">TRUE</option>
+            <option value="FALSE" >FALSE</option>
+        </param>
+        <param name="sort" type="select" label="Select TRUE if you want that output file is sorted by increasing order of p-value?" help="">
+            <option value="TRUE" selected="true">TRUE</option>
+            <option value="FALSE" >FALSE</option>
+        </param>
+        <param name="stringent" type="select" label="Select TRUE to admit more stringent analysis." help=" If stringent is TRUE any unreliable or undetermined measurements among technical and
+biological replicates will result in the final result being Undetermined. If stringent is FALSE result will be OK unless at least half of the Ct values for a given gene are unreliable/undetermined.">
+            <option value="TRUE" selected="true">TRUE</option>
+            <option value="FALSE" >FALSE</option>
+        </param>
+        <param name="padjust" type="select"  label="Select one of the methods for adjusting pvalues in case of multiple hypothesis testing">
+          <option value="BH" selected="true">Benjamini-Hochberg</option>
+          <option value="bonferroni">Bonferroni</option>
+        </param>
+      </when>
+      <when value="wtest">
         <param name="alternative" type="select"  label="Select one of the types of alternative hypothesis to assess significance.">
           <option value="two.sided" selected="true">Two sided</option>
           <option value="greater">Greater</option>
