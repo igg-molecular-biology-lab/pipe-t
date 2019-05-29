@@ -570,7 +570,7 @@ png(x,    # create PNG for the heat map
   res = 300,            # 300 pixels per inch
   pointsize = 8)
  
-  plotCtBoxes(xFilter, ylim=c(min(exprs(xFilter), na.rm = TRUE),max(exprs(xFilter), na.rm = TRUE)), cex.lab=3, cex.axis = 2,stratify=NULL, xlab = "Samples", ylab="Ct", mar = c(8,8,8,8), names=as.character(seq(1, ncol(xFilter), 1)))       # smaller font size
+  plotCtBoxes(xFilter, ylim=c(dcCtmin,dcCtmax), cex.lab=3, cex.axis = 2,stratify=NULL, xlab = "Samples", ylab="Ct", mar = c(8,8,8,8), names=as.character(seq(1, ncol(xFilter), 1)))       # smaller font size
 dev.off()
 
 #write.table(exprs(xFilter), file=x, quote=FALSE,  row.names=TRUE, col.names=TRUE,sep = "\t")
