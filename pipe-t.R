@@ -882,6 +882,8 @@ switch(DEAMethod,
       DEG<-RP(exprs(qFiltNAs), as.numeric(pData(qFiltNAs)$Treatment)-1, num.perm = 1000,logged = TRUE, gene.names = featureNames(qFiltNAs), huge=TRUE, plot = FALSE, rand = 123)
  write.table(DEG[1:5], file=outputDEA, quote=FALSE,  row.names=TRUE, col.names=TRUE,sep = "\t")
     },
+    "none"={
+    },
     stop("Enter something that switches me!")
 )
 
