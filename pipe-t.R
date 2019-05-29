@@ -563,14 +563,15 @@ switch(format,
 xFilter <- filterCategory(unreliable)
 
 cat("\n Categorization completed! ")
-
+minvalue<-min(exprs(xFilter), na.rm = TRUE)
+maxvalue<-max(exprs(xFilter), na.rm = TRUE)
 png(x,    # create PNG for the heat map
   width = 10*300,        # 5 x 300 pixels
   height = 10*300,
   res = 300,            # 300 pixels per inch
   pointsize = 8)
  
-  plotCtBoxes(xFilter, ylim=c(dcCtmin,dcCtmax), cex.lab=3, cex.axis = 2,stratify=NULL, xlab = "Samples", ylab="Ct", mar = c(8,8,8,8), names=as.character(seq(1, ncol(xFilter), 1)))       # smaller font size
+  plotCtBoxes(xFilter, ylim=c(as.numeric(minvalue), as.numeric(maxvalue)), cex.lab=3, cex.axis = 2,stratify=NULL, xlab = "Samples", ylab="Ct", mar = c(8,8,8,8), names=as.character(seq(1, ncol(xFilter), 1)))       # smaller font size
 dev.off()
 
 #write.table(exprs(xFilter), file=x, quote=FALSE,  row.names=TRUE, col.names=TRUE,sep = "\t")
