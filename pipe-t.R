@@ -813,7 +813,7 @@ png(outputIMP,    # create PNG for the heat map
   res = 300,            # 300 pixels per inch
   pointsize = 8)
  
-  plotCtBoxes(normalizedDataset, ylim=c(min(exprs(normalizedDataset), na.rm = TRUE),max(exprs(normalizedDataset),cex.lab=3, cex.axis = 2,stratify=NULL, xlab = "Samples", ylab="DeltaCt", mar = c(8,8,8,8), names=as.character(seq(1, ncol(normalizedDataset), 1)))       # smaller font size
+  plotCtBoxes(normalizedDataset, ylim=c(min(exprs(normalizedDataset), na.rm = TRUE),max(exprs(normalizedDataset), na.rm = TRUE)),cex.lab=3, cex.axis = 2,stratify=NULL, xlab = "Samples", ylab="DeltaCt", mar = c(8,8,8,8), names=as.character(seq(1, ncol(normalizedDataset), 1)))       # smaller font size
 dev.off()
 
 ################################################## Filtering based on number of NAs##################################################
