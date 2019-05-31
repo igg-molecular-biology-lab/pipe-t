@@ -135,19 +135,19 @@ Here, we list some hints about the ListOfFile list format:
 8. Be sure that each file contains at least the following column names:
 a. For format EDS:  EXPFAIL, Target Name, Well Position, and CT,
 b. For format plain: flag as 4th column, feature as 6th column, type as   7th column, position as 3th  column, and Ct as 8th column, 
-c. For format SDS: Omit, Detector, Task, and Avg Ct, 
-d. For format LightCycler: Name, Pos, and Cp, 
-e. For format CFX: Content, Well, Cq Mean, 
-f. For format OpenArray: ThroughHole.Outlier, Assay.Assay.ID, Assay.Assay.Type, ThroughHole.Address, and ThroughHole.Ct,
-g. For format BioMark: Call, Name 1, ID, and Value.
+	c. For format SDS: Omit, Detector, Task, and Avg Ct, 
+	d. For format LightCycler: Name, Pos, and Cp, 
+	e. For format CFX: Content, Well, Cq Mean, 
+	f. For format OpenArray: ThroughHole.Outlier, Assay.Assay.ID, Assay.Assay.Type, ThroughHole.Address, and ThroughHole.Ct,
+	g. For format BioMark: Call, Name 1, ID, and Value.
 9. Be sure that flag of all features is one of the following values:
-a. For format EDS:  Y or N,
-b. For format plain: Flagged or Passed, 
-c. For format SDS: TRUE or FALSE, 
-d. For format LightCycler: Y or N, 
-e. For format CFX: Y or N, 
-f. For format OpenArray: TRUE or FALSE,
-g. For format BioMark: Fail or Pass.
+	a. For format EDS:  Y or N,
+	b. For format plain: Flagged or Passed, 
+	c. For format SDS: TRUE or FALSE, 
+	d. For format LightCycler: Y or N, 
+	e. For format CFX: Y or N, 
+	f. For format OpenArray: TRUE or FALSE,
+	g. For format BioMark: Fail or Pass.
 
 ##### Output
 One single execution of PIPE-T produces the following output files: 
