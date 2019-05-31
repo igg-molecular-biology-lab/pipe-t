@@ -288,7 +288,7 @@ function(readfile=readfile, n.data=n.data, i=i, nspots=nspots, ...)
 .readCtCFX	<- function(readfile=readfile, n.data=n.data, i=i, nspots=nspots, ...)
 {
 	# Read data, skip the required lines
-	out	<- read.csv(file=readfile, header=TRUE, as.is=TRUE, nrows=nspots*n.data[i], strip.white=TRUE, ...)
+	out	<- read.delim(file=readfile, header=TRUE, as.is=TRUE, nrows=nspots*n.data[i], strip.white=TRUE, ...)
 	# Return
 	out
 } # .readCtCFX
@@ -297,7 +297,7 @@ function(readfile=readfile, n.data=n.data, i=i, nspots=nspots, ...)
 function(readfile=readfile, n.data=n.data, i=i, nspots=nspots, ...)
 {
 	# Read data
-	out	<- read.csv(file=readfile, header=TRUE, as.is=TRUE, nrows=nspots*n.data[i], strip.white=TRUE, ...)
+	out	<- read.delim(file=readfile, header=TRUE, as.is=TRUE, nrows=nspots*n.data[i], strip.white=TRUE, ...)
 	# Regard those marked as outliers as "Unreliable"
 	out$ThroughHole.Outlier[out$ThroughHole.Outlier=="False"]	<- "OK"
 	out$ThroughHole.Outlier[out$ThroughHole.Outlier=="True"]	<- "Unreliable"	
@@ -314,7 +314,7 @@ function(readfile=readfile, n.data=n.data, i=i, nspots=nspots, ...)
 	if (length(n.header)==0) 
 		n.header	<- 0
 	# Read data, skip the required lines
-	out	<- read.csv(file=readfile, header=TRUE, as.is=TRUE, nrows=nspots*n.data[i], skip=n.header, strip.white=TRUE, ...)
+	out	<- read.delim(file=readfile, header=TRUE, as.is=TRUE, nrows=nspots*n.data[i], skip=n.header, strip.white=TRUE, ...)
 	# Convert the calls into flags
 	out$Call[out$Call=="Pass"] <- "OK"
 	out$Call[out$Call=="Fail"] <- "Undetermined"	
