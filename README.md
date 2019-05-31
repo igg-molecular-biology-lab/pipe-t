@@ -116,6 +116,38 @@ To start any PIPE-T execution, users must upload two types of input files:
 - A List collection of tab-separated text files containing the resulting data of the RT-qPCR experiment (ListOfFile)
 - A tab-separated text file associating each filename in ListOfFile with a treatment group (FileTreatment). 
 
+File formats must be carefully checked before starting uploading the files in Galaxy.
+Here, we list some hints about the fileTreatment file format
+1. fileTreatment must be a tab-delimited txt file.
+2. fileTreatment must have only two columns named sampleName and Treatment.
+3. Be sure that sampleName matches the name and the extension of the files in ListOfFile
+4. Omit any special symbol when you specify a sampleName or a Treatment.
+
+
+Here, we list some hints about the ListOfFile list format: 
+1. Each file in ListOfFile must be a tab-separated text file.
+2. Use the dot as decimal separator.
+3. Be sure that no special symbol was introduced in the files.
+4. Feature and column names must be the same in all input files
+5. Each file in ListOfFile must refer to one sample. 
+6. Check that the feature type is specified as Target or Endogenous Control. 
+7. SDS and EDS are the only formats with a header in the first rows of the file. PIPE-T automatically discard these header rows before parsing the content of these files. For this reason, the first column of the columns row must start by the symbol #  for a SDS file and by the word Well for a EDS file.
+8. Be sure that each file contains at least the following column names:
+a. For format EDS:  EXPFAIL, Target Name, Well Position, and CT,
+b. For format plain: flag as 4th column, feature as 6th column, type as   7th column, position as 3th  column, and Ct as 8th column, 
+c. For format SDS: Omit, Detector, Task, and Avg Ct, 
+d. For format LightCycler: Name, Pos, and Cp, 
+e. For format CFX: Content, Well, Cq Mean, 
+f. For format OpenArray: ThroughHole.Outlier, Assay.Assay.ID, Assay.Assay.Type, ThroughHole.Address, and ThroughHole.Ct,
+g. For format BioMark: Call, Name 1, ID, and Value.
+9. Be sure that flag of all features is one of the following values:
+a. For format EDS:  Y or N,
+b. For format plain: Flagged or Passed, 
+c. For format SDS: TRUE or FALSE, 
+d. For format LightCycler: Y or N, 
+e. For format CFX: Y or N, 
+f. For format OpenArray: TRUE or FALSE,
+g. For format BioMark: Fail or Pass.
 
 ##### Output
 One single execution of PIPE-T produces the following output files: 
