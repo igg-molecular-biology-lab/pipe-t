@@ -25,7 +25,6 @@ library(BBmisc)
 library(affy)
 library(psych)
 library(zoo)
-library(Hmisc)
 })
 
 cat("\n R libraries...loaded!\n")
@@ -852,12 +851,6 @@ switch(imputeMethod,
     },
     "cubic"={
      exprs(qFiltNAs) <- na.spline(exprs(qFiltNAs))
-    },
-    "mean"={
-      exprs(qFiltNAs)<-impute(exprs(qFiltNAs),mean)
-    },
-    "median"={
-      exprs(qFiltNAs)<-impute(exprs(qFiltNAs),median)
     },
     stop("Enter something that switches me!")
 )

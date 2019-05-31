@@ -10,7 +10,6 @@
 <requirement type="package" version="1.11.0">r-bbmisc</requirement>
 <requirement type="package" version="1.8.4">r-psych</requirement>
 <requirement type="package" version="1.8_3">r-zoo</requirement>
-<requirement type="package" version="4.1_1">r-hmisc</requirement>
 <requirement type="package" version="1.28.0">bioconductor-normqpcr </requirement>
 </requirements>
 <stdio>
@@ -214,8 +213,6 @@
     <param name="format" type="select"  label="Select one of the imputation methods from the list below." help="">
       <option value="mestdagh" selected="true">Mestdagh</option>
       <option value="knn">K-Nearest Neighbour</option>
-      <option value="mean">Mean</option>
-      <option value="median">Median</option>
       <option value="cubic">Cubic Spline</option>
     </param>
     <when value="knn">
