@@ -155,12 +155,12 @@
  	<param name="files" type="data" format="txt" label="Select one of the files from the history tab" help="File should contains only the columns: sampleName and Treatment." />
   <param name="formatFile" type="select"  label="Select one of the file formats from the list below." help="">
       <option value="EDS" selected="true">EDS</option>
-      <option value="plain">Plain</option>
       <option value="SDS" >SDS</option>
-      <option value="LightCycler" >LightCycler</option>
-      <option value="CFX">CFX</option>
       <option value="OpenArray" >OpenArray</option>
+      <option value="LightCycler" >LightCycler</option>
+      <option value="CFX">CFX</option>      
       <option value="BioMark" >BioMark</option>
+      <option value="plain">Plain</option>
     </param>
     <param name="n" type="integer" min="1" max="1000" value="384" label="Type the number of transcripts in your file" />
 </section>
