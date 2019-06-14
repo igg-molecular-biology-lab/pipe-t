@@ -92,9 +92,8 @@ The Galaxy Admin User has the username `admin@galaxy.org` and the password `1234
 
 Docker images are "read-only", all your changes inside one session will be lost after restart. This mode is useful to present Galaxy to your colleagues or to run workshops with it. To install Tool Shed repositories or to save your data you need to export the calculated data to the host computer.
 
-Run this command setting your local landing path (`/host/path/targetfolder/`):
+Run this command setting your local landing path (`/host/path/targetfolder/` es. win - F:\GALAXY-PIPE-T, linux - /home/user/GALAXY-PIPE-T ):
 ```
-docker run -d -p 8080:80 \
     docker run -d -p 21:21/tcp -p 443:443/tcp -p 80:80/tcp -p 8800:8800/tcp -p 9002:9002/tcp \
     -v /host/path/targetfolder/:/export/ \
     davidecangelosi/galaxy-pipe-t:latest
