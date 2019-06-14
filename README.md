@@ -161,7 +161,7 @@ One single execution of PIPE-T produces the following output files:
 
 ###  Example application  <a name="first-example" /> [[toc]](#toc)
 
-In this example, we will show you how to perform a simple analysis with PIPE-T on mCRC data. We have chosen the 53 metastatic colorectal cancer study that we presented in our manuscript. 
+In this example, we will show you how to perform a simple analysis with PIPE-T on mCRC data. We have chosen the 53 metastatic colorectal cancer study whose gene expression profile was available in the Gene Expression Omnibus with accession GSE52513. 
 
 
 The top rows relative to an example file of a hypothetical ListOfFile is reported in the table below. Note that file contains data about the type of the file, dates and any other relevant information about the experiment.
